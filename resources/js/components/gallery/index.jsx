@@ -28,7 +28,7 @@ const Gallery = () => {
           <div className="row">
             <div className="col-sm-12">
               <div className="gallery-boxes" style={{position: 'relative', height: '2156.25px'}}>
-                <div className="each-box col-lg-4 col-md-6 col-sm-12 gallery-box charity" style={{position: 'absolute', left: '0px', top: '0px'}}>
+                <div className="each-box col-lg-3 col-md-4 col-sm-12 gallery-box charity" style={{position: 'absolute', left: '0px', top: '0px'}}>
                   <div className="inner gray-bg text-center">
                     <div className="box-hover">
                       <img src="./assets/images/1(1).jpg" alt="Helping by charity" className="img-responsive" />
@@ -46,7 +46,7 @@ const Gallery = () => {
                   {/* End: .inner */}
                 </div>
                 {/* Single gallery box box end */}
-                <div className="each-box col-lg-4 col-md-6 col-sm-12 gallery-box children" style={{position: 'absolute', left: '345px', top: '0px'}}>
+                <div className="each-box col-lg-3 col-md-4 col-sm-12 gallery-box children" style={{position: 'absolute', left: '345px', top: '0px'}}>
                   <div className="inner gray-bg text-center">
                     <div className="box-hover">
                       <img src="./assets/images/2(1).jpg" alt="Help for child" className="img-responsive" />
@@ -65,7 +65,7 @@ const Gallery = () => {
                 </div>
                 {/* Single gallery box box end */}
                 {/* Single gallery box box end */}
-                <div className="each-box col-lg-4 col-md-6 col-sm-12 gallery-box food" style={{position: 'absolute', left: '0px', top: '431px'}}>
+                <div className="each-box col-lg-3 col-md-4 col-sm-12 gallery-box food" style={{position: 'absolute', left: '0px', top: '431px'}}>
                   <div className="inner gray-bg text-center">
                     <div className="box-hover">
                       <img src="./assets/images/3(1).jpg" alt="Education help" className="img-responsive" />
@@ -84,7 +84,7 @@ const Gallery = () => {
                 </div>
                 {/* Single gallery box box end */}
                 {/* Single gallery box box end */}
-                <div className="each-box col-lg-4 col-md-6 col-sm-12 gallery-box nature" style={{position: 'absolute', left: '345px', top: '431px'}}>
+                <div className="each-box col-lg-3 col-md-4 col-sm-12 gallery-box nature" style={{position: 'absolute', left: '345px', top: '431px'}}>
                   <div className="inner gray-bg text-center">
                     <div className="box-hover">
                       <img src="./assets/images/4(1).jpg" alt="Nature" className="img-responsive" />
@@ -103,7 +103,7 @@ const Gallery = () => {
                 </div>
                 {/* Single gallery box box end */}
                 {/* Single gallery box box end */}
-                <div className="each-box col-lg-4 col-md-6 col-sm-12 gallery-box charity" style={{position: 'absolute', left: '0px', top: '862px'}}>
+                <div className="each-box col-lg-3 col-md-4 col-sm-12 gallery-box charity" style={{position: 'absolute', left: '0px', top: '862px'}}>
                   <div className="inner gray-bg text-center">
                     <div className="box-hover">
                       <img src="./assets/images/5.jpg" alt="Charity" className="img-responsive" />
@@ -122,7 +122,7 @@ const Gallery = () => {
                 </div>
                 {/* Single gallery box box end */}
                 {/* Single gallery box box end */}
-                <div className="each-box col-lg-4 col-md-6 col-sm-12 gallery-box children" style={{position: 'absolute', left: '345px', top: '862px'}}>
+                <div className="each-box col-lg-3 col-md-4 col-sm-12 gallery-box children" style={{position: 'absolute', left: '345px', top: '862px'}}>
                   <div className="inner gray-bg text-center">
                     <div className="box-hover">
                       <img src="./assets/images/6.jpg" alt="Children" className="img-responsive" />
@@ -141,7 +141,7 @@ const Gallery = () => {
                 </div>
                 {/* Single gallery box box end */}
                 {/* Single gallery box box end */}
-                <div className="each-box col-lg-4 col-md-6 col-sm-12 gallery-box food" style={{position: 'absolute', left: '0px', top: '1293px'}}>
+                <div className="each-box col-lg-3 col-md-4 col-sm-12 gallery-box food" style={{position: 'absolute', left: '0px', top: '1293px'}}>
                   <div className="inner gray-bg text-center">
                     <div className="box-hover">
                       <img src="./assets/images/7.jpg" alt="Food" className="img-responsive" />
@@ -160,7 +160,7 @@ const Gallery = () => {
                 </div>
                 {/* Single gallery box box end */}
                 {/* Single gallery box box end */}
-                <div className="each-box col-lg-4 col-md-6 col-sm-12 gallery-box nature" style={{position: 'absolute', left: '345px', top: '1293px'}}>
+                <div className="each-box col-lg-3 col-md-4 col-sm-12 gallery-box nature" style={{position: 'absolute', left: '345px', top: '1293px'}}>
                   <div className="inner gray-bg text-center">
                     <div className="box-hover">
                       <img src="./assets/images/8.jpg" alt="Nature" className="img-responsive" />
@@ -179,7 +179,7 @@ const Gallery = () => {
                 </div>
                 {/* Single gallery box box end */}
                 {/* Single gallery box box end */}
-                <div className="each-box col-lg-4 col-md-6 col-sm-12 gallery-box charity" style={{position: 'absolute', left: '0px', top: '1725px'}}>
+                <div className="each-box col-lg-3 col-md-4 col-sm-12 gallery-box charity" style={{position: 'absolute', left: '0px', top: '1725px'}}>
                   <div className="inner gray-bg text-center">
                     <div className="box-hover">
                       <img src="./assets/images/9.jpg" alt="Charity" className="img-responsive" />

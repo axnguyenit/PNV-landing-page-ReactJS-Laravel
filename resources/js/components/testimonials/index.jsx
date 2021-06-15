@@ -48,6 +48,39 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </div>
+                <div className="swiper-slide" style={{width: '720px'}}>
+                  <div className="row single-testimonial">
+                    <div className="col-sm-12 col-md-5 col-lg-3 align-self-center">
+                      <img className="img-thumbnail" src="./assets/images/1(2).jpg" alt="" />
+                    </div>
+                    <div className="col-sm-12 col-md-7 col-lg-9 align-self-center">
+                      <div className="p-30px testimonial-content bg-white">
+                        <h3>John Deo</h3>
+                        <blockquote>
+                          Is at purse tried jokes china ready decay an. Small its shy way had woody downs power. To denoting admitted speaking learning my exercise so in. Procured shutters mr it feelings. To or three offer house begin taken am at. As dissuade cheerful overcame
+                          so of friendly he indulged unpacked.
+                          
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="swiper-slide swiper-slide-prev" style={{width: '720px'}}>
+                  <div className="row single-testimonial">
+                    <div className="col-sm-12 col-md-5 col-lg-3 align-self-center">
+                      <img className="img-thumbnail" src="./assets/images/2(2).jpg" alt="" />
+                    </div>
+                    <div className="col-sm-12 col-md-7 col-lg-9 align-self-center">
+                      <div className="p-30px testimonial-content bg-white">
+                        <h3>Jenefar Deo</h3>
+                        <blockquote>
+                          In by an appetite no humoured returned informed. Possession so comparison inquietude he he conviction no decisively. Marianne jointure attended she hastened surprise but she. Ever lady son yet you very paid form away. He advantage of exquisite resolving
+                          if on tolerably. Become sister on in garden it barton waited on.
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div className="swiper-slide swiper-slide-active" style={{width: '720px'}}>
                   <div className="row single-testimonial">
                     <div className="col-sm-12 col-md-5 col-lg-3 align-self-center">

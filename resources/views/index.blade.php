@@ -11,6 +11,7 @@
 
 <body>
     <div id="app">  </div>
+    <script src= {{ asset('./js/app.js') }} ></script>
 
     <script src= {{ asset('./assets/js/jquery-3.2.1.min.js') }}></script>
     <script src= {{ asset('./assets/js/jquery-migrate-3.0.0.min.js') }}></script>
@@ -37,6 +38,5 @@
     <!-- Custom -->
     <script src= {{ asset('./assets/js/custom.js') }}></script>
     <!-- ReactJS -->
-    <script src={{ asset('js/app.js') }} ></script>
 </body>
 </html>

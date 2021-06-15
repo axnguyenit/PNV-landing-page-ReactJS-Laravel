@@ -93,7 +93,7 @@ var Gallery = function Gallery() {
               height: '2156.25px'
             },
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "each-box col-lg-4 col-md-6 col-sm-12 gallery-box charity",
+              className: "each-box col-lg-3 col-md-4 col-sm-12 gallery-box charity",
               style: {
                 position: 'absolute',
                 left: '0px',
@@ -135,7 +135,7 @@ var Gallery = function Gallery() {
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "each-box col-lg-4 col-md-6 col-sm-12 gallery-box children",
+              className: "each-box col-lg-3 col-md-4 col-sm-12 gallery-box children",
               style: {
                 position: 'absolute',
                 left: '345px',
@@ -177,7 +177,7 @@ var Gallery = function Gallery() {
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "each-box col-lg-4 col-md-6 col-sm-12 gallery-box food",
+              className: "each-box col-lg-3 col-md-4 col-sm-12 gallery-box food",
               style: {
                 position: 'absolute',
                 left: '0px',
@@ -219,7 +219,7 @@ var Gallery = function Gallery() {
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "each-box col-lg-4 col-md-6 col-sm-12 gallery-box nature",
+              className: "each-box col-lg-3 col-md-4 col-sm-12 gallery-box nature",
               style: {
                 position: 'absolute',
                 left: '345px',
@@ -261,7 +261,7 @@ var Gallery = function Gallery() {
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "each-box col-lg-4 col-md-6 col-sm-12 gallery-box charity",
+              className: "each-box col-lg-3 col-md-4 col-sm-12 gallery-box charity",
               style: {
                 position: 'absolute',
                 left: '0px',
@@ -303,7 +303,7 @@ var Gallery = function Gallery() {
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "each-box col-lg-4 col-md-6 col-sm-12 gallery-box children",
+              className: "each-box col-lg-3 col-md-4 col-sm-12 gallery-box children",
               style: {
                 position: 'absolute',
                 left: '345px',
@@ -345,7 +345,7 @@ var Gallery = function Gallery() {
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "each-box col-lg-4 col-md-6 col-sm-12 gallery-box food",
+              className: "each-box col-lg-3 col-md-4 col-sm-12 gallery-box food",
               style: {
                 position: 'absolute',
                 left: '0px',
@@ -387,7 +387,7 @@ var Gallery = function Gallery() {
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "each-box col-lg-4 col-md-6 col-sm-12 gallery-box nature",
+              className: "each-box col-lg-3 col-md-4 col-sm-12 gallery-box nature",
               style: {
                 position: 'absolute',
                 left: '345px',
@@ -429,7 +429,7 @@ var Gallery = function Gallery() {
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "each-box col-lg-4 col-md-6 col-sm-12 gallery-box charity",
+              className: "each-box col-lg-3 col-md-4 col-sm-12 gallery-box charity",
               style: {
                 position: 'absolute',
                 left: '0px',

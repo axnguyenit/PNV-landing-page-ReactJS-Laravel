@@ -3,6 +3,9 @@ import React from 'react';
 const Header = () => {
     return (
         <header>
+            <div id="preloader-wrap">
+                <div className="preloader"></div>
+            </div>
             <nav className="navbar navbar-inverse navbar-expand-lg header-nav fixed-top light-header fixed-header">
                 <div className="container">
                     <a className="navbar-brand logo" href="#">
@@ -25,11 +28,11 @@ const Header = () => {
                             <li><a href="https://themeatelier.net/site-templates/prottasha/index-03.html">Home Option 4</a></li>
                         </ul>
                         </li>
-                        <li><a className="nav-link active" href="#about">About</a></li>
+                        <li><a className="nav-link" href="#about">About</a></li>
                         <li><a className="nav-link" href="#causes">Causes</a></li>
                         <li><a className="nav-link" href="#donate">Donate</a></li>
                         <li><a className="nav-link" href="#gallery">Gallery</a></li>
-                        <li><a className="nav-link" href="#donors">Donors</a></li>
+                        <li><a className="nav-link" href="#donors">Donors</a></li> {/* active */}
                         <li><a className="nav-link" href="#volunteers">Volunteers</a></li>
                         <li>
                         <a className="nav-link" href="#blog">Blog</a>
