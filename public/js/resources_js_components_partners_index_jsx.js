@@ -1,9 +1,9 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_donors_index_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_partners_index_jsx"],{
 
-/***/ "./resources/js/components/donors/index.jsx":
-/*!**************************************************!*\
-  !*** ./resources/js/components/donors/index.jsx ***!
-  \**************************************************/
+/***/ "./resources/js/components/partners/index.jsx":
+/*!****************************************************!*\
+  !*** ./resources/js/components/partners/index.jsx ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -17,16 +17,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Donors = function Donors() {
+var Partners = function Partners() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
-    id: "donors",
+    id: "partners",
     className: "p-80px-tb bg-light",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "container",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "section-title text-center m-60px-b",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
-          children: "Top Corporate Donors"
+          children: "Partners"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "divider-circle mx-auto"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
@@ -42,11 +42,11 @@ var Donors = function Donors() {
               transform: 'translate3d(0px, 0px, 0px)'
             },
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "col-lg-4 col-sm-6 swiper-slide",
+              className: "swiper-slide col-lg-4 col-sm-6",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "./assets/images/1.png",
+                  src: "./assets/images/partners/Agility-IO.png",
                   alt: ""
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                   href: "#",
@@ -56,11 +56,11 @@ var Donors = function Donors() {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "col-lg-4 col-sm-6 swiper-slide",
+              className: "swiper-slide col-lg-4 col-sm-6",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "./assets/images/1.png",
+                  src: "./assets/images/partners/Axon-logoPNwebsite.png",
                   alt: ""
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                   href: "#",
@@ -70,11 +70,11 @@ var Donors = function Donors() {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "col-lg-4 col-sm-6 swiper-slide",
+              className: "swiper-slide col-lg-4 col-sm-6",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "./assets/images/1.png",
+                  src: "./assets/images/partners/seadev.png",
                   alt: ""
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                   href: "#",
@@ -84,11 +84,11 @@ var Donors = function Donors() {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "col-lg-4 col-sm-6 swiper-slide",
+              className: "swiper-slide col-lg-4 col-sm-6",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "./assets/images/1.png",
+                  src: "./assets/images/partners/Neolab.png",
                   alt: ""
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                   href: "#",
@@ -98,11 +98,11 @@ var Donors = function Donors() {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "col-lg-4 col-sm-6 swiper-slide",
+              className: "swiper-slide col-lg-4 col-sm-6",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "./assets/images/1.png",
+                  src: "./assets/images/partners/mgm.png",
                   alt: ""
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                   href: "#",
@@ -112,11 +112,11 @@ var Donors = function Donors() {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "col-lg-4 col-sm-6 swiper-slide",
+              className: "swiper-slide col-lg-4 col-sm-6",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "./assets/images/1.png",
+                  src: "./assets/images/partners/Logigear-logo.png",
                   alt: ""
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                   href: "#",
@@ -126,11 +126,11 @@ var Donors = function Donors() {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "col-lg-4 col-sm-6 swiper-slide",
+              className: "swiper-slide col-lg-4 col-sm-6",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "./assets/images/1.png",
+                  src: "./assets/images/partners/KMS-Technology-400x284.png",
                   alt: ""
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                   href: "#",
@@ -140,11 +140,11 @@ var Donors = function Donors() {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "col-lg-4 col-sm-6 swiper-slide",
+              className: "swiper-slide col-lg-4 col-sm-6",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "./assets/images/1.png",
+                  src: "./assets/images/partners/J.P.Morgan.jpg",
                   alt: ""
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                   href: "#",
@@ -154,11 +154,11 @@ var Donors = function Donors() {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "col-lg-4 col-sm-6 swiper-slide",
+              className: "swiper-slide col-lg-4 col-sm-6",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "./assets/images/1.png",
+                  src: "./assets/images/partners/HSBC_logo_200x150.png",
                   alt: ""
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                   href: "#",
@@ -168,11 +168,11 @@ var Donors = function Donors() {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "col-lg-4 col-sm-6 swiper-slide",
+              className: "swiper-slide col-lg-4 col-sm-6",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "./assets/images/1.png",
+                  src: "./assets/images/partners/Enouvo-1-400x284.png",
                   alt: ""
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                   href: "#",
@@ -182,11 +182,11 @@ var Donors = function Donors() {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "col-lg-4 col-sm-6 swiper-slide",
+              className: "swiper-slide col-lg-4 col-sm-6",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "./assets/images/1.png",
+                  src: "./assets/images/partners/DVT-400x284.png",
                   alt: ""
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                   href: "#",
@@ -199,7 +199,7 @@ var Donors = function Donors() {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             className: "swiper-pagination swiper-pagination-clickable swiper-pagination-bullets",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "swiper-pagination-bullet swiper-pagination-bullet-active",
+              className: "swiper-pagination-bullet",
               tabIndex: 0,
               role: "button",
               "aria-label": "Go to slide 1"
@@ -209,7 +209,7 @@ var Donors = function Donors() {
               role: "button",
               "aria-label": "Go to slide 2"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "swiper-pagination-bullet",
+              className: "swiper-pagination-bullet swiper-pagination-bullet-active",
               tabIndex: 0,
               role: "button",
               "aria-label": "Go to slide 3"
@@ -225,7 +225,7 @@ var Donors = function Donors() {
   });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Donors);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Partners);
 
 /***/ })
 

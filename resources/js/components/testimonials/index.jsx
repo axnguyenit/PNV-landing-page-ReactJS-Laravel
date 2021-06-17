@@ -32,7 +32,7 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-                <div className="swiper-slide swiper-slide-prev" style={{width: '720px'}}>
+                <div className="swiper-slide" style={{width: '720px'}}>
                   <div className="row single-testimonial">
                     <div className="col-sm-12 col-md-5 col-lg-3 align-self-center">
                       <img className="img-thumbnail" src="./assets/images/2(2).jpg" alt="" />
@@ -65,7 +65,41 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-                <div className="swiper-slide swiper-slide-prev" style={{width: '720px'}}>
+                <div className="swiper-slide" style={{width: '720px'}}>
+                  <div className="row single-testimonial">
+                    <div className="col-sm-12 col-md-5 col-lg-3 align-self-center">
+                      <img className="img-thumbnail" src="./assets/images/1(2).jpg" alt="" />
+                    </div>
+                    <div className="col-sm-12 col-md-7 col-lg-9 align-self-center">
+                      <div className="p-30px testimonial-content bg-white">
+                        <h3>John Deo</h3>
+                        <blockquote>
+                          Is at purse tried jokes china ready decay an. Small its shy way had woody downs power. To denoting admitted speaking learning my exercise so in. Procured shutters mr it feelings. To or three offer house begin taken am at. As dissuade cheerful overcame
+                          so of friendly he indulged unpacked.
+                          
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="swiper-slide" style={{width: '720px'}}>
+                  <div className="row single-testimonial">
+                    <div className="col-sm-12 col-md-5 col-lg-3 align-self-center">
+                      <img className="img-thumbnail" src="./assets/images/1(2).jpg" alt="" />
+                    </div>
+                    <div className="col-sm-12 col-md-7 col-lg-9 align-self-center">
+                      <div className="p-30px testimonial-content bg-white">
+                        <h3>John Deo</h3>
+                        <blockquote>
+                          Is at purse tried jokes china ready decay an. Small its shy way had woody downs power. To denoting admitted speaking learning my exercise so in. Procured shutters mr it feelings. To or three offer house begin taken am at. As dissuade cheerful overcame
+                          so of friendly he indulged unpacked.
+                          
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="swiper-slide" style={{width: '720px'}}>
                   <div className="row single-testimonial">
                     <div className="col-sm-12 col-md-5 col-lg-3 align-self-center">
                       <img className="img-thumbnail" src="./assets/images/2(2).jpg" alt="" />
@@ -81,7 +115,7 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-                <div className="swiper-slide swiper-slide-active" style={{width: '720px'}}>
+                <div className="swiper-slide" style={{width: '720px'}}>
                   <div className="row single-testimonial">
                     <div className="col-sm-12 col-md-5 col-lg-3 align-self-center">
                       <img className="img-thumbnail" src="./assets/images/3(2).jpg" alt="" />
@@ -98,8 +132,13 @@ const Testimonials = () => {
                   </div>
                 </div>
               </div>
-              <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 1" /><span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 2" /><span className="swiper-pagination-bullet swiper-pagination-bullet-active" tabIndex={0} role="button" aria-label="Go to slide 3" /></div>
-              <span className="swiper-notification" aria-live="assertive" aria-atomic="true" /></div>
+              <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                <span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 1" />
+                <span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 2" />
+                <span className="swiper-pagination-bullet swiper-pagination-bullet-active" tabIndex={0} role="button" aria-label="Go to slide 3" />
+              </div>
+              <span className="swiper-notification" aria-live="assertive" aria-atomic="true" />
+            </div>
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-(globalThis["webpackChunk"] = globalThis["webpackChunk"] || []).push([["resources_js_components_donate_index_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_donate_index_jsx"],{
 
 /***/ "./resources/js/components/donate/index.jsx":
 /*!**************************************************!*\

@@ -22,9 +22,9 @@ const HelpProcess = () => {
                 <div className="process-circle">
                   <p>1</p>
                 </div>
-                <div className="icon-outer">
+                {/* <div className="icon-outer">
                   <i className="icofont-search-2" />
-                </div>
+                </div> */}
                 <h4 className="m-35px-t sm-m-15px-t">Find the cause</h4>
               </div>
               {/* Single process item end */}
@@ -33,9 +33,9 @@ const HelpProcess = () => {
                 <div className="process-circle">
                   <p>2</p>
                 </div>
-                <div className="icon-outer">
+                {/* <div className="icon-outer">
                   <i className="icofont-holding-hands" />
-                </div>
+                </div> */}
                 <h4 className="m-35px-t sm-m-15px-t">Make a donation</h4>
               </div>
               {/* Single process item end */}
@@ -44,9 +44,9 @@ const HelpProcess = () => {
                 <div className="process-circle">
                   <p>3</p>
                 </div>
-                <div className="icon-outer">
+                {/* <div className="icon-outer">
                   <i className="icofont-slidshare" />
-                </div>
+                </div> */}
                 <h4 className="m-35px-t sm-m-15px-t">Share with peoples</h4>
               </div>
               {/* Single process item end */}
@@ -55,9 +55,9 @@ const HelpProcess = () => {
                 <div className="process-circle">
                   <p>4</p>
                 </div>
-                <div className="icon-outer">
+                {/* <div className="icon-outer">
                   <i className="icofont-simple-smile" />
-                </div>
+                </div> */}
                 <h4 className="m-35px-t sm-m-15px-t">See smiling faces</h4>
               </div>
               {/* Single process item end */}

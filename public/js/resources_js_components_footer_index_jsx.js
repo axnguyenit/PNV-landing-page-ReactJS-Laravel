@@ -1,4 +1,4 @@
-(globalThis["webpackChunk"] = globalThis["webpackChunk"] || []).push([["resources_js_components_footer_index_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_footer_index_jsx"],{
 
 /***/ "./resources/js/components/footer/index.jsx":
 /*!**************************************************!*\
@@ -91,7 +91,7 @@ var Footer = function Footer() {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "single-widget col-md-6 col-sm-6",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-                  children: "Latest posts"
+                  children: "Milestones"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
                   className: "recent-post",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {

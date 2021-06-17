@@ -1,4 +1,4 @@
-(globalThis["webpackChunk"] = globalThis["webpackChunk"] || []).push([["resources_js_components_blog_index_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_blog_index_jsx"],{
 
 /***/ "./resources/js/components/blog/index.jsx":
 /*!************************************************!*\
@@ -78,7 +78,7 @@ var Blog = function Blog() {
                 href: true,
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                   className: "day",
-                  children: "09"
+                  children: "2010"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                   className: "month",
                   children: "Sep"
@@ -129,7 +129,7 @@ var Blog = function Blog() {
                 href: true,
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                   className: "day",
-                  children: "09"
+                  children: "2020"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                   className: "month",
                   children: "Oct"
@@ -180,7 +180,7 @@ var Blog = function Blog() {
                 href: true,
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                   className: "day",
-                  children: "01"
+                  children: "2016"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                   className: "month",
                   children: "Nov"

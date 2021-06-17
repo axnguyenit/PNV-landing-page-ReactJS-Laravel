@@ -7,7 +7,7 @@ const Contact = () => {
           <div className="row">
             <div className="col-sm-8 offset-sm-2">
               <div className="section-title text-center m-60px-b">
-                <h2>Get in touch</h2>
+                <h2>Contact Form</h2>
                 <div className="divider-circle mx-auto" />
                 <p>Folly was these three and songs arose whose. Of in vicinity contempt together in possible branched. Assured company hastily looking garrets in oh.</p>
               </div>
@@ -49,9 +49,9 @@ const Contact = () => {
                 </ul>
                 <h4>Connect our socials</h4>
                 <ul className="nav light-icon social-icons">
-                  <li><a href="#"><i className="icofont-twitter" /></a></li>
                   <li><a href="#"><i className="icofont-facebook" /></a></li>
-                  <li><a href="#"><i className="icofont-pinterest" /></a></li>
+                  <li><a href="#"><i className="icofont-youtube" /></a></li>
+                  <li><a href="#"><i className="icofont-skype" /></a></li>
                   <li><a href="#"><i className="icofont-linkedin" /></a></li>
                   <li><a href="#"><i className="icofont-instagram" /></a></li>
                 </ul>

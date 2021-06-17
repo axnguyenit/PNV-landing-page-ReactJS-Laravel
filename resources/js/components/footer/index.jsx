@@ -31,7 +31,7 @@ const Footer = () => {
               <div className="col-lg-6 col-md-12 col-sm-12">
                 <div className="row">
                   <div className="single-widget col-md-6 col-sm-6">
-                    <h3>Latest posts</h3>
+                    <h3>Milestones</h3>
                     <ul className="recent-post">
                       <li><a href="#">10 years of clelbration for helping peoples</a></li>
                       <li><a href="#">We proudly completed 2010 causes within 3 years</a></li>

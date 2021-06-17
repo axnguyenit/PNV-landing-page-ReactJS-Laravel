@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const Banner = () => {
     return (
         <section id="home">
         <div className="swiper-container hero-swiper swiper-container-horizontal">
@@ -98,4 +98,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Banner;

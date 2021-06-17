@@ -1,9 +1,9 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_home_index_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_banner_index_jsx"],{
 
-/***/ "./resources/js/components/home/index.jsx":
-/*!************************************************!*\
-  !*** ./resources/js/components/home/index.jsx ***!
-  \************************************************/
+/***/ "./resources/js/components/banner/index.jsx":
+/*!**************************************************!*\
+  !*** ./resources/js/components/banner/index.jsx ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -17,7 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Header = function Header() {
+var Banner = function Banner() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
     id: "home",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
@@ -214,7 +214,7 @@ var Header = function Header() {
   });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Banner);
 
 /***/ })
 

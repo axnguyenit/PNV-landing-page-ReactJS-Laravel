@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Gallery = () => {
+  const idTag = "gallery";
     return (
-        <section id="gallery" className="p-80px-tb">
+        <section id={idTag} className="p-80px-tb">
         <div className="container">
           <div className="row">
             <div className="col-sm-8 offset-sm-2">
@@ -36,9 +37,6 @@ const Gallery = () => {
                         <div className="mask-inner">
                           <h3 className="title">Helping by charity</h3>
                           <p className="pera-text">Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom.</p>
-                          <ul className="nav light-icon gallery-icon">
-                            <li><a href="./assets/images/1(1).jpg" className="gallery-lightbox" title="Porject name"><i className="icofont-image" /></a></li>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -54,9 +52,6 @@ const Gallery = () => {
                         <div className="mask-inner">
                           <h3 className="title">Helping for child</h3>
                           <p className="pera-text">Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom.</p>
-                          <ul className="nav light-icon gallery-icon">
-                            <li><a href="./assets/images/2(1).jpg" className="gallery-lightbox" title="Porject name"><i className="icofont-image" /></a></li>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -73,9 +68,6 @@ const Gallery = () => {
                         <div className="mask-inner">
                           <h3 className="title">Helping for education</h3>
                           <p className="pera-text">Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom.</p>
-                          <ul className="nav light-icon gallery-icon">
-                            <li><a href="./assets/images/3(1).jpg" className="gallery-lightbox" title="Porject name"><i className="icofont-image" /></a></li>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -92,9 +84,6 @@ const Gallery = () => {
                         <div className="mask-inner">
                           <h3 className="title">Saveing nature</h3>
                           <p className="pera-text">Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom.</p>
-                          <ul className="nav light-icon gallery-icon">
-                            <li><a href="./assets/images/4(1).jpg" className="gallery-lightbox" title="Porject name"><i className="icofont-image" /></a></li>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -111,9 +100,6 @@ const Gallery = () => {
                         <div className="mask-inner">
                           <h3 className="title">Our charity</h3>
                           <p className="pera-text">Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom.</p>
-                          <ul className="nav light-icon gallery-icon">
-                            <li><a href="./assets/images/5.jpg" className="gallery-lightbox" title="Porject name"><i className="icofont-image" /></a></li>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -130,9 +116,6 @@ const Gallery = () => {
                         <div className="mask-inner">
                           <h3 className="title">Children are hopless</h3>
                           <p className="pera-text">Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom.</p>
-                          <ul className="nav light-icon gallery-icon">
-                            <li><a href="./assets/images/6.jpg" className="gallery-lightbox" title="Porject name"><i className="icofont-image" /></a></li>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -149,9 +132,6 @@ const Gallery = () => {
                         <div className="mask-inner">
                           <h3 className="title">Food supplie</h3>
                           <p className="pera-text">Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom.</p>
-                          <ul className="nav light-icon gallery-icon">
-                            <li><a href="./assets/images/7.jpg" className="gallery-lightbox" title="Porject name"><i className="icofont-image" /></a></li>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -168,9 +148,6 @@ const Gallery = () => {
                         <div className="mask-inner">
                           <h3 className="title">Save animales</h3>
                           <p className="pera-text">Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom.</p>
-                          <ul className="nav light-icon gallery-icon">
-                            <li><a href="./assets/images/8.jpg" className="gallery-lightbox" title="Porject name"><i className="icofont-image" /></a></li>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -187,9 +164,6 @@ const Gallery = () => {
                         <div className="mask-inner">
                           <h3 className="title">Charity work</h3>
                           <p className="pera-text">Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom.</p>
-                          <ul className="nav light-icon gallery-icon">
-                            <li><a href="./assets/images/9.jpg" className="gallery-lightbox" title="Porject name"><i className="icofont-image" /></a></li>
-                          </ul>
                         </div>
                       </div>
                     </div>

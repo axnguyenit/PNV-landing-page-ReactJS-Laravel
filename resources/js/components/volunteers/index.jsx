@@ -27,12 +27,6 @@ const Volunteers = () => {
                             <div className="mask-inner">
                               <h3 className="title">Abraham L.</h3>
                               <p className="pera-text">Helping over 5+ years</p>
-                              <ul className="nav light-icon vol-social-icon">
-                                <li><a href="#"><i className="icofont-twitter" /></a></li>
-                                <li><a href="#"><i className="icofont-google-plus" /></a></li>
-                                <li><a href="#"><i className="icofont-facebook" /></a></li>
-                                <li><a href="#"><i className="icofont-share" /></a></li>
-                              </ul>
                             </div>
                           </div>
                         </div>
@@ -53,12 +47,6 @@ const Volunteers = () => {
                             <div className="mask-inner">
                               <h3 className="title">Mollie S.</h3>
                               <p className="pera-text">Helping over 4+ years</p>
-                              <ul className="nav light-icon vol-social-icon">
-                                <li><a href="#"><i className="icofont-twitter" /></a></li>
-                                <li><a href="#"><i className="icofont-google-plus" /></a></li>
-                                <li><a href="#"><i className="icofont-facebook" /></a></li>
-                                <li><a href="#"><i className="icofont-share" /></a></li>
-                              </ul>
                             </div>
                           </div>
                         </div>
@@ -79,12 +67,6 @@ const Volunteers = () => {
                             <div className="mask-inner">
                               <h3 className="title">Sajid K.</h3>
                               <p className="pera-text">Helping over 3+ years</p>
-                              <ul className="nav light-icon vol-social-icon">
-                                <li><a href="#"><i className="icofont-twitter" /></a></li>
-                                <li><a href="#"><i className="icofont-google-plus" /></a></li>
-                                <li><a href="#"><i className="icofont-facebook" /></a></li>
-                                <li><a href="#"><i className="icofont-share" /></a></li>
-                              </ul>
                             </div>
                           </div>
                         </div>
@@ -105,12 +87,6 @@ const Volunteers = () => {
                             <div className="mask-inner">
                               <h3 className="title">Maria D.</h3>
                               <p className="pera-text">Helping over 2+ years</p>
-                              <ul className="nav light-icon vol-social-icon">
-                                <li><a href="#"><i className="icofont-twitter" /></a></li>
-                                <li><a href="#"><i className="icofont-google-plus" /></a></li>
-                                <li><a href="#"><i className="icofont-facebook" /></a></li>
-                                <li><a href="#"><i className="icofont-share" /></a></li>
-                              </ul>
                             </div>
                           </div>
                         </div>

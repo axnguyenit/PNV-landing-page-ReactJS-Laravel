@@ -22,18 +22,6 @@ const Causes = () => {
                     <article className="content-box diffuse-shadow bg-light p-10px">
                       <div className="btn-relative-img text-center overlay overlay-5">
                         <img src="./assets/images/1.jpg" alt="" />
-                        <div className="lightbox-icons">
-                          <a href="./assets/images/1.jpg" className="causes-lightbox" title="Donate for victims">
-                            <i className="icofont-image" />
-                          </a>
-                          <button className="js-modal-btn" data-video-id="QIYcFth8ty4">
-                            <i className="icofont-video-alt" />
-                          </button>
-                          <a href="https://themeatelier.net/site-templates/prottasha/causes-detail.html">
-                            <i className="icofont-external-link" />
-                          </a>
-                        </div>
-                        <a href="https://themeatelier.net/site-templates/prottasha/donate.html" className="btn btn-default btn-small">Donate</a>
                       </div>
                       <div className="content-area mt-2 p-10px">
                         <h3><a href="https://themeatelier.net/site-templates/prottasha/donate.html">Donate for helpless</a></h3>
@@ -68,18 +56,6 @@ const Causes = () => {
                     <article className="content-box diffuse-shadow bg-light p-10px">
                       <div className="btn-relative-img text-center overlay overlay-5">
                         <img src="./assets/images/2.jpg" alt="" />
-                        <div className="lightbox-icons">
-                          <a href="./assets/images/2.jpg" className="causes-lightbox" title="Donate for victims">
-                            <i className="icofont-image" />
-                          </a>
-                          <button className="js-modal-btn" data-video-id="QIYcFth8ty4">
-                            <i className="icofont-video-alt" />
-                          </button>
-                          <a href="https://themeatelier.net/site-templates/prottasha/causes-detail.html">
-                            <i className="icofont-external-link" />
-                          </a>
-                        </div>
-                        <a href="https://themeatelier.net/site-templates/prottasha/donate.html" className="btn btn-default btn-small">Donate</a>
                       </div>
                       <div className="content-area mt-2 p-10px">
                         <h3><a href="https://themeatelier.net/site-templates/prottasha/donate.html">Donate for education</a></h3>
@@ -114,18 +90,6 @@ const Causes = () => {
                     <article className="content-box diffuse-shadow bg-light p-10px">
                       <div className="btn-relative-img text-center overlay overlay-5">
                         <img src="./assets/images/3.jpg" alt="" />
-                        <div className="lightbox-icons">
-                          <a href="./assets/images/3.jpg" className="causes-lightbox" title="Donate for victims">
-                            <i className="icofont-image" />
-                          </a>
-                          <button className="js-modal-btn" data-video-id="QIYcFth8ty4">
-                            <i className="icofont-video-alt" />
-                          </button>
-                          <a href="https://themeatelier.net/site-templates/prottasha/causes-detail.html">
-                            <i className="icofont-external-link" />
-                          </a>
-                        </div>
-                        <a href="https://themeatelier.net/site-templates/prottasha/donate.html" className="btn btn-default btn-small">Donate</a>
                       </div>
                       <div className="content-area mt-2 p-10px">
                         <h3><a href="https://themeatelier.net/site-templates/prottasha/donate.html">Donate for hope</a></h3>
@@ -160,18 +124,6 @@ const Causes = () => {
                     <article className="content-box diffuse-shadow bg-light p-10px">
                       <div className="btn-relative-img text-center overlay overlay-5">
                         <img src="./assets/images/4.jpg" alt="" />
-                        <div className="lightbox-icons">
-                          <a href="./assets/images/4.jpg" className="causes-lightbox" title="Donate for victims">
-                            <i className="icofont-image" />
-                          </a>
-                          <button className="js-modal-btn" data-video-id="QIYcFth8ty4">
-                            <i className="icofont-video-alt" />
-                          </button>
-                          <a href="https://themeatelier.net/site-templates/prottasha/causes-detail.html">
-                            <i className="icofont-external-link" />
-                          </a>
-                        </div>
-                        <a href="https://themeatelier.net/site-templates/prottasha/donate.html" className="btn btn-default btn-small">Donate</a>
                       </div>
                       <div className="content-area mt-2 p-10px">
                         <h3><a href="#">Donate for education</a></h3>

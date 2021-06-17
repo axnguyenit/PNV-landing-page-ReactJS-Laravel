@@ -1,4 +1,4 @@
-(globalThis["webpackChunk"] = globalThis["webpackChunk"] || []).push([["resources_js_components_gallery_index_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_gallery_index_jsx"],{
 
 /***/ "./resources/js/components/gallery/index.jsx":
 /*!***************************************************!*\
@@ -18,8 +18,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Gallery = function Gallery() {
+  var idTag = "gallery";
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
-    id: "gallery",
+    id: idTag,
     className: "p-80px-tb",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "container",
@@ -117,18 +118,6 @@ var Gallery = function Gallery() {
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                         className: "pera-text",
                         children: "Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom."
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-                        className: "nav light-icon gallery-icon",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                            href: "./assets/images/1(1).jpg",
-                            className: "gallery-lightbox",
-                            title: "Porject name",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                              className: "icofont-image"
-                            })
-                          })
-                        })
                       })]
                     })
                   })]
@@ -159,18 +148,6 @@ var Gallery = function Gallery() {
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                         className: "pera-text",
                         children: "Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom."
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-                        className: "nav light-icon gallery-icon",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                            href: "./assets/images/2(1).jpg",
-                            className: "gallery-lightbox",
-                            title: "Porject name",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                              className: "icofont-image"
-                            })
-                          })
-                        })
                       })]
                     })
                   })]
@@ -201,18 +178,6 @@ var Gallery = function Gallery() {
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                         className: "pera-text",
                         children: "Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom."
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-                        className: "nav light-icon gallery-icon",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                            href: "./assets/images/3(1).jpg",
-                            className: "gallery-lightbox",
-                            title: "Porject name",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                              className: "icofont-image"
-                            })
-                          })
-                        })
                       })]
                     })
                   })]
@@ -243,18 +208,6 @@ var Gallery = function Gallery() {
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                         className: "pera-text",
                         children: "Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom."
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-                        className: "nav light-icon gallery-icon",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                            href: "./assets/images/4(1).jpg",
-                            className: "gallery-lightbox",
-                            title: "Porject name",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                              className: "icofont-image"
-                            })
-                          })
-                        })
                       })]
                     })
                   })]
@@ -285,18 +238,6 @@ var Gallery = function Gallery() {
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                         className: "pera-text",
                         children: "Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom."
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-                        className: "nav light-icon gallery-icon",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                            href: "./assets/images/5.jpg",
-                            className: "gallery-lightbox",
-                            title: "Porject name",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                              className: "icofont-image"
-                            })
-                          })
-                        })
                       })]
                     })
                   })]
@@ -327,18 +268,6 @@ var Gallery = function Gallery() {
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                         className: "pera-text",
                         children: "Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom."
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-                        className: "nav light-icon gallery-icon",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                            href: "./assets/images/6.jpg",
-                            className: "gallery-lightbox",
-                            title: "Porject name",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                              className: "icofont-image"
-                            })
-                          })
-                        })
                       })]
                     })
                   })]
@@ -369,18 +298,6 @@ var Gallery = function Gallery() {
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                         className: "pera-text",
                         children: "Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom."
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-                        className: "nav light-icon gallery-icon",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                            href: "./assets/images/7.jpg",
-                            className: "gallery-lightbox",
-                            title: "Porject name",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                              className: "icofont-image"
-                            })
-                          })
-                        })
                       })]
                     })
                   })]
@@ -411,18 +328,6 @@ var Gallery = function Gallery() {
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                         className: "pera-text",
                         children: "Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom."
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-                        className: "nav light-icon gallery-icon",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                            href: "./assets/images/8.jpg",
-                            className: "gallery-lightbox",
-                            title: "Porject name",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                              className: "icofont-image"
-                            })
-                          })
-                        })
                       })]
                     })
                   })]
@@ -453,18 +358,6 @@ var Gallery = function Gallery() {
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                         className: "pera-text",
                         children: "Good draw knew bred ham busy his hour. Ask agreed answer rather joy nature admire wisdom."
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-                        className: "nav light-icon gallery-icon",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                            href: "./assets/images/9.jpg",
-                            className: "gallery-lightbox",
-                            title: "Porject name",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                              className: "icofont-image"
-                            })
-                          })
-                        })
                       })]
                     })
                   })]
