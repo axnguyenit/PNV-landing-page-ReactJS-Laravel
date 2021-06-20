@@ -127,7 +127,6 @@ const Milestones = () => {
           </div>
         </div>
       </section>
-
     )
 }
 
