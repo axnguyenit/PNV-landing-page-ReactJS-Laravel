@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './css/app.css';
 
@@ -16,14 +16,27 @@ const JoinVolenteers = React.lazy(() => import ('./components/joinVolenteers'));
 const Milestones = React.lazy(() => import ('./components/milestones'));
 const Contact = React.lazy(() => import ('./components/contact'));
 const Footer = React.lazy(() => import ('./components/footer'));
+const Form = React.lazy(() => import ('./components/milestones/Form'));
 
 const loading = (
   <div id="preloader-wrap">
       <div className="preloader"></div>
   </div>
 )
-
 function App() {
+ const [milestones, setMilestones] = useState([]);
+ const fetchAll = () =>{
+   if(localStorage.getItem('values')){
+     const data = JSON.parse(localStorage.getItem('values'));
+     setMilestones(data);
+     console.log(data);
+   }
+ }
+ useEffect(() =>{
+  fetchAll();
+  setInterval(fetchAll,1000);
+},[]);
+//  console.log(value);
   return (
   <>
     <React.Suspense fallback={loading}>
@@ -38,7 +51,8 @@ function App() {
       <Partners />
       <Volunteers />
       <JoinVolenteers />
-      <Milestones />
+      <Milestones {...milestones}/>
+      <Form />
       <Contact />
       <Footer />
     </React.Suspense>
