@@ -17,7 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var JoinVolenteers = function JoinVolenteers() {
+var JoinVolenteers = function JoinVolenteers(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
     id: "JoinVolenteers",
     className: "p-80px-tb",
@@ -28,12 +28,11 @@ var JoinVolenteers = function JoinVolenteers() {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "col-md-6 col-sm-12 sm-m-35px-b",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
-            children: "Join as Volenteer"
+            children: props.title
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
             className: "divider-dashed m-25px-b"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            className: "m-25px-b",
-            children: "Real sold my in call. Invitation on an advantages collecting. But event old above shy bed noisy. Had sister see wooded favour income has. Stuff rapid since do as hence. Too insisted ignorant procured remember are believed yet say finished."
+            children: props.desc
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
             className: "btn btn-default",
             href: "#",
@@ -42,7 +41,7 @@ var JoinVolenteers = function JoinVolenteers() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "col-md-6 col-sm-12",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-            src: "./assets/images/vollentiers.jpg",
+            src: props.image,
             alt: ""
           })
         })]
