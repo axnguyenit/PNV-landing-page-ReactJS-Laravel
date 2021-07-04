@@ -24,7 +24,6 @@ const Milestones = (props) => {
                   <CardMilestones {...card} />
                 ))
               }
-
               {/* End Single blog */}
             </div>
             <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
