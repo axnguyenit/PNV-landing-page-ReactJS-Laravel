@@ -19,5 +19,6 @@ const CardMilestones = (props) => {
             </div>
         </div>
     );
+    
 }
 export default CardMilestones;

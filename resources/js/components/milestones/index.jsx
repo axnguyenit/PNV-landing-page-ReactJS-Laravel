@@ -1,5 +1,5 @@
 import React from 'react';
-import CardMilestones from './card';
+import CardMilestones from './CardMilestones';
 const Milestones = (props) => {
   // const card = props.card;
   return (
@@ -24,7 +24,6 @@ const Milestones = (props) => {
                   <CardMilestones {...card} />
                 ))
               }
-              {/* End Single blog */}
             </div>
             <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
               <span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 1" />
