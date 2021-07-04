@@ -39,8 +39,13 @@ const Donate = () => {
                         I want to donate this amount every month
                       </label>
                     </div>
+                    <form action="https://www.sandbox.paypal.com/donate" method="post" target="_top">
+                      <input type="hidden" name="hosted_button_id" value="XWG8TJUVLMB8A" />
+                      <input hidden type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                      <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                      <input type="submit" className="btn btn-default" value="Donate now" />
+                    </form>
                   </div>
-                  <a className="btn btn-default" href="#">Donate now</a>
                 </form>
               </div>
             </div>
