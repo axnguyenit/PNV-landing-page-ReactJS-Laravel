@@ -19,6 +19,7 @@ const CardVolunteers =(props) =>{
                 </div>
             </div>
         </div>
+        
     )
 }
 export default CardVolunteers;

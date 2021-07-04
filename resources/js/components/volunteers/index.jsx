@@ -31,6 +31,7 @@ const Volunteers = (props) => {
         </div>
       </section>
     )
+    
 }
 
 export default Volunteers;
