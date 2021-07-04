@@ -6,7 +6,7 @@ const CardMilestones = (props) => {
                 <div className="single-blog">
                     <img src={props.img} alt="" />
                     <div className="post-content">
-                        <p>{props.desc}</p>
+                        <p>{props.description}</p>
                     </div>
                 </div>
                 <div className="post-header">
