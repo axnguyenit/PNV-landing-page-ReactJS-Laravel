@@ -11,7 +11,7 @@ const Milestones = (props) => {
               {/* <h2>Important Milestones</h2> */}
               <h2>{props.title}</h2>
               <div className="divider-circle mx-auto" />
-              <p>{props.desc}</p>
+              <p>{props.description}</p>
               {/* <p>With my them if up many. Lain week nay she them her she. Extremity so attending objection as engrossed gentleman something.</p> */}
             </div>
           </div>
