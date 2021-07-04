@@ -44,7 +44,7 @@ var Partners = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.lazy(function () 
   return __webpack_require__.e(/*! import() */ "resources_js_components_partners_index_jsx").then(__webpack_require__.bind(__webpack_require__, /*! ./components/partners */ "./resources/js/components/partners/index.jsx"));
 });
 var Testimonials = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.lazy(function () {
-  return Promise.resolve().then(function webpackMissingModule() { var e = new Error("Cannot find module 'components/testimonials'"); e.code = 'MODULE_NOT_FOUND'; throw e; });
+  return __webpack_require__.e(/*! import() */ "resources_js_components_testimonials_index_jsx").then(__webpack_require__.bind(__webpack_require__, /*! ./components/testimonials */ "./resources/js/components/testimonials/index.jsx"));
 });
 var Volunteers = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.lazy(function () {
   return __webpack_require__.e(/*! import() */ "resources_js_components_volunteers_index_jsx").then(__webpack_require__.bind(__webpack_require__, /*! ./components/volunteers */ "./resources/js/components/volunteers/index.jsx"));
@@ -60,7 +60,7 @@ var Contact = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.lazy(function () {
 });
 var Footer = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.lazy(function () {
   return __webpack_require__.e(/*! import() */ "resources_js_components_footer_index_jsx").then(__webpack_require__.bind(__webpack_require__, /*! ./components/footer */ "./resources/js/components/footer/index.jsx"));
-}); // const Form = React.lazy(() => import("./components/milestones/Form"));
+});
 
 var loading = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
   id: "preloader-wrap",
@@ -70,39 +70,17 @@ var loading = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx
 });
 
 function App() {
-  // const [milestones, setMilestones] = useState([]);
-  // const fetchAll = () => {
-  //     if (localStorage.getItem("values")) {
-  //         const data = JSON.parse(localStorage.getItem("values"));
-  //         setMilestones(data);
-  //         console.log(data);
-  //     }
-  // };
-  // const [testimonials, setTestimonials] = useState([]);
-  // const fetchTestimonials = () => {
-  //     if (localStorage.getItem("testimonials")) {
-  //         const data = JSON.parse(localStorage.getItem("testimonials"));
-  //         setTestimonials(data);
-  //         console.log(data);
-  //     }
-  // };
-  // useEffect(() => {
-  //     fetchAll();
-  //     fetchTestimonials();
-  //     setInterval(fetchAll, 1000);
-  // }, []);
-  //  console.log(value);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Suspense, {
       fallback: loading,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Header, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(About, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Causes, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(HelpProcess, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Donate, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Gallery, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Testimonials, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(FormTes, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Partners, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Volunteers, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(JoinVolenteers, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Milestones, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Form, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Contact, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Footer, {})]
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Header, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(About, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Causes, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(HelpProcess, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Donate, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Gallery, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Testimonials, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Partners, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Volunteers, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(JoinVolenteers, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Milestones, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Contact, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Footer, {})]
     })
   });
 } // export default App;
 
 
-if (document.getElementById("app")) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(App, {}), document.getElementById("app"));
+if (document.getElementById('app')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(App, {}), document.getElementById('app'));
 }
 
 /***/ }),
@@ -32038,7 +32016,7 @@ module.exports = function (list, options) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_header_index_jsx":1,"resources_js_components_banner_index_jsx":1,"resources_js_components_about_index_jsx":1,"resources_js_components_causes_index_jsx":1,"resources_js_components_helpProcess_index_jsx":1,"resources_js_components_donate_index_jsx":1,"resources_js_components_gallery_index_jsx":1,"resources_js_components_partners_index_jsx":1,"resources_js_components_volunteers_index_jsx":1,"resources_js_components_joinVolenteers_index_jsx":1,"resources_js_components_milestones_index_jsx":1,"resources_js_components_contact_index_jsx":1,"resources_js_components_footer_index_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_header_index_jsx":1,"resources_js_components_banner_index_jsx":1,"resources_js_components_about_index_jsx":1,"resources_js_components_causes_index_jsx":1,"resources_js_components_helpProcess_index_jsx":1,"resources_js_components_donate_index_jsx":1,"resources_js_components_gallery_index_jsx":1,"resources_js_components_partners_index_jsx":1,"resources_js_components_testimonials_index_jsx":1,"resources_js_components_volunteers_index_jsx":1,"resources_js_components_joinVolenteers_index_jsx":1,"resources_js_components_milestones_index_jsx":1,"resources_js_components_contact_index_jsx":1,"resources_js_components_footer_index_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
@@ -32215,7 +32193,7 @@ var __webpack_exports__ = {};
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-__webpack_require__(/*! ./index */ "./resources/js/index.js"); // import React from 'react';
+__webpack_require__(/*! ./index */ "./resources/js/index.js");
 })();
 
 /******/ })()
