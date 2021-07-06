@@ -23,7 +23,12 @@ const Volunteers = (props) => {
                   ))
                 }
               </div>
-              {/* Add Pagination */}
+              {
+                  props.card.map((card) => (
+                    <CardVolunteers {...card}/>
+                  ))
+                }
+             
               <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span className="swiper-pagination-bullet swiper-pagination-bullet-active" tabIndex={0} role="button" aria-label="Go to slide 1" /><span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 2" />
                 <span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 3" /><span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 4" /></div>
               <span className="swiper-notification" aria-live="assertive" aria-atomic="true" /></div>
