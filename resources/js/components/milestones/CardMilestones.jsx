@@ -9,6 +9,7 @@ const CardMilestones = (props) => {
                         <p>{props.description}</p>
                     </div>
                 </div>
+                
                 <div className="post-header">
                     <a className="date" href>
                         <span className="day">{props.year}</span>

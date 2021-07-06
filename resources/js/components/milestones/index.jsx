@@ -3,6 +3,7 @@ import CardMilestones from './CardMilestones';
 const Milestones = (props) => {
   // const card = props.card;
   return (
+
     <section id="blog" className="p-80px-tb bg-light">
       <div className="container">
         <div className="row">
