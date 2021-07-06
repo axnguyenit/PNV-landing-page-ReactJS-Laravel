@@ -1,5 +1,6 @@
-import React from 'react';
 
+import React from 'react';
+import form from './form';
 const Causes = () => {
     return (
         <section id="causes" className="p-80px-tb bg-white">
@@ -7,150 +8,46 @@ const Causes = () => {
           <div className="row">
             <div className="col-sm-8 offset-sm-2">
               <div className="section-title text-center m-60px-b">
-                <h2>Our recent causes</h2>
+                <h2>{form.title}</h2>
                 <div className="divider-circle mx-auto" />
-                <p>Lose away off why half led have near bed. At engage simple father of period others except. My giving do summer of though narrow marked at.</p>
+                <p>{form.slogan}</p>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="swiper-container causes-swiper p-60px-b swiper-container-horizontal swiper-container-free-mode">
               <div className="swiper-wrapper" style={{transform: 'translate3d(0px, 0px, 0px)'}}>
-                {/* Single causes item start */}
-                <div className="swiper-slide swiper-slide-active" style={{width: '360px'}}>
-                  <div className="col">
-                    <article className="content-box diffuse-shadow bg-light p-10px">
-                      <div className="btn-relative-img text-center overlay overlay-5">
-                        <img src="./assets/images/1.jpg" alt="" />
-                      </div>
-                      <div className="content-area mt-2 p-10px">
-                        <h3><a href="https://themeatelier.net/site-templates/prottasha/donate.html">Donate for helpless</a></h3>
-                        <p>Much evil soon high in hope do view. Out may few northward.</p>
-                      </div>
-                      <div className="progress-bars m-35px-b m-10px-t p-10px-l p-10px-r">
-                        <div className="progress">
-                          <div className="progress-bar" data-value={30} style={{width: '30%'}}><span>30%</span></div>
-                        </div>
-                      </div>
-                      <footer className="content-footer p-10px-l p-10px-r">
-                        <p className="content-raised">
-                          Raised:<br /><b>$1,299</b>
-                        </p>
-                        <p className="content-goal">
-                          Goal:<br /><b>$12,000</b>
-                        </p>
-                        <p className="content-raised">
-                          Donors:<br /><b>14 Donors</b>
-                        </p>
-                        <p className="content-goal">
-                          Time left:<br /><b>222 days</b>
-                        </p>
-                      </footer>
-                    </article>
-                  </div>
-                </div>
-                {/* Single causes item end */}
-                {/* Single causes item start */}
-                <div className="swiper-slide swiper-slide-next" style={{width: '360px'}}>
-                  <div className="col">
-                    <article className="content-box diffuse-shadow bg-light p-10px">
-                      <div className="btn-relative-img text-center overlay overlay-5">
-                        <img src="./assets/images/2.jpg" alt="" />
-                      </div>
-                      <div className="content-area mt-2 p-10px">
-                        <h3><a href="https://themeatelier.net/site-templates/prottasha/donate.html">Donate for education</a></h3>
-                        <p>Much evil soon high in hope do view. Out may few northward.</p>
-                      </div>
-                      <div className="progress-bars m-35px-b m-10px-t p-10px-l p-10px-r">
-                        <div className="progress">
-                          <div className="progress-bar" data-value={30} style={{width: '30%'}}><span>30%</span></div>
-                        </div>
-                      </div>
-                      <footer className="content-footer p-10px-l p-10px-r">
-                        <p className="content-raised">
-                          Raised:<br /><b>$1,299</b>
-                        </p>
-                        <p className="content-goal">
-                          Goal:<br /><b>$12,000</b>
-                        </p>
-                        <p className="content-raised">
-                          Donors:<br /><b>14 Donors</b>
-                        </p>
-                        <p className="content-goal">
-                          Time left:<br /><b>222 days</b>
-                        </p>
-                      </footer>
-                    </article>
-                  </div>
-                </div>
-                {/* Single causes item end */}
-                {/* Single causes item start */}
-                <div className="swiper-slide" style={{width: '360px'}}>
-                  <div className="col">
-                    <article className="content-box diffuse-shadow bg-light p-10px">
-                      <div className="btn-relative-img text-center overlay overlay-5">
-                        <img src="./assets/images/3.jpg" alt="" />
-                      </div>
-                      <div className="content-area mt-2 p-10px">
-                        <h3><a href="https://themeatelier.net/site-templates/prottasha/donate.html">Donate for hope</a></h3>
-                        <p>Much evil soon high in hope do view. Out may few northward.</p>
-                      </div>
-                      <div className="progress-bars m-35px-b m-10px-t p-10px-l p-10px-r">
-                        <div className="progress">
-                          <div className="progress-bar" data-value={90} style={{width: '90%'}}><span>90%</span></div>
-                        </div>
-                      </div>
-                      <footer className="content-footer p-10px-l p-10px-r">
-                        <p className="content-raised">
-                          Raised:<br /><b>$1,299</b>
-                        </p>
-                        <p className="content-goal">
-                          Goal:<br /><b>$12,000</b>
-                        </p>
-                        <p className="content-raised">
-                          Donors:<br /><b>14 Donors</b>
-                        </p>
-                        <p className="content-goal">
-                          Time left:<br /><b>222 days</b>
-                        </p>
-                      </footer>
-                    </article>
-                  </div>
-                </div>
-                {/* Single causes item end */}
-                {/* Single causes item start */}
-                <div className="swiper-slide" style={{width: '360px'}}>
-                  <div className="col">
-                    <article className="content-box diffuse-shadow bg-light p-10px">
-                      <div className="btn-relative-img text-center overlay overlay-5">
-                        <img src="./assets/images/4.jpg" alt="" />
-                      </div>
-                      <div className="content-area mt-2 p-10px">
-                        <h3><a href="#">Donate for education</a></h3>
-                        <p>Much evil soon high in hope do view. Out may few northward.</p>
-                      </div>
-                      <div className="progress-bars m-35px-b m-10px-t p-10px-l p-10px-r">
-                        <div className="progress">
-                          <div className="progress-bar" data-value={45} style={{width: '45%'}}><span>45%</span></div>
-                        </div>
-                      </div>
-                      <footer className="content-footer p-10px-l p-10px-r">
-                        <p className="content-raised">
-                          Raised:<br /><b>$1,299</b>
-                        </p>
-                        <p className="content-goal">
-                          Goal:<br /><b>$12,000</b>
-                        </p>
-                        <p className="content-raised">
-                          Donors:<br /><b>14 Donors</b>
-                        </p>
-                        <p className="content-goal">
-                          Time left:<br /><b>222 days</b>
-                        </p>
-                      </footer>
-                    </article>
-                  </div>
-                </div>
+              {form.card.map(cause => {                  
+        return <div className="col">
+           <article className="content-box diffuse-shadow bg-light p-10px">
+            <div className="btn-relative-img text-center overlay overlay-5">
+              
+           <img src={cause.img} alt="" />
+            </div>
+            <div className="content-area mt-2 p-10px">
+              <h3><a href="https://themeatelier.net/site-templates/prottasha/donate.html">{cause.title}</a></h3>
+          <p>{cause.desc}</p>
+        </div>
+            <footer className="content-footer p-10px-l p-10px-r">
+              <p className="content-raised">
+                      {cause.footer.key1}:<br /><b>{cause.footer.value1}</b>
+              </p>
+              <p className="content-goal">
+                {cause.footer.key2}:<br /><b> {cause.footer.value2} </b>
+              </p>
+              <p className="content-raised">
+                {cause.footer.key3}:<br /><b> {cause.footer.value3} </b>
+              </p>
+              <p className="content-goal">
+                {cause.footer.key4}:<br /><b> {cause.footer.value4}</b>
+              </p>
+            </footer>
+          </article>
+        </div>
+      }
+      )}
+              </div>
+              </div>
                 {/* Single causes item end */}
               </div>
               {/* Slider Pagination */}
@@ -158,8 +55,8 @@ const Causes = () => {
                 <span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 3" />
               </div>
               <span className="swiper-notification" aria-live="assertive" aria-atomic="true" /></div>
-          </div>
-        </div>
+          
+       
       </section>
     )
 }
