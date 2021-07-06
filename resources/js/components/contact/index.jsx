@@ -1,7 +1,9 @@
-import React from 'react';
 
-const Contact = () => {
-    return (
+require('./index');
+// import React from 'react';
+const Contact = (props) => {
+
+  return (
         <section id="contact" className="p-80px-tb bg-white">
         <div className="container">
           <div className="row">
@@ -9,8 +11,8 @@ const Contact = () => {
               <div className="section-title text-center m-60px-b">
                 <h2>Contact Form</h2>
                 <div className="divider-circle mx-auto" />
-                <p>Folly was these three and songs arose whose. Of in vicinity contempt together in possible branched. Assured company hastily looking garrets in oh.</p>
-              </div>
+                <p>{props.slogan}</p>
+              </div>  
             </div>
           </div>
           <div className="row">
@@ -43,14 +45,14 @@ const Contact = () => {
               <div className="address-wrap bg-light p-30px">
                 <ul>
                   {/* SELECT FROM DATABASE */}
-                  <li><span>Address:</span>99 To Hien Thanh <br /> Da Nang, Vietnam</li>
+                  <li><span>Address:</span>{props.address}  </li>
                   <li><span>Phone:</span><a href="#">+84 236 3888 503</a></li>
                   <li><span>Email:</span><a href="#"> info.vietnam@passerellesnumeriques.org</a></li>
                 </ul>
                 <h4>Connect our socials</h4>
                 <ul className="nav light-icon social-icons">
-                  <li><a href="#"><i className="icofont-facebook" /></a></li>
-                  <li><a href="#"><i className="icofont-youtube" /></a></li>
+                  <li><a href="https://www.facebook.com/PNVtuyensinh"><i className="icofont-facebook" /></a></li>
+                  <li><a href="https://www.youtube.com/user/PasserellesNumerique"><i className="icofont-youtube" /></a></li>
                   <li><a href="#"><i className="icofont-skype" /></a></li>
                   <li><a href="#"><i className="icofont-linkedin" /></a></li>
                   <li><a href="#"><i className="icofont-instagram" /></a></li>
