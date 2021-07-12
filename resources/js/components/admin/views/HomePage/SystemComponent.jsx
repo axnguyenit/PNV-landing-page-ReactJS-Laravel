@@ -4,7 +4,7 @@ const systemComponent = {
         type: "object",
         properties: {
             title: { type: "string", title: "Title", },
-            tasks: {
+            details: {
                 type: "array",
                 title: "Description List",
                 items: {
@@ -17,7 +17,7 @@ const systemComponent = {
                     }
                 }
             },
-            file: { type: "string", format: "data-url", title: "Single file" },
+            file: { type: "string", title: "Single file" },
         }
     },
     "Causes": {

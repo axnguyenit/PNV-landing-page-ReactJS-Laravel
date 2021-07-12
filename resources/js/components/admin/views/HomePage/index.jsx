@@ -14,6 +14,8 @@ import GridContainer from "../../components/Grid/GridContainer.js";
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
 import CardHeader from "../../components/Card/CardHeader.js";
+import axios from "axios";
+
 import CardBody from "../../components/Card/CardBody.js";
 import CustomTabs from "../../components/CustomTabs/CustomTabs.js";
 // import HomePage from "../../components/HomePage/HomePage";
@@ -58,62 +60,25 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
-const finalSpaceCharacters = [
-  {
-    id: 'gary',
-    name: 'Gary Goodspeed',
-    // thumb: gary.default,
-    type: 'sample',
-    componentName: ''
-  },
-  {
-    id: 'cato',
-    name: 'Little Cato',
-    // thumb: cato.default,
-    type: 'sample',
-    componentName: ''
-  },
-  {
-    id: 'kvn',
-    name: 'KVN',
-    // thumb: kvn.default,
-    type: 'sample',
-    componentName: ''
-  },
-  {
-    id: 'mooncake',
-    name: 'Mooncake',
-    // thumb: mooncake.default,
-    type: 'sample',
-    componentName: ''
-  },
-  {
-    id: 'quinn',
-    name: 'Quinn Ergon',
-    // thumb: quinn.default,
-    type: 'sample',
-    componentName: ''
-  },
-];
 
-const renderComponent = (name) => {
+const renderComponent = (name, props) => {
   switch(name) {
     case 'About':
-      return <About/>
+      return <About {...props}/>
     case 'Causes':
-      return <Causes />
+      return <Causes {...props}/>
     case 'Partners':
-      return <Partners />
+      return <Partners {...props}/>
     case 'Volunteers':
-      return <Volunteers />
+      return <Volunteers {...props}/>
     case 'JoinAsVolunteer':
-      return <JoinAsVolunteer />
+      return <JoinAsVolunteer {...props}/>
     case 'Milestones':
-      return <Milestones />
+      return <Milestones {...props}/>
     case 'Testimonials':
-      return <Testimonials />
+      return <Testimonials {...props}/>
     case 'Video':
-      return <VideoSection />
+      return <VideoSection {...props}/>
     return ''
   }
 }
@@ -124,18 +89,18 @@ export default function HomePage() {
   const [age, setAge] = React.useState('');
   const [componentName, setComponentName] = useState(null);
   const [selectedComponent, updateSelectedComponent] = useState({});
-  const [characters, updateCharacters] = useState(finalSpaceCharacters);
   const [listSelectedComponent, updateListSelectedComponent] = useState([]);
+  const [currentFormData, updateCurrentFormData] = useState({});
+  const [updateIndex, setUpdateIndex] = useState(null);
+  
 
-  const handleOnChange = (e) => {
-    const value = e.target.value;
-    setAge(value);
-    // console.log(value);
-    console.log(systemComponent[value]);
+  const handleOnChange = (value, existingData = {}, currentIndex = null) => {
     setComponentName(value);
     updateSelectedComponent(systemComponent[value]);
-    listSelectedComponent.push(systemComponent[value]);
-    updateListSelectedComponent([...listSelectedComponent]);
+    console.log(existingData);
+    updateCurrentFormData(existingData);
+    setUpdateIndex(currentIndex);
+
     if(value) {
       setIsSelectComponent(true);
     }
@@ -147,68 +112,71 @@ export default function HomePage() {
   function handleOnDragEnd(result) {
     if (!result.destination) return;
 
-    const items = Array.from(characters);
+    const items = [...listSelectedComponent]
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
 
-    updateCharacters(items);
-
+    updateListSelectedComponent(items);
   }
 
-  const onChangeSelectComponent = (e) => {
-    // let newCharactor = {
-    //   id: 'quinn'+Date.now(),
-    //   name: 'Quinn Ergon',
-    //   // thumb: quinn.default,
-    //   type: 'component',
-    //   componentName: e.target.value
-    // }
+  const onSubmitForm = async (data) => {
+    console.log(data);
+    if (updateIndex === null) {
+      listSelectedComponent.push({
+        name: componentName,
+        componentParams: data.formData
+      });
+    } else {
+      let existing = listSelectedComponent[updateIndex];
+      existing.name = componentName;
+      existing.componentParams = data.formData;
+    }
 
-    // characters.push(newCharactor);
-    // updateCharacters([...characters]);
+    updateListSelectedComponent([...listSelectedComponent]);
+    setTimeout(()=>{
+      updateCurrentFormData(data.formData);
+    },200)
+  }
 
-  };
+  const onSaveLandingPage = async () => {
+    try {
+        let result  = await axios({
+            method: 'put',
+            url: '/api/landing-page',
+            data: {
+              url: 'home-page',
+              description: 'home-page',
+              title: 'home-page',
+              meta: 'home-page',
+              components: listSelectedComponent
+            }
+        });
+    } catch( $e ) {
+
+    }
+  }
 
   return (
     <div>
-      {/* Add Component Start */}
       <GridContainer>
-        {/* Component Sample Start */}
-        {
-          !isSelectComponent ? "" :
-          <GridItem xs={12} sm={12} md={12}>
-            <Card>
-              <CardHeader color="info">
-                <h4 className={classes.cardTitleWhite}>Component Sample</h4>
-              </CardHeader>
-              <CardBody>
-                <GridContainer>
-                  <GridItem xs={12} sm={12} md={12}>
-                    { renderComponent(componentName) }
-                  </GridItem>
-                </GridContainer>
-              </CardBody>
-            </Card>
-          </GridItem>
-        }
-        {/* Component Sample End */}
+        
 
         {/* Select Component Start */}
         <GridItem xs={12} sm={12} md={12}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Add Component</h4>
+              <h4 className={classes.cardTitleWhite}>Select Component</h4>
             </CardHeader>
             <CardBody>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={12}>
                   <FormControl className={classes.formControl}>
-                    <InputLabel id="demo-controlled-open-select-label">Select Component</InputLabel>
+                    <InputLabel id="demo-controlled-open-select-label">Select Component Type</InputLabel>
                     <Select
                       labelId="demo-controlled-open-select-label"
                       id="demo-controlled-open-select"
                       // value={age}
-                      onChange={handleOnChange}
+                      onChange={(e) => handleOnChange(e.target.value)}
                     >
                       <MenuItem value="">
                         <em>None</em>
@@ -218,62 +186,59 @@ export default function HomePage() {
                       )}
                     </Select>
                   </FormControl>
-                  {/* {
-                    selectedComponent && 
-                    <Form
-                      schema={selectedComponent}
-                      uiSchema={uiSchema}
-                      onChange={e => {console.log("changed"); console.log(e.formData)} }
-                      onSubmit={e=>console.log("submitted")}
-                      onError={e=> console.log("errors")}
-                    />
-                  } */}
+                  
                   {!isSelectComponent ? "" :
-                  <CustomTabs
-                    title="Language:"
-                    headerColor="success"
-                    tabs={[
-                      {
-                        tabName: "Vietnamese",
-                        tabContent: (
-                          <Form
-                            schema={selectedComponent}
-                            uiSchema={uiSchema}
-                            // console.log(e.formData)}
-                            onChange={e => console.log("changed")}
-                            onSubmit={e=>console.log("submitted")}
-                            onError={e=> console.log("errors")}
-                          />
-                        ),
-                      },
-                      {
-                        tabName: "English",
-                        tabContent: (
-                          <Form
-                            schema={selectedComponent}
-                            uiSchema={uiSchema}
-                            onChange={e => {console.log("changed")} }
-                            onSubmit={e=>console.log("submitted")}
-                            onError={e=> console.log("errors")}
-                          />
-                        ),
-                      },
-                      {
-                        tabName: "Français",
-                        tabContent: (
-                          <Form
-                            schema={selectedComponent}
-                            uiSchema={uiSchema}
-                            onChange={e => {console.log("changed")}}
-                            onSubmit={e=> console.log("submitted")}
-                            onError={e=> console.log("errors")}
-                          />
-                        ),
-                      },
-                    ]}
-                  />
-                }
+                    <CustomTabs
+                      title="Language:"
+                      headerColor="success"
+                      tabs={[
+                        {
+                          tabName: "Vietnamese",
+                          tabContent: (
+                            <Form
+                              schema={selectedComponent}
+                              uiSchema={uiSchema}
+                              formData={currentFormData}
+                              onChange={e => console.log("changed")}
+                              onSubmit={onSubmitForm}
+                              onError={e=> console.log("errors")}
+                            />
+                          ),
+                        },
+                        {
+                          tabName: "English",
+                          tabContent: (
+                            <Form
+                              schema={selectedComponent}
+                              uiSchema={uiSchema}
+                              formData={currentFormData}
+                              onChange={e => {console.log("changed")} }
+                              onSubmit={onSubmitForm}
+                              onError={e=> console.log("errors")}
+                            />
+                          ),
+                        },
+                        {
+                          tabName: "Français",
+                          tabContent: (
+                            <Form
+                              schema={selectedComponent}
+                              uiSchema={uiSchema}
+                              formData={currentFormData}
+                              onChange={e => {console.log("changed")}}
+                              onSubmit={onSubmitForm}
+                              onError={e=> console.log("errors")}
+                            />
+                          ),
+                        },
+                      ]}
+                    />
+                  }
+                  <div> Preview Component</div>
+                  { isSelectComponent && renderComponent(componentName) }
                 </GridItem>
+            
+
               </GridContainer>
             </CardBody>
           </Card>
@@ -288,27 +253,20 @@ export default function HomePage() {
         <GridItem xs={12} sm={12} md={12}>
           <Card>
             <CardHeader color="success">
-              <h4 className={classes.cardTitleWhite}>Home Page Component Container</h4>
+              <h4 className={classes.cardTitleWhite}>Landing preview</h4>
             </CardHeader>
             <CardBody>
               {/* <HomePage></HomePage> */}
               <DragDropContext onDragEnd={handleOnDragEnd}>
-                <Droppable droppableId="characters">
+                <Droppable droppableId="landing-page-preview">
                   {(provided) => (
-                      <ul className="characters" {...provided.droppableProps} ref={provided.innerRef}>
-                        {characters.map(({id, name, thumb, type, componentName}, index) => {
-                        // console.log(provided.placeholder);
+                      <ul className="landing-page-preview" {...provided.droppableProps} ref={provided.innerRef}>
+                        {listSelectedComponent.map((item, index) => {
                           return (
-                            <Draggable key={id} draggableId={id} index={index}>
+                            <Draggable key={`${item.name}_${index}`} draggableId={`${item.name}_${index}`} index={index}>
                               {(provided) => (
-                                <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                                  {type ==="sample" && <>
-                                    {/* <div className="characters-thumb">
-                                      <img src={thumb} alt={`${name} Thumb`} />
-                                    </div> */}
-                                    <p> { name } </p> </>
-                                  }
-                                  {type ==="component" && renderComponent(componentName)}
+                                <li onClick={()=>{handleOnChange(item.name, item.componentParams, index)}} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                                  {renderComponent(item.name, item.componentParams)}
                                 </li>
                               )}
                             </Draggable>
@@ -321,7 +279,7 @@ export default function HomePage() {
               </DragDropContext>
             </CardBody>
             <CardFooter>
-              <Button color="primary">Save</Button>
+              <Button color="primary" onClick={onSaveLandingPage}>Save</Button>
             </CardFooter>
           </Card>
         </GridItem>
