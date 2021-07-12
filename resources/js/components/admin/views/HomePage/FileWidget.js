@@ -14,7 +14,7 @@ const selectFile = async (file, currentFileName = '') => {
             headers: { "Content-Type": "multipart/form-data" }
         });
         console.log(result.data);
-        return result.data;
+        return `${window.location.origin}/${result.data}`;
     } catch( $e ) {
 
     }
@@ -31,7 +31,7 @@ const FileWidget = (props) => {
     }
 
     const preview = (path) => {
-       previewEl.current.style.backgroundImage = `url(${window.location.origin}/${path})`;
+       previewEl.current.style.backgroundImage = `url(${path})`;
        previewEl.current.style.width="100px";
        previewEl.current.style.height="100px";
     }
@@ -43,7 +43,7 @@ const FileWidget = (props) => {
     }
 
     const style = props.value ? {
-        backgroundImage: `url(${window.location.origin}/${props.value})`,
+        backgroundImage: `url(${props.value})`,
         width: '100px',
         height: '100px'
     } : {}

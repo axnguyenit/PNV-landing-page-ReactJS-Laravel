@@ -51,7 +51,7 @@ const systemComponent = {
                     properties: {
                         title: { type: "string", title: "Causes title", },
                         desc: { type: "string", title: "Description", },
-                        file: { type: "string", format: "data-url", title: "Single file" },
+                        file: { type: "string",  title: "Single file" },
                         title1: { type: "string", title: "Title 1", },
                         content1: { type: "string", title: "Content 1", },
                         title2: { type: "string", title: "Title 2", },
@@ -86,7 +86,7 @@ const systemComponent = {
                     ],
                     properties: {
                         url: { type: "string", title: "Link Page", },
-                        file: { type: "string", format: "data-url", title: "Single file" },
+                        file: { type: "string",  title: "Single file" },
                     }
                 }
             }
@@ -115,7 +115,7 @@ const systemComponent = {
                     properties: {
                         name: { type: "string", title: "Name", },
                         year: { type: "string", title: "Year", },
-                        file: { type: "string", format: "data-url", title: "Single file" },
+                        file: { type: "string",  title: "Single file" },
                     }
                 }
             }
@@ -131,7 +131,7 @@ const systemComponent = {
         properties: {
             title: { type: "string", title: "Title" },
             desc: { type: "string", title: "Description" },
-            file: { type: "string", format: "data-url", title: "Single file" },
+            file: { type: "string",  title: "Single file" },
         }
     },
     "Milestones": {
@@ -158,7 +158,7 @@ const systemComponent = {
                     "properties": {
                         title: { type: "string",  title: "Title" },
                         desc: { type: "string", title: "Description" },
-                        file: { type: "string", title: "Image", format: "data-url", description: "Image" },
+                        file: { type: "string", title: "Image",  description: "Image" },
                         date: { type: "string", title: "Date", format: "date" }
                     }
                 }
@@ -189,7 +189,7 @@ const systemComponent = {
                     "properties": {
                         name: { type: "string",  title: "Name" },
                         desc: { type: "string", title: "Description" },
-                        file: { type: "string", title: "Image", format: "data-url", description: "Image" },
+                        file: { type: "string", title: "Image",  description: "Image" },
                     }
                 }
             }
@@ -206,7 +206,7 @@ const systemComponent = {
             title: { type: "string", title: "Title" },
             desc: { type: "string", title: "Description" },
             videoUrl: { type: "string", title: "Video URL" },
-            file: { type: "string", format: "data-url", title: "Background" },
+            file: { type: "string",  title: "Background" },
         }
     },
 }

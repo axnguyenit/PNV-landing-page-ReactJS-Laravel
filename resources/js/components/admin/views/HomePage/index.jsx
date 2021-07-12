@@ -92,6 +92,8 @@ export default function HomePage() {
   const [listSelectedComponent, updateListSelectedComponent] = useState([]);
   const [currentFormData, updateCurrentFormData] = useState({});
   const [updateIndex, setUpdateIndex] = useState(null);
+
+
   
 
   const handleOnChange = (value, existingData = {}, currentIndex = null) => {
@@ -119,8 +121,12 @@ export default function HomePage() {
     updateListSelectedComponent(items);
   }
 
+  const onChangeFormdata = async (data) => {    
+    updateCurrentFormData(data.formData);
+  }
+
+
   const onSubmitForm = async (data) => {
-    console.log(data);
     if (updateIndex === null) {
       listSelectedComponent.push({
         name: componentName,
@@ -133,9 +139,7 @@ export default function HomePage() {
     }
 
     updateListSelectedComponent([...listSelectedComponent]);
-    setTimeout(()=>{
-      updateCurrentFormData(data.formData);
-    },200)
+    updateCurrentFormData(data.formData);
   }
 
   const onSaveLandingPage = async () => {
@@ -200,7 +204,7 @@ export default function HomePage() {
                               schema={selectedComponent}
                               uiSchema={uiSchema}
                               formData={currentFormData}
-                              onChange={e => console.log("changed")}
+                              onChange={onChangeFormdata}
                               onSubmit={onSubmitForm}
                               onError={e=> console.log("errors")}
                             />
@@ -213,7 +217,7 @@ export default function HomePage() {
                               schema={selectedComponent}
                               uiSchema={uiSchema}
                               formData={currentFormData}
-                              onChange={e => {console.log("changed")} }
+                              onChange={onChangeFormdata}
                               onSubmit={onSubmitForm}
                               onError={e=> console.log("errors")}
                             />
@@ -226,7 +230,7 @@ export default function HomePage() {
                               schema={selectedComponent}
                               uiSchema={uiSchema}
                               formData={currentFormData}
-                              onChange={e => {console.log("changed")}}
+                              onChange={onChangeFormdata}
                               onSubmit={onSubmitForm}
                               onError={e=> console.log("errors")}
                             />
@@ -236,7 +240,7 @@ export default function HomePage() {
                     />
                   }
                   <div> Preview Component</div>
-                  { isSelectComponent && renderComponent(componentName) }
+                  { isSelectComponent && renderComponent(componentName , currentFormData) }
                 </GridItem>
             
 
