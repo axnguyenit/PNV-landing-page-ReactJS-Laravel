@@ -14,8 +14,10 @@ class Component extends Model
         'params' => 'array'
     ];
     protected $fillable = [
-        'name', 'url', 'desc', 'params'
+        'name', 'code_name', 'url', 'desc', 'params'
     ];
+
+    protected $timestamp = false;
 
     public function containers() {
         return $this->hasMany(Container::class);

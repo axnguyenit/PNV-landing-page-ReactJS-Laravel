@@ -1,5 +1,4 @@
-import React, { useEffect, useState} from "react";
-import ReactDOM from "react-dom";
+import React, { useEffect, useState } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -7,6 +6,15 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Form from "@rjsf/material-ui";
+// 
+import SpeedDial from '@material-ui/lab/SpeedDial';
+import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
+import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
+import EditIcon from '@material-ui/icons/Edit';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import DeleteIcon from '@material-ui/icons/Delete';
+// 
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 // core components
 import GridItem from "../../components/Grid/GridItem.js";
@@ -14,6 +22,7 @@ import GridContainer from "../../components/Grid/GridContainer.js";
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
 import CardHeader from "../../components/Card/CardHeader.js";
+import swal from 'sweetalert';
 import axios from "axios";
 
 import CardBody from "../../components/Card/CardBody.js";
@@ -34,7 +43,7 @@ import Testimonials from '../../../testimonials';
 import Milestones from '../../../milestones';
 // import Input from "@material-ui/core/Input";
 
-// import avatar from "../../assets/img/faces/marc.jpg";
+const API_URL_CONTAINER = `http://127.0.0.1:8000/api/container`;
 
 const styles = {
   cardCategoryWhite: {
@@ -56,10 +65,27 @@ const styles = {
   formControl: {
     minWidth: "100%",
   },
+  characters: {
+    position: 'relative',
+    width: "100%",
+    listStyle: "none",
+    paddingLeft: "0",
+  },
+  root: {
+    transform: 'translateZ(0px)',
+    flexGrow: 1,
+  },
+  exampleWrapper: {
+    position: 'relative',
+  },
+  speedDial: {
+    position: 'absolute',
+    top: '20px',
+    right: '20px',
+  },
 };
 
 const useStyles = makeStyles(styles);
-
 
 const renderComponent = (name, props) => {
   switch(name) {
@@ -83,34 +109,103 @@ const renderComponent = (name, props) => {
   }
 }
 
+const actions = [
+  { icon: <EditIcon />, name: 'Edit' },
+  { icon: <VisibilityOffIcon />, name: 'Hide' },
+  { icon: <VisibilityIcon />, name: 'Show' },
+  { icon: <DeleteIcon />, name: 'Delete' },
+];
+
 export default function HomePage() {
   const [isSelectComponent, setIsSelectComponent] = useState(false);
   const classes = useStyles();
-  const [age, setAge] = React.useState('');
   const [componentName, setComponentName] = useState(null);
   const [selectedComponent, updateSelectedComponent] = useState({});
   const [listSelectedComponent, updateListSelectedComponent] = useState([]);
   const [currentFormData, updateCurrentFormData] = useState({});
   const [updateIndex, setUpdateIndex] = useState(null);
 
+  const [open, setOpen] = React.useState(false);
 
-  
+  const handleComponent = (option, value, existingData = {}, currentIndex = null) => {
+    // console.log(value);
+    // console.log(existingData);
+    // console.log(currentIndex);
+    switch(option) {
+      case 'Edit':
+        setComponentName(value);
+        updateSelectedComponent(systemComponent[value]);
+        updateCurrentFormData(existingData);
+        setUpdateIndex(currentIndex);
 
-  const handleOnChange = (value, existingData = {}, currentIndex = null) => {
-    setComponentName(value);
-    updateSelectedComponent(systemComponent[value]);
-    console.log(existingData);
-    updateCurrentFormData(existingData);
-    setUpdateIndex(currentIndex);
+        if(value) {
+          setIsSelectComponent(true);
+        }
+        else {
+          setIsSelectComponent(false);
+        }
+        break;
+      case 'Hide':
+        // let existing = listSelectedComponent[currentIndex];
+        // existing.show = false;
+        listSelectedComponent[currentIndex].show = false;
+        break;
+      case 'Show':
+        // let existing = listSelectedComponent[currentIndex];
+        // existing.show = true;
+        listSelectedComponent[currentIndex].show = true;
+        break;
+      case 'Delete':
+        listSelectedComponent.splice(currentIndex, 1);
+        break;
+    } 
+  }
 
-    if(value) {
-      setIsSelectComponent(true);
-    }
-    else {
-      setIsSelectComponent(false);
-    }
+  const handleClose = () => {
+    setOpen(false);
   };
 
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+
+  // handle call api get data from database
+  const fetchData = () => {
+    axios.get('/api/landing-page/home-page').then(res => {
+      updateListSelectedComponent(res.data.components);
+    })
+  }
+  
+  // handle get dynamic form 
+  const handleOnChange = (e) => {
+    // setComponentName(value);
+    // updateSelectedComponent(systemComponent[value]);
+    // // console.log(existingData);
+    // updateCurrentFormData(existingData);
+    // setUpdateIndex(currentIndex);
+
+    // if(value) {
+    //   setIsSelectComponent(true);
+    // }
+    // else {
+    //   setIsSelectComponent(false);
+    // }
+
+
+    const value = e.target.value;
+        
+        setComponentName(value);
+        updateSelectedComponent(systemComponent[value]);
+
+        if (value) {
+            setIsSelectComponent(true);
+        } else {
+            setIsSelectComponent(false);
+        }
+  };
+
+  // handle DnD to sort component
   function handleOnDragEnd(result) {
     if (!result.destination) return;
 
@@ -121,30 +216,70 @@ export default function HomePage() {
     updateListSelectedComponent(items);
   }
 
-  const onChangeFormdata = async (data) => {    
+  // handle onChange to get data from dynamic form
+  const onChangeFormdata = async (data) => {
     updateCurrentFormData(data.formData);
   }
 
-
+  // handle add && update component
   const onSubmitForm = async (data) => {
+    var title = '';
     if (updateIndex === null) {
-      listSelectedComponent.push({
-        name: componentName,
-        componentParams: data.formData
-      });
+      // check name component 
+      const componentTerm = listSelectedComponent.find(component => component.componentParams.title.toLowerCase() === data.formData.title.toLowerCase());
+
+      console.log(componentTerm);
+      if(!componentTerm) {
+        listSelectedComponent.push({
+          name: componentName,
+          show: true,
+          componentParams: data.formData
+        });
+        swal({
+          title: 'Add component successfully!',
+          icon: "success",
+        });
+      }
+      else {
+        swal({
+          title: 'Title already exists, try another title!',
+          icon: "warning",
+        });
+      }
     } else {
-      let existing = listSelectedComponent[updateIndex];
-      existing.name = componentName;
-      existing.componentParams = data.formData;
+      const componentTerm = listSelectedComponent.find((component, index) => (
+                              component.componentParams.title.toLowerCase() === data.formData.title.toLowerCase()
+                              && index !== updateIndex
+                            ));
+      console.log(componentTerm);
+
+      // update data component
+      if(!componentTerm) {
+        let existing = listSelectedComponent[updateIndex];
+        existing.name = componentName;
+        existing.componentParams = data.formData;
+        swal({
+          title: 'Update component successfully!',
+          icon: "success",
+        });
+      }
+      // no update component
+      else {
+        swal({
+          title: 'Title already exists, try another title!',
+          icon: "warning",
+        });
+      }
     }
 
     updateListSelectedComponent([...listSelectedComponent]);
     updateCurrentFormData(data.formData);
   }
 
+  // handle save list selected component to database
   const onSaveLandingPage = async () => {
     try {
-        let result  = await axios({
+        const res = await axios({
             method: 'put',
             url: '/api/landing-page',
             data: {
@@ -156,16 +291,31 @@ export default function HomePage() {
               components: listSelectedComponent
             }
         });
+
+        if(res.status === 200) {
+          swal({
+            title: "Saved!",
+            icon: "success",
+          });
+        }
+        else {
+          swal({
+            title: "Something went wrong, try again!",
+            icon: "warning",
+          });
+        }
     } catch( $e ) {
 
     }
   }
 
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div>
       <GridContainer>
-        
-
         {/* Select Component Start */}
         <GridItem xs={12} sm={12} md={12}>
           <Card>
@@ -180,8 +330,7 @@ export default function HomePage() {
                     <Select
                       labelId="demo-controlled-open-select-label"
                       id="demo-controlled-open-select"
-                      // value={age}
-                      onChange={(e) => handleOnChange(e.target.value)}
+                      onChange={handleOnChange}
                     >
                       <MenuItem value="">
                         <em>None</em>
@@ -232,18 +381,32 @@ export default function HomePage() {
                               formData={currentFormData}
                               onChange={onChangeFormdata}
                               onSubmit={onSubmitForm}
-                              onError={e=> console.log("errors")}
+                              onError={e => console.log("errors")}
                             />
                           ),
                         },
                       ]}
                     />
                   }
-                  <div> Preview Component</div>
-                  { isSelectComponent && renderComponent(componentName , currentFormData) }
+                  {/* <div> Preview Component</div> */}
+                  {/* { isSelectComponent && renderComponent(componentName , currentFormData) } */}
+                  {!isSelectComponent ? "" : (
+                    <GridContainer>
+                      <GridItem xs={12} sm={12} md={12}>
+                        <Card>
+                            <CardHeader color="info">
+                                <h4 className={classes.cardTitleWhite}>
+                                    Preview Component
+                                </h4>
+                            </CardHeader>
+                            <CardBody>
+                                {renderComponent(componentName , currentFormData)}
+                            </CardBody>
+                        </Card>
+                      </GridItem>
+                    </GridContainer>
+                  )}
                 </GridItem>
-            
-
               </GridContainer>
             </CardBody>
           </Card>
@@ -265,14 +428,52 @@ export default function HomePage() {
               <DragDropContext onDragEnd={handleOnDragEnd}>
                 <Droppable droppableId="landing-page-preview">
                   {(provided) => (
-                      <ul className="landing-page-preview" {...provided.droppableProps} ref={provided.innerRef}>
+                      <ul className={classes.characters} {...provided.droppableProps} ref={provided.innerRef}>
                         {listSelectedComponent.map((item, index) => {
                           return (
                             <Draggable key={`${item.name}_${index}`} draggableId={`${item.name}_${index}`} index={index}>
                               {(provided) => (
-                                <li onClick={()=>{handleOnChange(item.name, item.componentParams, index)}} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                                  {renderComponent(item.name, item.componentParams)}
-                                </li>
+                                <Card>
+                                    <div className={classes.exampleWrapper}>
+                                      <SpeedDial
+                                        ariaLabel="SpeedDial example"
+                                        className={classes.speedDial}
+                                        icon={<SpeedDialIcon />}
+                                        onClose={handleClose}
+                                        onOpen={handleOpen}
+                                        open={open}
+                                        direction='down'
+                                      >
+                                      {actions.map(action => {
+                                        if(action.name === 'Hide' && !item.show) {
+                                          return '';
+                                        }
+                                        else if(action.name === 'Show' && item.show) {
+                                          return '';
+                                        }
+                                        else {
+                                          return (
+                                            <SpeedDialAction
+                                              key={action.name}
+                                              icon={action.icon}
+                                              tooltipTitle={action.name}
+                                              onClick={() => handleComponent(action.name, item.name, item.componentParams, index)}
+                                            />
+                                          )
+                                        }
+                                      })}
+                                      </SpeedDial>
+                                    </div>
+                                  <li 
+                                    className={classes.root}
+                                    // onClick={()=>{handleOnChange(item.name, item.componentParams, index)}}
+                                    ref={provided.innerRef}
+                                    {...provided.draggableProps}
+                                    {...provided.dragHandleProps}
+                                  >
+                                    {renderComponent(item.name, item.componentParams)}
+                                  </li>
+                                </Card>
                               )}
                             </Draggable>
                           );

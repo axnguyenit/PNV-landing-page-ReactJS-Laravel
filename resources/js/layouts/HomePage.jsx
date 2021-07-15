@@ -20,24 +20,24 @@ const Footer = React.lazy(() => import ('../components/footer'));
 
 
 
-const renderComponent = (name, props) => {
+const renderComponent = (name, show, props) => {
   switch(name) {
     case 'About':
-      return <About {...props}/>
+      return show ? <About {...props}/> : '';
     case 'Causes':
-      return <Causes {...props}/>
+      return show ? <Causes {...props}/> : '';
     case 'Partners':
-      return <Partners {...props}/>
+      return show ? <Partners {...props}/> : '';
     case 'Volunteers':
-      return <Volunteers {...props}/>
+      return show ? <Volunteers {...props}/> : '';
     case 'JoinAsVolunteer':
-      return <JoinAsVolunteer {...props}/>
+      return show ? <JoinVolunteers {...props}/> : '';
     case 'Milestones':
-      return <Milestones {...props}/>
+      return show ? <Milestones {...props}/> : '';
     case 'Testimonials':
-      return <Testimonials {...props}/>
+      return show ? <Testimonials {...props}/> : '';
     case 'Video':
-      return <VideoSection {...props}/>
+      return show ? <VideoSection {...props}/> : '';
     return ''
   }
 }
@@ -58,8 +58,14 @@ function HomePage() {
     fetchData();
   }, [])
 
-  return data.components? data.components.map(item => renderComponent(item.name, item.componentParams)) : ''
-
+  return (
+    <>
+      <Header />
+      <Banner />
+      {data.components ? data.components.map(item => renderComponent(item.name, item.show, item.componentParams)) : ''}
+      <Footer /> 
+    </>
+  )
 }
 
 export default HomePage;

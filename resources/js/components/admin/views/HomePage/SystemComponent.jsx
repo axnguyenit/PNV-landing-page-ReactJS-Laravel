@@ -4,19 +4,20 @@ const systemComponent = {
         type: "object",
         properties: {
             title: { type: "string", title: "Title", },
-            details: {
-                type: "array",
-                title: "Description List",
-                items: {
-                    type: "object",
-                    required: [
-                        "desc",
-                    ],
-                    properties: {
-                        desc: { type: "string", title: "Description", },
-                    }
-                }
-            },
+            desc: { type: "string", title: "Description" },
+            // details: {
+            //     type: "array",
+            //     title: "Description List",
+            //     items: {
+            //         type: "object",
+            //         required: [
+            //             "desc",
+            //         ],
+            //         properties: {
+            //             desc: { type: "string", title: "Description", },
+            //         }
+            //     }
+            // },
             file: { type: "string", title: "Single file" },
         }
     },

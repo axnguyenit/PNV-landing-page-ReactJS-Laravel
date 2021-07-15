@@ -14,13 +14,13 @@ class CreateLandingPageTable extends Migration
     public function up()
     {
         Schema::create('landing_pages', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name');
             $table->string('url')->unique();
             $table->string('description');
             $table->string('meta');
             $table->string('title');
-            $table->string('components');
+            $table->text('components');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class CreateLandingPageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('landing_page');
+        Schema::dropIfExists('landing_pages');
     }
 }

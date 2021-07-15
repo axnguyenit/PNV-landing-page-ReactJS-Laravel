@@ -1,8 +1,9 @@
 import { selectFile, FileWidget } from './FileWidget';
+import { DraftjsWidget } from './DraftjsWidget';
 
 const uiSchema = {
     desc: {
-        "ui:widget": "textarea" 
+        "ui:widget": DraftjsWidget 
     },
     file: {
         "ui:widget": FileWidget

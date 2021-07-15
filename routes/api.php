@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\LandingPage;
-
+// use App\Http\Controllers\ContainerController;
 
 
 /*
@@ -45,7 +45,6 @@ Route::post('/landing-page', function (Request $request) {
 
 Route::put('/landing-page', function (Request $request) {
     try {
-        
         $data = $request->json()->all();
         
         $landingPage = LandingPage::where('url', $data['url'])->get();
@@ -68,7 +67,7 @@ Route::put('/landing-page', function (Request $request) {
         echo $e->getMessage();
         return 'fail';
     }
-    return 'ok';
+    // return 'ok';
 });
 
 Route::get('/landing-page/{url}', function (Request $request) {
@@ -80,10 +79,10 @@ Route::get('/landing-page/{url}', function (Request $request) {
 
 Route::post('/savefile', function (Request $request) {
     $file = $request->file;
-    $file->move($path = public_path(). DIRECTORY_SEPARATOR.'files'.DIRECTORY_SEPARATOR, $file->getClientOriginalName());
-    return 'files/'.$file->getClientOriginalName();
+    $newImageName = time().'-'.$file->getClientOriginalName();
+    $file->move($path = public_path(). DIRECTORY_SEPARATOR.'files'.DIRECTORY_SEPARATOR, $newImageName);
+    return 'files/'.$newImageName;
 });
-
 
 Route::post('/savefiles', function (Request $request) {
     $fileInfo = $request->fileInfo;
@@ -99,3 +98,4 @@ Route::post('/savefiles', function (Request $request) {
     return $ok;
 });
 
+// Route::apiResource('container', ContainerController::class);

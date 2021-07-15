@@ -12,7 +12,8 @@ const About = (props) => {
               <div className="about-box diffuse-shadow p-45px sm-p-25px bg-white">
                 <h2>{props.title}</h2>
                 <div className="divider-dashed m-25px-b" />
-                <p dangerouslySetInnerHTML={{ __html: props.details ? props.details[0].desc : '' }}></p>
+                <p dangerouslySetInnerHTML={{ __html: props.desc }}></p>
+                {/* {props.desc} */}
               </div>
             </div>
           </div>

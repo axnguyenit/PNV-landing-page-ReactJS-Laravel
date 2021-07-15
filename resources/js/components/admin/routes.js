@@ -18,49 +18,49 @@ import Footer from "./views/Footer";
 //   })
 // }
 
-const dashboardRoutes = [
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    component: DashboardPage,
-    layout: "/admin",
-  },  
-  {
-    path: "/contact",
-    name: "Contact List",
-    component: EnhancedTable,
-    layout: "/admin",
-  },
-  {
-    path: "/donate",
-    name: "Donate List",
-    component: EnhancedTable,
-    layout: "/admin",
-  },
-  {
-    path: "/banner",
-    name: "Banner",
-    component: Banner,
-    layout: "/admin",
-  },
-  {
-    path: "/footer",
-    name: "Footer",
-    component: Footer,
-    layout: "/admin",
-  },
-  {
-    path: "/home-page",
-    name: "Home Page",
-    component: HomePage,
-    layout: "/admin",
-  },
-  {
-    path: "/user",
-    name: "User Profile",
-    component: UserProfile,
-    layout: "/admin",
-  },
+const dashboardRoutes = [{
+        path: "/dashboard",
+        name: "Dashboard",
+        // component: DashboardPage,
+        component: HomePage,
+        layout: "/admin",
+    },
+    {
+        path: "/contact",
+        name: "Contact List",
+        component: EnhancedTable,
+        layout: "/admin",
+    },
+    {
+        path: "/donate",
+        name: "Donate List",
+        component: EnhancedTable,
+        layout: "/admin",
+    },
+    {
+        path: "/banner",
+        name: "Banner",
+        component: Banner,
+        layout: "/admin",
+    },
+    {
+        path: "/footer",
+        name: "Footer",
+        component: Footer,
+        layout: "/admin",
+    },
+    {
+        path: "/home-page",
+        name: "Home Page",
+        component: HomePage,
+        layout: "/admin",
+    },
+    {
+        path: "/user",
+        name: "User Profile",
+        component: UserProfile,
+        layout: "/admin",
+    },
 ];
 
 export default dashboardRoutes;

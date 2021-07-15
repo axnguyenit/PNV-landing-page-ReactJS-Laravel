@@ -32,8 +32,11 @@ const FileWidget = (props) => {
 
     const preview = (path) => {
        previewEl.current.style.backgroundImage = `url(${path})`;
-       previewEl.current.style.width="100px";
-       previewEl.current.style.height="100px";
+    //    previewEl.current.style.width='300px';
+       previewEl.current.style.height='fit-content';
+       previewEl.current.style.backgroundPosition='center';
+       previewEl.current.style.backgroundRepeat='no-repeat';
+       previewEl.current.style.backgroundSize='cover';
     }
 
     const onChange = async (event) => {
@@ -43,20 +46,31 @@ const FileWidget = (props) => {
     }
 
     const style = props.value ? {
-        backgroundImage: `url(${props.value})`,
-        width: '100px',
-        height: '100px'
+        previewImg: {
+            backgroundImage: `url(${props.value})`,
+            height: 'fit-content',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+        },
+        imgTag: {
+            width: '100%',
+        }
     } : {}
 
     return (
         <div>
-            <Button onClick={onSelectFile}>Select File</Button>
-            <div ref={previewEl} style={style}></div>
-            <input ref={selectFileEl} 
+            <Button onClick={onSelectFile}>Upload Image</Button>
+            {/* <div ref={previewEl} className={style.previewImg}> */}
+                <img className={style.imgTag} src={ props.value ? props.value : ''} alt="" />
+            {/* </div> */}
+            <input 
+                ref={selectFileEl} 
                 type="file"
                 style={{display: 'none'}}
                 required={props.required}
-                onChange={onChange} />
+                onChange={onChange} 
+            />
         </div>
     )
   };

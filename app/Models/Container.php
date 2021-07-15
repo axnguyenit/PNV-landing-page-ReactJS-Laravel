@@ -11,6 +11,12 @@ class Container extends Model
 
     protected $table = 'containers';
     protected $primaryKey = 'id';
+    protected $fillable = [
+        'component_id', 'position', 'name', 'url', 'desc', 'params'
+    ];
+    protected $casts = [
+        'params' => 'array'
+    ];
 
     // A container belongs to a component
     public function component() {
