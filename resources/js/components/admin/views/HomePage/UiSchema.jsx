@@ -11,7 +11,7 @@ const uiSchema = {
     details: {
         items: {
             desc: {
-                "ui:widget": "textarea"
+                "ui:widget": DraftjsWidget
             },
             file: {
                 "ui:widget": FileWidget
@@ -21,7 +21,7 @@ const uiSchema = {
     tasks: {
         items: {
             desc: {
-                "ui:widget": "textarea"
+                "ui:widget": DraftjsWidget
             },
             file: {
                 "ui:widget": FileWidget
