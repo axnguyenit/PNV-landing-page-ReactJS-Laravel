@@ -8,6 +8,16 @@ const uiSchema = {
     file: {
         "ui:widget": FileWidget
     },
+    logo: {
+        "ui:widget": FileWidget
+    },
+    bannerItems :{
+        items: {
+            background: {
+                "ui:widget": FileWidget
+            }
+        }
+    },
     details: {
         items: {
             desc: {

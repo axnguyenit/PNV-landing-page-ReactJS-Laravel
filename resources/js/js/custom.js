@@ -32,7 +32,7 @@ var PATH = {};
     /******************** 1. PRELOADER ********************/
     PATH.preLoader = function() {
         $(".preloader").fadeOut();
-        $("#preloader-wrap").delay(1000).fadeOut("slow");
+        $("#preloader-wrap").delay(1500).fadeOut("slow");
     }
 
     /******************** 2. ADD CLASS HEADER ********************/

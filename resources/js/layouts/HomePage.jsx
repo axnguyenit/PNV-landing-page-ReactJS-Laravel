@@ -38,6 +38,10 @@ const renderComponent = (name, show, props) => {
       return show ? <Testimonials {...props}/> : '';
     case 'Video':
       return show ? <VideoSection {...props}/> : '';
+    case 'Header': 
+      return <Header {...props}/>
+    case 'Banner': 
+      return <Banner {...props}/>
     return ''
   }
 }
@@ -60,8 +64,9 @@ function HomePage() {
 
   return (
     <>
-      <Header />
-      <Banner />
+      <div id="preloader-wrap">
+        <div className="preloader"></div>
+    </div>
       {data.components ? data.components.map(item => renderComponent(item.name, item.show, item.componentParams)) : ''}
       <Footer /> 
     </>

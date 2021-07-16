@@ -35,6 +35,8 @@ import systemComponent from "./SystemComponent";
 import uiSchema from "./UiSchema";
 import About from '../../../about';
 import Causes from '../../../causes';
+import Header from "../../../header";
+import Banner from "../../../banner";
 import VideoSection from '../../../videoSection';
 import Partners from '../../../partners';
 import Volunteers from '../../../volunteers';
@@ -105,6 +107,10 @@ const renderComponent = (name, props) => {
       return <Testimonials {...props}/>
     case 'Video':
       return <VideoSection {...props}/>
+    case 'Header': 
+      return <Header {...props} preview={true}/>
+    case 'Banner': 
+      return <Banner {...props}/>
     return ''
   }
 }
@@ -223,6 +229,7 @@ export default function HomePage() {
 
   // handle add && update component
   const onSubmitForm = async (data) => {
+    console.log(data);
     var title = '';
     if (updateIndex === null) {
       // check name component 

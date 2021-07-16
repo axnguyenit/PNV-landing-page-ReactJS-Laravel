@@ -1,4 +1,55 @@
 const systemComponent = {
+    "Header": {
+        title: "Menu Header",
+        type: "object",
+        properties: {
+            title: { type: "string", title: "Title", },
+            menuItems: { 
+                type: "array", 
+                title: "Menu items",
+                items: {
+                    properties: {
+                        title: { 
+                            type: "string", 
+                            title: "Value item", 
+                        },
+                    },
+                },
+                
+            },
+            logo: { type: "string",  title: "Single file" },
+        }
+    },
+    "Banner": {
+        title: "Banner",
+        type: "object",
+        properties: {
+            title: { type: "string", title: "Title", },
+            bannerItems: { 
+                type: "array", 
+                title: "Banner Item",
+                items: {
+                    properties: {
+                        subTitle: { type: "string", title: "Sub title"},
+                        title: { type: "string", title: "title"},
+                        background: { type: "string",  title: "Single file" },
+                        buttonItems: {
+                            type: "array", 
+                            title: "buttons",
+                            items: {
+                                properties: {
+                                    buttonText: { type: "string", title: "text"},
+                                    buttonLink: { type: "string", title: "link"},
+                                    buttonClass: { type: "string", title: "classCss"},
+                                }
+                            }
+                        }
+                    },
+                },
+                
+            }
+        }
+    },
     "About": {
         title: "About Sample",
         type: "object",
