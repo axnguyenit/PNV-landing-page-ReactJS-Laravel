@@ -33,6 +33,8 @@ import Tasks from "../../components/Tasks/Tasks.js";
 import CardFooter from "../../components/Card/CardFooter.js";
 import systemComponent from "./SystemComponent";
 import uiSchema from "./UiSchema";
+import Header from "../../../header";
+import Banner from "../../../banner";
 import About from '../../../about';
 import Causes from '../../../causes';
 import VideoSection from '../../../videoSection';
@@ -105,6 +107,10 @@ const renderComponent = (name, props) => {
       return <Testimonials {...props}/>
     case 'Video':
       return <VideoSection {...props}/>
+    case 'Header': 
+      return <Header {...props} preview={true}/>
+    case 'Banner': 
+      return <Banner {...props}/>
     return ''
   }
 }
@@ -128,9 +134,6 @@ export default function HomePage() {
   const [open, setOpen] = React.useState(false);
 
   const handleComponent = (option, value, existingData = {}, currentIndex = null) => {
-    // console.log(value);
-    // console.log(existingData);
-    // console.log(currentIndex);
     switch(option) {
       case 'Edit':
         setComponentName(value);
@@ -146,13 +149,9 @@ export default function HomePage() {
         }
         break;
       case 'Hide':
-        // let existing = listSelectedComponent[currentIndex];
-        // existing.show = false;
         listSelectedComponent[currentIndex].show = false;
         break;
       case 'Show':
-        // let existing = listSelectedComponent[currentIndex];
-        // existing.show = true;
         listSelectedComponent[currentIndex].show = true;
         break;
       case 'Delete':
@@ -169,7 +168,6 @@ export default function HomePage() {
     setOpen(true);
   };
 
-
   // handle call api get data from database
   const fetchData = () => {
     axios.get('/api/landing-page/home-page').then(res => {
@@ -179,30 +177,17 @@ export default function HomePage() {
   
   // handle get dynamic form 
   const handleOnChange = (e) => {
-    // setComponentName(value);
-    // updateSelectedComponent(systemComponent[value]);
-    // // console.log(existingData);
-    // updateCurrentFormData(existingData);
-    // setUpdateIndex(currentIndex);
-
-    // if(value) {
-    //   setIsSelectComponent(true);
-    // }
-    // else {
-    //   setIsSelectComponent(false);
-    // }
-
-
     const value = e.target.value;
-        
-        setComponentName(value);
-        updateSelectedComponent(systemComponent[value]);
 
-        if (value) {
-            setIsSelectComponent(true);
-        } else {
-            setIsSelectComponent(false);
-        }
+    updateCurrentFormData({});
+    setComponentName(value);
+    updateSelectedComponent(systemComponent[value]);
+
+    if (value) {
+        setIsSelectComponent(true);
+    } else {
+        setIsSelectComponent(false);
+    }
   };
 
   // handle DnD to sort component
@@ -223,12 +208,10 @@ export default function HomePage() {
 
   // handle add && update component
   const onSubmitForm = async (data) => {
-    var title = '';
     if (updateIndex === null) {
       // check name component 
       const componentTerm = listSelectedComponent.find(component => component.componentParams.title.toLowerCase() === data.formData.title.toLowerCase());
 
-      console.log(componentTerm);
       if(!componentTerm) {
         listSelectedComponent.push({
           name: componentName,
@@ -239,6 +222,11 @@ export default function HomePage() {
           title: 'Add component successfully!',
           icon: "success",
         });
+        setIsSelectComponent(false);
+        setComponentName(null);
+        updateSelectedComponent({});
+        updateCurrentFormData({});
+        setUpdateIndex(null);
       }
       else {
         swal({
@@ -251,7 +239,6 @@ export default function HomePage() {
                               component.componentParams.title.toLowerCase() === data.formData.title.toLowerCase()
                               && index !== updateIndex
                             ));
-      console.log(componentTerm);
 
       // update data component
       if(!componentTerm) {
@@ -262,6 +249,11 @@ export default function HomePage() {
           title: 'Update component successfully!',
           icon: "success",
         });
+        setIsSelectComponent(false);
+        setComponentName(null);
+        updateSelectedComponent({});
+        updateCurrentFormData({});
+        setUpdateIndex(null);
       }
       // no update component
       else {
@@ -273,7 +265,6 @@ export default function HomePage() {
     }
 
     updateListSelectedComponent([...listSelectedComponent]);
-    updateCurrentFormData(data.formData);
   }
 
   // handle save list selected component to database
@@ -466,7 +457,6 @@ export default function HomePage() {
                                     </div>
                                   <li 
                                     className={classes.root}
-                                    // onClick={()=>{handleOnChange(item.name, item.componentParams, index)}}
                                     ref={provided.innerRef}
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}

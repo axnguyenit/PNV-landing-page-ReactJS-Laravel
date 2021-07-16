@@ -38,18 +38,20 @@ const renderComponent = (name, show, props) => {
       return show ? <Testimonials {...props}/> : '';
     case 'Video':
       return show ? <VideoSection {...props}/> : '';
-    return ''
+    case 'Header': 
+      return <Header {...props}/>
+    case 'Banner': 
+      return show ? <Banner {...props} /> : '';
+    return '';
   }
 }
 
 
 function HomePage() {
   const [data, setData] = useState([]);
-  console.log('thien');
   // call api here & transmit data to each component throught props
   const fetchData = () => {
     axios.get(`api/landing-page/home-page`).then(res => {
-      console.log(res.data);
       setData(res.data);
     })
   }
@@ -60,10 +62,8 @@ function HomePage() {
 
   return (
     <>
-      <Header />
-      <Banner />
       {data.components ? data.components.map(item => renderComponent(item.name, item.show, item.componentParams)) : ''}
-      <Footer /> 
+      <Footer />
     </>
   )
 }

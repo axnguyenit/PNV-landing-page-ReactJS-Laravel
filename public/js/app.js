@@ -2126,6 +2126,12 @@ var renderComponent = function renderComponent(name, show, props) {
 
     case 'Video':
       return show ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(VideoSection, _objectSpread({}, props)) : '';
+
+    case 'Header':
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Header, _objectSpread({}, props));
+
+    case 'Banner':
+      return show ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Banner, _objectSpread({}, props)) : '';
       return '';
   }
 };
@@ -2134,13 +2140,11 @@ function HomePage() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       data = _useState2[0],
-      setData = _useState2[1];
+      setData = _useState2[1]; // call api here & transmit data to each component throught props
 
-  console.log('thien'); // call api here & transmit data to each component throught props
 
   var fetchData = function fetchData() {
     axios__WEBPACK_IMPORTED_MODULE_0___default().get("api/landing-page/home-page").then(function (res) {
-      console.log(res.data);
       setData(res.data);
     });
   };
@@ -2149,7 +2153,7 @@ function HomePage() {
     fetchData();
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Header, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Banner, {}), data.components ? data.components.map(function (item) {
+    children: [data.components ? data.components.map(function (item) {
       return renderComponent(item.name, item.show, item.componentParams);
     }) : '', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Footer, {})]
   });

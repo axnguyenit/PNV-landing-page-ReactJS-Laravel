@@ -1,30 +1,3 @@
-/*========================================================================
-EXCLUSIVE ON themeforest.net
-Template Name   : Prottasha - Bootstrap 4 Charity Landing Page
-Author: ThemeAtelier
-Created: September 2018
-Last update: September 2018
-========================================================================*/
-
-/* TABLE OF CONTENTS
-	1. PRELOADER
-	2. ADD CLASS HEADER
-	3. NAV COLLAPSE
-	4. NAV SMOOTH SCROLL
-	5. FIXED HEADER
-	6. HERO SLIDER
-	7. TEXT ANIMATION
-	8. VIDEO LIGHTBOX
-	9. CAUSES LIGHTBOX
-	10. CAUSES PROGRESS BARS
-	11. CAUSES SLIDER
-	12. GALLERY FILTER
-	13. GALLERY LIGHTBOX
-	14. TESTIMONIAL SLIDER
-	15. VOLUNTEERS SLIDER
-	16. COUNTER UP JS
-	17. CONTACT FORM
-*/
 var PATH = {};
 (function($) {
     "use strict"
@@ -32,7 +5,7 @@ var PATH = {};
     /******************** 1. PRELOADER ********************/
     PATH.preLoader = function() {
         $(".preloader").fadeOut();
-        $("#preloader-wrap").delay(1000).fadeOut("slow");
+        $("#preloader-wrap").fadeOut("slow");
     }
 
     /******************** 2. ADD CLASS HEADER ********************/
@@ -83,9 +56,13 @@ var PATH = {};
         /******************** 6. HERO SLIDER  ********************/
     PATH.heroSlider = function() {
         var swiper = new Swiper('.hero-swiper', {
+            slidesPerView: 1,
             speed: 3000,
+            loop: true,
+            centeredSlides: true,
             autoplay: {
-                delay: 10000,
+                delay: 3000,
+                disableOnInteraction: true,
             },
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -171,13 +148,22 @@ var PATH = {};
 
     /******************** 11. CAUSES SLIDER ********************/
     PATH.causesSlider = function() {
-        var cswiper = new Swiper('.causes-swiper', {
+        var pswiper = new Swiper('.causes-swiper', {
             slidesPerView: 3,
             spaceBetween: 0,
             freeMode: true,
+            speed: 1500,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+                dynamicBullets: true,
             },
             breakpoints: {
                 1199: {

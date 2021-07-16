@@ -1,23 +1,60 @@
 const systemComponent = {
+    "Header": {
+        title: "Menu Header",
+        type: "object",
+        properties: {
+            title: { type: "string", title: "Title", },
+            menuItems: { 
+                type: "array", 
+                title: "Menu items",
+                items: {
+                    properties: {
+                        title: { 
+                            type: "string", 
+                            title: "Value item", 
+                        },
+                    },
+                },
+
+            },
+            logo: { type: "string",  title: "Single file" },
+        }
+    },
+    "Banner": {
+        title: "Banner",
+        type: "object",
+        properties: {
+            title: { type: "string", title: "Title", },
+            bannerItems: { 
+                type: "array", 
+                title: "Banner Item",
+                items: {
+                    properties: {
+                        subTitle: { type: "string", title: "Sub title"},
+                        title: { type: "string", title: "title"},
+                        background: { type: "string",  title: "Single file" },
+                        buttonItems: {
+                            type: "array", 
+                            title: "buttons",
+                            items: {
+                                properties: {
+                                    buttonText: { type: "string", title: "text"},
+                                    buttonLink: { type: "string", title: "link"},
+                                    buttonClass: { type: "string", title: "classCss"},
+                                }
+                            }
+                        }
+                    },
+                },
+            }
+        }
+    },
     "About": {
         title: "About Sample",
         type: "object",
         properties: {
             title: { type: "string", title: "Title", },
             desc: { type: "string", title: "Description" },
-            // details: {
-            //     type: "array",
-            //     title: "Description List",
-            //     items: {
-            //         type: "object",
-            //         required: [
-            //             "desc",
-            //         ],
-            //         properties: {
-            //             desc: { type: "string", title: "Description", },
-            //         }
-            //     }
-            // },
             file: { type: "string", title: "Single file" },
         }
     },
@@ -76,7 +113,7 @@ const systemComponent = {
         properties: {
             title: { type: "string", title: "Title" },
             desc: { type: "string", title: "Description" },
-            task: {
+            tasks: {
                 type: "array",
                 title: "Partners List",
                 items: {
@@ -86,7 +123,7 @@ const systemComponent = {
                         "file",
                     ],
                     properties: {
-                        url: { type: "string", title: "Link Page", },
+                        url: { type: "string", title: "Website link", },
                         file: { type: "string",  title: "Single file" },
                     }
                 }
@@ -103,16 +140,11 @@ const systemComponent = {
         properties: {
             title: { type: "string", title: "Title" },
             desc: { type: "string", title: "Description" },
-            task: {
+            tasks: {
                 type: "array",
                 title: "Volunteers List",
                 items: {
                     type: "object",
-                    required: [
-                        "name",
-                        "year",
-                        "file",
-                    ],
                     properties: {
                         name: { type: "string", title: "Name", },
                         year: { type: "string", title: "Year", },
