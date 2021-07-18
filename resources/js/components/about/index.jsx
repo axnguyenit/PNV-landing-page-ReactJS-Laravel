@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = (props) => {
     return (
-      <section id="about" className="p-80px-tb bg-light">
+      <div id={props.title} className={`p-80px-tb ${props.bg}`} data-aos={props.aos}>
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-sm-12 col-xs-12 align-self-center">
@@ -18,7 +18,7 @@ const About = (props) => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     )
 }
 

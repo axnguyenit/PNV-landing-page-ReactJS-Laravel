@@ -19,8 +19,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var Causes = function Causes(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
-    id: "causes",
-    className: "p-80px-tb bg-white",
+    id: props.title,
+    className: "p-80px-tb ".concat(props.bg),
+    "data-aos": props.aos,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "container",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -62,7 +63,7 @@ var Causes = function Causes(props) {
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                       className: "btn-relative-img text-center overlay overlay-5",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                        src: "./assets/images/1.jpg",
+                        src: cause.file,
                         alt: ""
                       })
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {

@@ -1,25 +1,25 @@
 const systemComponent = {
-    "Header": {
-        title: "Menu Header",
-        type: "object",
-        properties: {
-            title: { type: "string", title: "Title", },
-            menuItems: { 
-                type: "array", 
-                title: "Menu items",
-                items: {
-                    properties: {
-                        title: { 
-                            type: "string", 
-                            title: "Value item", 
-                        },
-                    },
-                },
+    // "Header": {
+    //     title: "Menu Header",
+    //     type: "object",
+    //     properties: {
+    //         title: { type: "string", title: "Title", },
+    //         menuItems: { 
+    //             type: "array", 
+    //             title: "Menu items",
+    //             items: {
+    //                 properties: {
+    //                     title: { 
+    //                         type: "string", 
+    //                         title: "Value item", 
+    //                     },
+    //                 },
+    //             },
 
-            },
-            logo: { type: "string",  title: "Single file" },
-        }
-    },
+    //         },
+    //         logo: { type: "string",  title: "Single file" },
+    //     }
+    // },
     "Banner": {
         title: "Banner",
         type: "object",
@@ -76,7 +76,6 @@ const systemComponent = {
                     required: [
                         "title",
                         "desc",
-                        "file",
                         "title1",
                         "title2",
                         "title3",
@@ -185,10 +184,9 @@ const systemComponent = {
                     required: [
                         "title",
                         "desc",
-                        "file",
                         "date"
                     ],
-                    "properties": {
+                    properties: {
                         title: { type: "string",  title: "Title" },
                         desc: { type: "string", title: "Description" },
                         file: { type: "string", title: "Image",  description: "Image" },
@@ -214,14 +212,12 @@ const systemComponent = {
                 items: {
                     type: "object",
                     required: [
-                        "title",
-                        "desc",
-                        "file",
-                        "date"
+                        "name",
+                        "testimonial"
                     ],
-                    "properties": {
+                    properties: {
                         name: { type: "string",  title: "Name" },
-                        desc: { type: "string", title: "Description" },
+                        testimonial: { type: "string", title: "Testimonial" },
                         file: { type: "string", title: "Image",  description: "Image" },
                     }
                 }

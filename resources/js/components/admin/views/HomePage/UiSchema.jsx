@@ -33,6 +33,9 @@ const uiSchema = {
             desc: {
                 "ui:widget": "textarea"
             },
+            testimonial: {
+                "ui:widget": "textarea"
+            },
             file: {
                 "ui:widget": FileWidget
             },

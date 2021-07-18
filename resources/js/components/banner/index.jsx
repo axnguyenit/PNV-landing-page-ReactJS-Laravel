@@ -5,8 +5,7 @@ const Banner = (props) => {
         <section id="section_0">
         <div className="swiper-container hero-swiper swiper-container-horizontal">
           <div className="swiper-wrapper">
-          {
-            props.bannerItems && props.bannerItems.map(item => (
+          {props.bannerItems && props.bannerItems.map(item => (
             <div className="swiper-slide swiper-slide-prev" style={{width: '783px'}}>
                   <div className="hero-area hero-slide" style={{backgroundImage: `url(${item.background})`}}>
                     <div className="overlay overlay-5" />
@@ -34,8 +33,7 @@ const Banner = (props) => {
                     </div>
                   </div>
             </div>
-          ))
-          }
+          ))}
           </div>
           <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
             <span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 1" />

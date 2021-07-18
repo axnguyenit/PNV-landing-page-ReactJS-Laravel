@@ -3,7 +3,7 @@ import React from 'react';
 const Gallery = () => {
   const idTag = "gallery";
     return (
-        <section id={idTag} className="p-80px-tb">
+        <section id={idTag} className="p-80px-tb" data-aos="zoom-in-up">
         <div className="container">
           <div className="row">
             <div className="col-sm-8 offset-sm-2">

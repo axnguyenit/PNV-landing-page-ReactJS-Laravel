@@ -1,9 +1,8 @@
 import React from 'react';
-// import 'js/'
 
-const VideoSection = () => {
+const VideoSection = (props) => {
     return (
-        <section className="p-100px-tb overlay overlay-6 parallax" style={{backgroundImage: 'url(./assets/images/bg/video-promo.jpg)'}}>
+      <section className="p-100px-tb overlay overlay-6 parallax" style={{backgroundImage: 'url(./assets/images/bg/video-promo.jpg)'}} data-aos={props.aos}>
         <div className="container">
           <div className="row">
             <div className="col-sm-8 offset-sm-2 text-center promo-video">
@@ -18,7 +17,7 @@ const VideoSection = () => {
                         {/*Body*/}
                         <div className="modal-body mb-0 p-0">
                           <div className="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                            <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/30KI5SuECuc" allowFullScreen />
+                            <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/olcVx8xnwWQ" allowFullScreen />
                           </div>
                         </div>
                       </div>

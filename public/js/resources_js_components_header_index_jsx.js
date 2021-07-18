@@ -18,11 +18,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Header = function Header(props) {
-  var className = "navbar navbar-inverse navbar-expand-lg header-nav fixed-top light-header fixed-header";
-
-  if (props.preview === true) {
-    className = "navbar navbar-inverse navbar-expand-lg header-nav light-header fixed-header";
-  }
+  var className = "navbar navbar-inverse navbar-expand-lg header-nav fixed-top light-header fixed-header"; // if (props.preview === true) {
+  //     className = "navbar navbar-inverse navbar-expand-lg header-nav light-header fixed-header"
+  // }
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("header", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("nav", {
@@ -33,7 +31,7 @@ var Header = function Header(props) {
           className: "navbar-brand",
           href: "#",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-            src: props.logo ? props.logo : 'images/pn-logo.png',
+            src: "assets/images/pn-logo.png",
             alt: "PN"
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
@@ -49,14 +47,18 @@ var Header = function Header(props) {
           id: "navbarCodeply",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
             className: "nav navbar-nav ml-auto",
-            children: props.menuItems && props.menuItems.map(function (item, index) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+            children: props.menu && props.menu.map(function (item, index) {
+              if (item.name === 'Banner' || item.name === "Video") {
+                return '';
+              }
+
+              return item.show ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
                   className: "nav-link",
-                  href: "#section_".concat(index),
-                  children: item.title
+                  href: "#".concat(item.componentParams.title),
+                  children: item.componentParams.title
                 })
-              });
+              }) : null;
             })
           })
         })]

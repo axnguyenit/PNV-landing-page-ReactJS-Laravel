@@ -1,6 +1,7 @@
 import axios from 'axios';
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Header = React.lazy(() => import ('../components/header'));
 const Banner = React.lazy(() => import ('../components/banner'));
@@ -18,28 +19,34 @@ const Milestones = React.lazy(() => import ('../components/milestones'));
 const Contact = React.lazy(() => import ('../components/contact'));
 const Footer = React.lazy(() => import ('../components/footer'));
 
-
-
-const renderComponent = (name, show, props) => {
+const renderComponent = (name, show, props, index) => {
+    if(index % 2 === 0) {
+      props.bg = 'bg-white';
+      props.aos = 'zoom-in-up';
+    }
+    else {
+      props.bg = 'bg-light';
+      props.aos = 'zoom-out-up';
+    }
   switch(name) {
     case 'About':
       return show ? <About {...props}/> : '';
     case 'Causes':
-      return show ? <Causes {...props}/> : '';
+      return show ? <Causes {...props}/>: '';
     case 'Partners':
-      return show ? <Partners {...props}/> : '';
+      return show ? <Partners {...props}/>: '';
     case 'Volunteers':
       return show ? <Volunteers {...props}/> : '';
     case 'JoinAsVolunteer':
       return show ? <JoinVolunteers {...props}/> : '';
     case 'Milestones':
-      return show ? <Milestones {...props}/> : '';
+      return show ? <Milestones {...props}/>: '';
     case 'Testimonials':
       return show ? <Testimonials {...props}/> : '';
     case 'Video':
-      return show ? <VideoSection {...props}/> : '';
-    case 'Header': 
-      return <Header {...props}/>
+      return show ? <VideoSection {...props}/>: '';
+    // case 'Header': 
+    //   return <Header {...props}/>
     case 'Banner': 
       return show ? <Banner {...props} /> : '';
     return '';
@@ -47,22 +54,34 @@ const renderComponent = (name, show, props) => {
 }
 
 
-function HomePage() {
+const HomePage = () => {
   const [data, setData] = useState([]);
+  const [menu, setMenu] = useState([]);
   // call api here & transmit data to each component throught props
   const fetchData = () => {
     axios.get(`api/landing-page/home-page`).then(res => {
+      // console.log(res.data);
+      let arrTerm = [];
+      res.data.components.map(item => {
+        arrTerm.push(item);
+      })
+      setMenu(arrTerm);
       setData(res.data);
     })
   }
 
   useEffect(() => {
     fetchData();
+    Aos.init({duration: 3000});
   }, [])
 
   return (
     <>
-      {data.components ? data.components.map(item => renderComponent(item.name, item.show, item.componentParams)) : ''}
+      {/* <div id="preloader-wrap">
+        <div className="preloader"></div>
+      </div> */}
+      <Header menu={menu}/>
+      {data.components ? data.components.map((item, index) => renderComponent(item.name, item.show, item.componentParams, index)) : ''}
       <Footer />
     </>
   )

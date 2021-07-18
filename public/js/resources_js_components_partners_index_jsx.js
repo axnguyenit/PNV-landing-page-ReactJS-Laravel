@@ -19,8 +19,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var Partners = function Partners(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
-    id: "partners",
-    className: "p-80px-tb bg-light",
+    id: props.title,
+    className: "p-80px-tb ".concat(props.bg),
+    "data-aos": props.aos,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "container",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {

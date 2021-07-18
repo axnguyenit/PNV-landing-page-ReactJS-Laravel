@@ -2,7 +2,7 @@ import React from 'react';
 
 const HelpProcess = () => {
     return (
-        <section id="HelpProcess" className="p-80px-tb bg-light">
+      <section id="HelpProcess" className="p-80px-tb bg-light" data-aos="zoom-in-up">
         <div className="container">
           <div className="row">
             <div className="col-sm-8 offset-sm-2">

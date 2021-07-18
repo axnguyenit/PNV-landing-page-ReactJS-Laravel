@@ -2,7 +2,7 @@ import React from 'react';
 
 const Partners = (props) => {
     return (
-        <section id="partners" className="p-80px-tb bg-light">
+      <section id={props.title} className={`p-80px-tb ${props.bg}`} data-aos={props.aos}>
           <div className="container">
             <div className="section-title text-center m-60px-b">
               <h2>{props.title}</h2>

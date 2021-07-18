@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <>
-        <section id="footer-top" className="p-80px-tb bg-light">
+        <section id="footer-top" className="p-80px-tb bg-light" data-aos="zoom-in-up">
           <div className="container">
             <div className="row">
               <div className="col-lg-6 col-md-12 col-sm-12">

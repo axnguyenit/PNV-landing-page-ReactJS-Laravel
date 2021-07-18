@@ -2,7 +2,7 @@ import React from 'react';
 
 const Causes = (props) => {
     return (
-      <section id="causes" className="p-80px-tb bg-white">
+      <section id={props.title} className={`p-80px-tb ${props.bg}`} data-aos={props.aos}>
         <div className="container">
           <div className="row">
             <div className="col-sm-8 offset-sm-2">
@@ -22,7 +22,7 @@ const Causes = (props) => {
                     <div className="col">
                       <article className="content-box diffuse-shadow bg-light p-10px">
                         <div className="btn-relative-img text-center overlay overlay-5">
-                          <img src="./assets/images/1.jpg" alt="" />
+                          <img src={cause.file} alt="" />
                         </div>
                         <div className="content-area mt-2 p-10px">
                           <h3><a href="#">{cause.title}</a></h3>

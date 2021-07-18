@@ -24,6 +24,7 @@ var Donate = function Donate() {
     style: {
       backgroundImage: 'url(./assets/images/bg/helping-hands.jpg)'
     },
+    "data-aos": "zoom-in-up",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "container",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -36,8 +37,6 @@ var Donate = function Donate() {
               children: "Make a Donation Now"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
               className: "divider-dashed m-25px-b"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-              children: "Had strictly mrs handsome mistaken cheerful. We it so if resolution invitation remarkably unpleasant conviction. As into ye then form."
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
               className: "m-30px-t",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
@@ -89,22 +88,34 @@ var Donate = function Donate() {
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                 className: "form-group",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                  className: "form-check",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
+                  action: "https://www.sandbox.paypal.com/donate",
+                  method: "post",
+                  target: "_top",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                    className: "form-check-input",
-                    type: "checkbox",
-                    id: "gridCheck"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
-                    className: "form-check-label",
-                    htmlFor: "gridCheck",
-                    children: "I want to donate this amount every month"
+                    type: "hidden",
+                    name: "hosted_button_id",
+                    value: "XWG8TJUVLMB8A"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                    hidden: true,
+                    type: "image",
+                    src: "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif",
+                    border: "0",
+                    name: "submit",
+                    title: "PayPal - The safer, easier way to pay online!",
+                    alt: "Donate with PayPal button"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+                    alt: "",
+                    border: "0",
+                    src: "https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif",
+                    width: "1",
+                    height: "1"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                    type: "submit",
+                    className: "btn btn-default",
+                    value: "Donate now"
                   })]
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                className: "btn btn-default",
-                href: "#",
-                children: "Donate now"
               })]
             })]
           })

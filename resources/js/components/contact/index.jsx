@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <section id="contact" className="p-80px-tb bg-white">
+      <div id="contact" className="p-80px-tb bg-white" data-aos="zoom-in-up">
         <div className="container">
           <div className="row">
             <div className="col-sm-8 offset-sm-2">
@@ -59,7 +59,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     )
 }
 

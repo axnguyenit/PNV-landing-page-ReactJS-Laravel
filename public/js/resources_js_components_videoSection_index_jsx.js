@@ -13,17 +13,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
- // import 'js/'
 
 
 
 
-var VideoSection = function VideoSection() {
+var VideoSection = function VideoSection(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
     className: "p-100px-tb overlay overlay-6 parallax",
     style: {
       backgroundImage: 'url(./assets/images/bg/video-promo.jpg)'
     },
+    "data-aos": props.aos,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "container",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -56,7 +56,7 @@ var VideoSection = function VideoSection() {
                       className: "embed-responsive embed-responsive-16by9 z-depth-1-half",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("iframe", {
                         className: "embed-responsive-item",
-                        src: "https://www.youtube.com/embed/30KI5SuECuc",
+                        src: "https://www.youtube.com/embed/olcVx8xnwWQ",
                         allowFullScreen: true
                       })
                     })

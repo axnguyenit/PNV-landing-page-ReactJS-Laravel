@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -133,6 +135,7 @@ export default function HomePage() {
 
   const [open, setOpen] = React.useState(false);
 
+  // handle edit, hide, show, remove component
   const handleComponent = (option, value, existingData = {}, currentIndex = null) => {
     switch(option) {
       case 'Edit':
@@ -302,6 +305,7 @@ export default function HomePage() {
 
   useEffect(() => {
     fetchData();
+    Aos.init({ duration: 2000 });
   }, []);
 
   return (
