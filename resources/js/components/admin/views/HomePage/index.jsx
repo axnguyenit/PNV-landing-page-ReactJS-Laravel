@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Aos from 'aos';
-import 'aos/dist/aos.css';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -45,6 +43,7 @@ import Volunteers from '../../../volunteers';
 import JoinAsVolunteer from '../../../joinVolunteers';
 import Testimonials from '../../../testimonials';
 import Milestones from '../../../milestones';
+import Gallery from '../../../gallery';
 // import Input from "@material-ui/core/Input";
 
 const API_URL_CONTAINER = `http://127.0.0.1:8000/api/container`;
@@ -75,12 +74,9 @@ const styles = {
     listStyle: "none",
     paddingLeft: "0",
   },
-  root: {
-    transform: 'translateZ(0px)',
-    flexGrow: 1,
-  },
   exampleWrapper: {
     position: 'relative',
+    zIndex: '1',
   },
   speedDial: {
     position: 'absolute',
@@ -113,6 +109,8 @@ const renderComponent = (name, props) => {
       return <Header {...props} preview={true}/>
     case 'Banner': 
       return <Banner {...props}/>
+    case 'Gallery':
+      return <Gallery {...props}/>
     return ''
   }
 }
@@ -173,7 +171,7 @@ export default function HomePage() {
 
   // handle call api get data from database
   const fetchData = () => {
-    axios.get('/api/landing-page/home-page').then(res => {
+    axios.get('/api/landing-page').then(res => {
       updateListSelectedComponent(res.data.components);
     })
   }
@@ -191,6 +189,8 @@ export default function HomePage() {
     } else {
         setIsSelectComponent(false);
     }
+
+    console.log(value);
   };
 
   // handle DnD to sort component
@@ -207,6 +207,7 @@ export default function HomePage() {
   // handle onChange to get data from dynamic form
   const onChangeFormdata = async (data) => {
     updateCurrentFormData(data.formData);
+    console.log(data.formData);
   }
 
   // handle add && update component
@@ -268,14 +269,16 @@ export default function HomePage() {
     }
 
     updateListSelectedComponent([...listSelectedComponent]);
+    console.log(listSelectedComponent);
   }
 
   // handle save list selected component to database
   const onSaveLandingPage = async () => {
     try {
+      console.log(listSelectedComponent);
         const res = await axios({
             method: 'put',
-            url: '/api/landing-page',
+            url: `http://127.0.0.1:8000/api/landing-page/${listSelectedComponent.id}`,
             data: {
               name: 'home-page',
               url: 'home-page',
@@ -305,7 +308,6 @@ export default function HomePage() {
 
   useEffect(() => {
     fetchData();
-    Aos.init({ duration: 2000 });
   }, []);
 
   return (
@@ -315,7 +317,7 @@ export default function HomePage() {
         <GridItem xs={12} sm={12} md={12}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Select Component</h4>
+              <h4 className={classes.cardTitleWhite}>Select Component Sample</h4>
             </CardHeader>
             <CardBody>
               <GridContainer>
@@ -460,7 +462,6 @@ export default function HomePage() {
                                       </SpeedDial>
                                     </div>
                                   <li 
-                                    className={classes.root}
                                     ref={provided.innerRef}
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}

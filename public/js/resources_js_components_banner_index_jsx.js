@@ -36,7 +36,7 @@ var Banner = function Banner(props) {
                 backgroundImage: "url(".concat(item.background, ")")
               },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                className: "overlay overlay-5"
+                className: "overlay overlay-6"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                 className: "container",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -63,6 +63,17 @@ var Banner = function Banner(props) {
                           children: item.title
                         })
                       })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                      className: "hero-btn-wrapper",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                        href: "#contact",
+                        className: "btn btn-default btn-default-outline",
+                        children: "Contact us"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                        className: "btn btn-default",
+                        href: "#",
+                        children: "Donate now"
+                      })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                       className: "hero-btn-wrapper",
                       children: item.buttonItems && item.buttonItems.map(function (button) {

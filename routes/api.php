@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\LandingPage;
-// use App\Http\Controllers\ContainerController;
+use App\Http\Controllers\LandingPageController;
 
 
 /*
@@ -22,60 +22,58 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/landing-page', function (Request $request) {
-    try {
-        $data = $request->json()->all();
+// Route::post('/landing-page', function (Request $request) {
+//     try {
+//         $data = $request->json()->all();
+//         $landingPage = new LandingPage();
+//         $landingPage->name = $data['name'];
+//         $landingPage->description = $data['description'];
+//         $landingPage->url = $data['url'];
+//         $landingPage->title = $data['title'];
+//         $landingPage->meta = $data['meta'];
+//         $landingPage->components = json_encode ($data['components']);
+//         $landingPage->save();
+
+//     } catch(Exception $e) {
+//         return 'fail';
+//     }
+//     return 'ok';
+// });
+
+Route::apiResource('/landing-page', LandingPageController::class);
+// Route::put('/landing-page', [LandingPageController::class, ])
+// Route::put('/landing-page', function (Request $request) {
+//     try {
+//         $data = $request->json()->all();
         
-        $landingPage = new LandingPage();
-        $landingPage->name = $data['name'];
-        $landingPage->description = $data['description'];
-        $landingPage->url = $data['url'];
-        $landingPage->title = $data['title'];
-        $landingPage->meta = $data['meta'];
-        $landingPage->components = json_encode ($data['components']);
-        $landingPage->save();
+//         $landingPage = LandingPage::where('url', $data['url'])->get();
+//         if (count($landingPage) < 1) {
+//             $landingPage = new LandingPage();
+//         } else {
+//             $landingPage = $landingPage[0];
+//         }
+
+//         $landingPage->name = $data['name'];
+//         $landingPage->description = $data['description'];
+//         $landingPage->url = $data['url'];
+//         $landingPage->title = $data['title'];
+//         $landingPage->meta = $data['meta'];
+//         $landingPage->components = json_encode ($data['components']);
+//         $landingPage->save();
 
 
-    } catch(Exception $e) {
-        return 'fail';
-    }
-    return 'ok';
-});
+//     } catch(Exception $e) {
+//         echo $e->getMessage();
+//         return 'fail';
+//     }
+//     // return 'ok';
+// });
 
-
-Route::put('/landing-page', function (Request $request) {
-    try {
-        $data = $request->json()->all();
-        
-        $landingPage = LandingPage::where('url', $data['url'])->get();
-        if (count($landingPage) < 1) {
-            $landingPage = new LandingPage();
-        } else {
-            $landingPage = $landingPage[0];
-        }
-
-        $landingPage->name = $data['name'];
-        $landingPage->description = $data['description'];
-        $landingPage->url = $data['url'];
-        $landingPage->title = $data['title'];
-        $landingPage->meta = $data['meta'];
-        $landingPage->components = json_encode ($data['components']);
-        $landingPage->save();
-
-
-    } catch(Exception $e) {
-        echo $e->getMessage();
-        return 'fail';
-    }
-    // return 'ok';
-});
-
-Route::get('/landing-page/{url}', function (Request $request) {
-    $landingPage = LandingPage::where('url', $request->url)->get();
-    
-    $landingPage[0]->components = json_decode($landingPage[0]->components, FALSE);
-    return $landingPage[0];
-});
+// Route::get('/landing-page/{url}', function (Request $request) {
+//     $landingPage = LandingPage::where('url', $request->url)->get();
+//     $landingPage[0]->components = json_decode($landingPage[0]->components, FALSE);
+//     return $landingPage[0];
+// });
 
 Route::post('/savefile', function (Request $request) {
     $file = $request->file;
@@ -97,5 +95,3 @@ Route::post('/savefiles', function (Request $request) {
     $ok = file_put_contents($path.$name, $data);
     return $ok;
 });
-
-// Route::apiResource('container', ContainerController::class);

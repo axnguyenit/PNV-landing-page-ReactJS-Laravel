@@ -50,7 +50,7 @@ const systemComponent = {
         }
     },
     "About": {
-        title: "About Sample",
+        title: "About",
         type: "object",
         properties: {
             title: { type: "string", title: "Title", },
@@ -58,8 +58,32 @@ const systemComponent = {
             file: { type: "string", title: "Single file" },
         }
     },
+    "Gallery": {
+        title: 'Gallery',
+        type: 'object',
+        properties: {
+            tasks: { 
+                type: "array", 
+                title: "Images",
+                items: {
+                    properties: {
+                        filter: { type: "string", title: "Gallery Filter"},
+                        images: {
+                            type: "array", 
+                            title: "Image",
+                            items: {
+                                properties: {
+                                    file: { type: "string", title: "Single file"},
+                                }
+                            }
+                        }
+                    },
+                },
+            }
+        }
+    },
     "Causes": {
-        title: "Causes Sample",
+        title: "Causes",
         type: "object",
         required: [
             "title",
@@ -103,7 +127,7 @@ const systemComponent = {
         }
     },
     "Partners": {
-        title: "Partners Sample",
+        title: "Partners",
         type: "object",
         required: [
             "title",
@@ -130,7 +154,7 @@ const systemComponent = {
         }
     },
     "Volunteers": {
-        title: "Volunteers Sample",
+        title: "Volunteers",
         type: "object",
         required: [
             "title",
@@ -154,7 +178,7 @@ const systemComponent = {
         }
     },
     "JoinAsVolunteer" : {
-        title: "Join As Volunteer Sample",
+        title: "Join As Volunteer",
         type: "object",
         required: [
             "title",
@@ -167,7 +191,7 @@ const systemComponent = {
         }
     },
     "Milestones": {
-        title: "Milestones Sample",
+        title: "Milestones",
         type: "object",
         required: [
             "title",
@@ -197,7 +221,7 @@ const systemComponent = {
         }
     },
     "Testimonials": {
-        title: "Testimonials Sample",
+        title: "Testimonials",
         type: "object",
         required: [
             "title",
@@ -225,7 +249,7 @@ const systemComponent = {
         }
     },
     "Video" : {
-        title: "Video Sample",
+        title: "Video",
         type: "object",
         required: [
             "title",

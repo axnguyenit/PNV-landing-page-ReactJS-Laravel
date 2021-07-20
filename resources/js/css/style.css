@@ -1,14 +1,3 @@
-/*
-* Prottasha - Bootstrap 4 Charity Landing Page
-* Build Date: September 2018
-* Last Update: September 2018
-* Author: ThemeAtelier
-* Author URL: http://www.themeatelier.net
-* Copyright (C) 2018 ThemeAtelier
-* EXCLUSIVE ON themeforest.net
-*/
-
-
 /* TABLE OF CONTENTS
     1. IMPORT GOOGLE FONTS
 	2. GENERAL
@@ -454,7 +443,7 @@ ol {
     }
     50% {
         transform: translateX(-50px) scale(1.5) rotate(-164deg);
-        background: #e1b12c;
+        background: #007bff;
         border-radius: 0;
     }
     100% {
@@ -687,12 +676,12 @@ ol {
 
 .hero-swiper .swiper-pagination-bullet {
     opacity: 1;
-    border: 1px solid #e1b12c;
+    border: 1px solid #007bff;
     background-color: transparent;
 }
 
 .hero-swiper .swiper-pagination-bullet-active {
-    background-color: #e1b12c;
+    background-color: #007bff;
 }
 
 .hero-swiper.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {

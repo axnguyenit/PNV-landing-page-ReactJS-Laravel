@@ -21,8 +21,9 @@ const Causes = (props) => {
                   <div className="swiper-slide swiper-slide-active" style={{width: '360px'}}>
                     <div className="col">
                       <article className="content-box diffuse-shadow bg-light p-10px">
-                        <div className="btn-relative-img text-center overlay overlay-5">
-                          <img src={cause.file} alt="" />
+                        <div className="btn-relative-img text-center">
+                          <img src={cause.file} alt="PNV" />
+                          <a href='#' className="btn btn-default btn-small">Donate</a>
                         </div>
                         <div className="content-area mt-2 p-10px">
                           <h3><a href="#">{cause.title}</a></h3>

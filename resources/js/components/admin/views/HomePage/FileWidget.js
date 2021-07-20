@@ -25,24 +25,13 @@ const selectFile = async (file, currentFileName = '') => {
 
 const FileWidget = (props) => {
     const selectFileEl = useRef(null);
-    const previewEl = useRef(null);
     const onSelectFile = () => {
         selectFileEl.current.click();
     }
 
-    const preview = (path) => {
-       previewEl.current.style.backgroundImage = `url(${path})`;
-    //    previewEl.current.style.width='300px';
-       previewEl.current.style.height='fit-content';
-       previewEl.current.style.backgroundPosition='center';
-       previewEl.current.style.backgroundRepeat='no-repeat';
-       previewEl.current.style.backgroundSize='cover';
-    }
-
     const onChange = async (event) => {
         let path = await selectFile(event.target.files[0], props.value);
-        props.onChange(path) 
-        preview(path);
+        props.onChange(path);
     }
 
     const style = props.value ? {
@@ -61,9 +50,7 @@ const FileWidget = (props) => {
     return (
         <div>
             <Button onClick={onSelectFile}>Upload Image</Button>
-            {/* <div ref={previewEl} className={style.previewImg}> */}
                 <img className={style.imgTag} src={ props.value ? props.value : ''} alt="" />
-            {/* </div> */}
             <input 
                 ref={selectFileEl} 
                 type="file"

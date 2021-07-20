@@ -1,4 +1,5 @@
 import React from 'react';
+import './paypal2.js';
 
 const Donate = () => {
     return (
@@ -33,18 +34,21 @@ const Donate = () => {
                     <input type="number" className="form-control" id="donateAmount" placeholder="Enter amount" />
                   </div>
                   <div className="form-group">
-                    {/* <div className="form-check">
+                    <div className="form-check">
                       <input className="form-check-input" type="checkbox" id="gridCheck" />
                       <label className="form-check-label" htmlFor="gridCheck">
                         I want to donate this amount every month
                       </label>
-                    </div> */}
+                    </div>
+
                     <form action="https://www.sandbox.paypal.com/donate" method="post" target="_top">
-                      <input type="hidden" name="hosted_button_id" value="XWG8TJUVLMB8A" />
-                      <input hidden type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                      <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                      <input type="hidden" name="hosted_button_id" value="BPUVMLWMPNBUL" />
+                      <input hidden type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                      <img alt="" border="0" src="https://www.sandbox.paypal.com/en_VN/i/scr/pixel.gif" width="1" height="1" />
                       <input type="submit" className="btn btn-default" value="Donate now" />
                     </form>
+
+                    {/* <div id="paypal-button"></div> */}
                   </div>
                   {/* <a className="btn btn-default" href="#">Donate now</a> */}
                 </form>

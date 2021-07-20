@@ -19,11 +19,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var VideoSection = function VideoSection(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
-    className: "p-100px-tb overlay overlay-6 parallax",
+    className: "video p-100px-tb overlay overlay-6 parallax",
     style: {
-      backgroundImage: 'url(./assets/images/bg/video-promo.jpg)'
+      backgroundImage: "url(".concat(props.file, ")")
     },
-    "data-aos": props.aos,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "container",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -32,10 +31,10 @@ var VideoSection = function VideoSection(props) {
           className: "col-sm-8 offset-sm-2 text-center promo-video",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
             className: "m-0px-b",
-            children: "Let's Learn more"
+            children: props.title
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
             className: "m-30px-b sm-m-25px-b",
-            children: "Want to learn more about us? Let's check the video"
+            children: props.desc
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             className: "video-btn",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -56,7 +55,7 @@ var VideoSection = function VideoSection(props) {
                       className: "embed-responsive embed-responsive-16by9 z-depth-1-half",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("iframe", {
                         className: "embed-responsive-item",
-                        src: "https://www.youtube.com/embed/olcVx8xnwWQ",
+                        src: props.videoUrl,
                         allowFullScreen: true
                       })
                     })

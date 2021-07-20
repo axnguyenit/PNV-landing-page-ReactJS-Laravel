@@ -22,9 +22,9 @@
     <script src= {{ asset('./assets/js/jquery.lettering.js') }}></script>
     <script src= {{ asset('./assets/js/jquery.fittext.js') }}></script>
     <!-- Magnific Popup core JS -->
-    <script src= {{ asset('./assets/js/jquery.magnific-popup.min.js') }}></script>
+    {{-- <script src= {{ asset('./assets/js/jquery.magnific-popup.min.js') }}></script> --}}
     <!-- Modal video Popup core JS -->
-    <!-- <script src= {{ asset('./assets/js/modal-video.min.js') }}></script> -->
+    {{-- <!-- <script src= {{ asset('./assets/js/modal-video.min.js') }}></script> --> --}}
     <!-- Waypoints JS -->
     <script src= {{ asset('./assets/js/waypoints.min.js') }}></script>
     <!-- CounterUp JS -->
@@ -35,6 +35,8 @@
     <script src= {{ asset('./assets/js/jquery.ajaxchimp.min.js') }}></script>
     <!-- Swiper JS -->
     <script src= {{ asset('./assets/js/swiper.min.js') }}></script>
+    {{-- PayPal --}}
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <!-- Custom -->
     <script src= {{ asset('./assets/js/custom.js') }}></script>
     <!-- ReactJS -->

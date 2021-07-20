@@ -57,11 +57,11 @@ var PATH = {};
     PATH.heroSlider = function() {
         var swiper = new Swiper('.hero-swiper', {
             slidesPerView: 1,
-            speed: 3000,
+            speed: 2000,
             loop: true,
             centeredSlides: true,
             autoplay: {
-                delay: 3000,
+                delay: 10000,
                 disableOnInteraction: true,
             },
             navigation: {
@@ -102,14 +102,6 @@ var PATH = {};
                     effect: 'fadeOutLeft',
                 },
             });
-        }
-    }
-
-    /******************** 8. VIDEO LIGHTBOX ********************/
-    PATH.videoModal = function() {
-        var $jsmodal = $(".js-modal-btn");
-        if ($jsmodal.length) {
-            $jsmodal.modalVideo();
         }
     }
 
@@ -222,14 +214,21 @@ var PATH = {};
 
     /******************** 14. TESTIMONIAL SLIDER ********************/
     PATH.sliderTestimonial = function() {
-            var vswiper = new Swiper('.testimonialSwiper', {
-                speed: 2000,
+            var tswiper = new Swiper('.testimonialSwiper', {
+
+                speed: 1500,
+                loop: true,
+
+                freeMode: true,
+                centeredSlides: true,
                 autoplay: {
                     delay: 2000,
+                    disableOnInteraction: true,
                 },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
+                    dynamicBullets: true,
                 },
             });
         }
@@ -239,9 +238,13 @@ var PATH = {};
                 slidesPerView: 4,
                 spaceBetween: 0,
                 freeMode: true,
+                autoplay: {
+                    delay: 2000,
+                },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
+                    dynamicBullets: true,
                 },
                 breakpoints: {
                     1199: {
@@ -327,11 +330,9 @@ var PATH = {};
 
     /* Document ready function */
     $(function() {
-        PATH.textAnimation(),
-            PATH.MenuClose(),
-            PATH.HeaderScroll(),
-            PATH.HeaderSticky();
-        PATH.videoModal();
+        PATH.MenuClose();
+        PATH.HeaderScroll();
+        PATH.HeaderSticky();
         PATH.causesLightBox();
         PATH.causesProgress();
         PATH.GalleryLightBox();
@@ -345,6 +346,7 @@ var PATH = {};
 
     /* Window on load function */
     $(window).on('load', function() {
+        PATH.textAnimation();
         PATH.sliderTestimonial();
         PATH.sliderVolunteers();
         PATH.heroSlider();
@@ -353,5 +355,4 @@ var PATH = {};
         PATH.counterUp();
         PATH.preLoader();
     });
-
 })(jQuery);

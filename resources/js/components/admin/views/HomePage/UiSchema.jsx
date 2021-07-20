@@ -40,6 +40,17 @@ const uiSchema = {
                 "ui:widget": FileWidget
             },
         }
+    },
+    tasks: {
+        items: {
+            images: {
+                items: {
+                    file: {
+                        "ui:widget": FileWidget
+                    }
+                }
+            }
+        }
     }
 }
 
