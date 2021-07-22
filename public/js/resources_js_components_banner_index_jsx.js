@@ -24,9 +24,9 @@ var Banner = function Banner(props) {
       className: "swiper-container hero-swiper swiper-container-horizontal",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "swiper-wrapper",
-        children: props.bannerItems && props.bannerItems.map(function (item) {
+        children: props.bannerItems && props.bannerItems.map(function (item, index) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "swiper-slide swiper-slide-prev",
+            className: "swiper-slide",
             style: {
               width: '783px'
             },
@@ -47,6 +47,9 @@ var Banner = function Banner(props) {
                       className: "tlt1",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
                         className: "texts",
+                        style: {
+                          display: 'none'
+                        },
                         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
                           className: "current",
                           children: item.subTitle
@@ -58,6 +61,9 @@ var Banner = function Banner(props) {
                       className: "text-capitalize m-35px-tb tlt",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
                         className: "texts",
+                        style: {
+                          display: 'none'
+                        },
                         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
                           className: "current",
                           children: item.title
@@ -88,7 +94,7 @@ var Banner = function Banner(props) {
                 })
               })]
             })
-          });
+          }, index);
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "swiper-pagination swiper-pagination-clickable swiper-pagination-bullets",

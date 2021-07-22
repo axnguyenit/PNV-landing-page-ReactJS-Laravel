@@ -20,11 +20,7 @@
     <!-- Animated text -->
     <script src= {{ asset('./assets/js/jquery.textillate.js') }}></script>
     <script src= {{ asset('./assets/js/jquery.lettering.js') }}></script>
-    <script src= {{ asset('./assets/js/jquery.fittext.js') }}></script>
-    <!-- Magnific Popup core JS -->
-    {{-- <script src= {{ asset('./assets/js/jquery.magnific-popup.min.js') }}></script> --}}
-    <!-- Modal video Popup core JS -->
-    {{-- <!-- <script src= {{ asset('./assets/js/modal-video.min.js') }}></script> --> --}}
+    <script src= {{ asset('./assets/js/jquery.fittext.js') }}></script
     <!-- Waypoints JS -->
     <script src= {{ asset('./assets/js/waypoints.min.js') }}></script>
     <!-- CounterUp JS -->

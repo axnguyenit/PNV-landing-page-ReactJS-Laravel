@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([ComponentsSeeder::class]);
+        $this->call([LandingPageSeeder::class]);
+        $this->call([ContactSeeder::class]);
     }
 }

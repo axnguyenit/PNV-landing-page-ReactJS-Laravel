@@ -236,7 +236,7 @@ ol {
 }
 
 .btn-default:before {
-    background-color: #5a9f5c;
+    background-color: #226cea;
 }
 
 .btn-default {
@@ -407,7 +407,7 @@ ol {
     border-radius: 50%;
     content: "";
     position: absolute;
-    background: #38C695;
+    background: #226cea;
     animation: preloader_before 1.8s infinite cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
@@ -416,7 +416,7 @@ ol {
     height: 15px;
     left: 15%;
     border-radius: 50%;
-    background: #38C695;
+    background: #226cea;
     content: "";
     position: absolute;
     /* background: #; */
@@ -429,7 +429,7 @@ ol {
     }
     50% {
         transform: translateX(50px) scale(1.5) rotate(164deg);
-        background: #6c757d;
+        background: #226cea;
         border-radius: 0;
     }
     100% {
@@ -1674,7 +1674,7 @@ button {
     font-size: 15px;
     text-align: center;
     padding: 10px;
-    display: none;
+    /* display: none; */
 }
 
 .email-loading img {

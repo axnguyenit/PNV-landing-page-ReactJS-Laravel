@@ -30,6 +30,13 @@ const uiSchema = {
     },
     tasks: {
         items: {
+            file: {
+                "ui:widget": FileWidget
+            },
+        },
+    },
+    tasks: {
+        items: {
             desc: {
                 "ui:widget": "textarea"
             },
@@ -41,17 +48,17 @@ const uiSchema = {
             },
         }
     },
-    tasks: {
-        items: {
-            images: {
-                items: {
-                    file: {
-                        "ui:widget": FileWidget
-                    }
-                }
-            }
-        }
-    }
+    // tasks: {
+    //     items: {
+    //         images: {
+    //             items: {
+    //                 file: {
+    //                     "ui:widget": FileWidget
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 export default uiSchema;

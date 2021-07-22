@@ -14,7 +14,16 @@ class CreateDonatesTable extends Migration
     public function up()
     {
         Schema::create('donates', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('transaction_id');
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('address');
+            $table->string('donation_for');
+            $table->string('donation_type');
+            $table->string('amount');
+            $table->string('currency_code');
             $table->timestamps();
         });
     }

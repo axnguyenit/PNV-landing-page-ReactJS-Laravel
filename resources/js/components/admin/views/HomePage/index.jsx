@@ -76,7 +76,7 @@ const styles = {
   },
   exampleWrapper: {
     position: 'relative',
-    zIndex: '1',
+    zIndex: '999',
   },
   speedDial: {
     position: 'absolute',

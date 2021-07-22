@@ -143,7 +143,6 @@ const systemComponent = {
                     type: "object",
                     required: [
                         "url",
-                        "file",
                     ],
                     properties: {
                         url: { type: "string", title: "Website link", },

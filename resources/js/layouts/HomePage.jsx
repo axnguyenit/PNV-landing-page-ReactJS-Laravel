@@ -48,7 +48,7 @@ const renderComponent = (name, show, props, index) => {
     // case 'Header': 
     //   return <Header {...props}/>
     case 'Banner': 
-      return show ? <Banner {...props} /> : '';
+      return show ? <> <Banner {...props} /> <Contact /> </> : '';
     return '';
   }
 }
@@ -72,15 +72,13 @@ const HomePage = () => {
 
   useEffect(() => {
     fetchData();
-    Aos.init({duration: 3000});
+    Aos.init({duration: 2000});
   }, [])
 
   return (
     <>
-      {/* <div id="preloader-wrap">
-        <div className="preloader"></div>
-      </div> */}
-      <Header menu={menu}/>
+      {menu ? <Header menu={menu}/> : null}
+      
       {data.components ? data.components.map((item, index) => renderComponent(item.name, item.show, item.componentParams, index)) : ''}
       <Footer />
     </>

@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Donate extends Model
 {
     use HasFactory;
+
+    protected $table = 'donates';
+    protected $primaryKey = 'id';
 }

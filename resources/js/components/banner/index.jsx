@@ -5,21 +5,21 @@ const Banner = (props) => {
       <section id="section_0">
         <div className="swiper-container hero-swiper swiper-container-horizontal">
           <div className="swiper-wrapper">
-          {props.bannerItems && props.bannerItems.map(item => (
-            <div className="swiper-slide swiper-slide-prev" style={{width: '783px'}}>
+          {props.bannerItems && props.bannerItems.map((item, index) => (
+            <div key={index} className="swiper-slide" style={{width: '783px'}}>
               <div className="hero-area hero-slide" style={{backgroundImage: `url(${item.background})`}}>
                 <div className="overlay overlay-6" />
                 <div className="container">
                   <div className="row full-height align-items-center text-center">
                     <div className="col p-100px-t p-50px-b slider-text">
                       <h4 className="tlt1">
-                        <ul className="texts">
+                        <ul className="texts" style={{display: 'none'}}>
                           <li className="current">{item.subTitle}</li>
                         </ul>
                       </h4>
                       <div className="divider-circle mt-4" />
                       <h2 className="text-capitalize m-35px-tb tlt">
-                        <ul className="texts">
+                        <ul className="texts" style={{display: 'none'}}>
                           <li className="current">{item.title}</li>
                         </ul>
                       </h2>

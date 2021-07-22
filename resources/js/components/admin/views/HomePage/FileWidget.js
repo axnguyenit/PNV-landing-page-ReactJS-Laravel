@@ -34,23 +34,10 @@ const FileWidget = (props) => {
         props.onChange(path);
     }
 
-    const style = props.value ? {
-        previewImg: {
-            backgroundImage: `url(${props.value})`,
-            height: 'fit-content',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-        },
-        imgTag: {
-            width: '100%',
-        }
-    } : {}
-
     return (
         <div>
             <Button onClick={onSelectFile}>Upload Image</Button>
-                <img className={style.imgTag} src={ props.value ? props.value : ''} alt="" />
+                <img style={{ width: '30%' }} src={ props.value ? props.value : ''} alt="" />
             <input 
                 ref={selectFileEl} 
                 type="file"

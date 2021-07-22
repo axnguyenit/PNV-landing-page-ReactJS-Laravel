@@ -4,10 +4,9 @@ import UserProfile from "./views/UserProfile/UserProfile.js";
 // import Typography from "./views/Typography/Typography.js";
 // import Icons from "./views/Icons/Icons.js";
 // import Navbars from "./views/Navbars";
-import Banner from "./views/Banner";
 import HomePage from "./views/HomePage";
-import EnhancedTable from "./views/Table";
-import Footer from "./views/Footer";
+import ContactTable from "./views/Contact";
+import Donation from "./views/Donation";
 // import NotificationsPage from "./views/Notifications/Notifications.js";
 
 // call api to render node navigation which need
@@ -26,33 +25,21 @@ const dashboardRoutes = [{
         layout: "/admin",
     },
     {
+        path: "/home-page",
+        name: "Home Page",
+        component: HomePage,
+        layout: "/admin",
+    },
+    {
         path: "/contact",
         name: "Contact List",
-        component: EnhancedTable,
+        component: ContactTable,
         layout: "/admin",
     },
     {
         path: "/donate",
         name: "Donate List",
-        component: EnhancedTable,
-        layout: "/admin",
-    },
-    {
-        path: "/banner",
-        name: "Banner",
-        component: Banner,
-        layout: "/admin",
-    },
-    {
-        path: "/footer",
-        name: "Footer",
-        component: Footer,
-        layout: "/admin",
-    },
-    {
-        path: "/home-page",
-        name: "Home Page",
-        component: HomePage,
+        component: Donation,
         layout: "/admin",
     },
     {

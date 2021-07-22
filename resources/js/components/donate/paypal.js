@@ -11,6 +11,8 @@ paypal.Button.render({
         size: 'large',
         color: 'blue',
         shape: 'pill',
+        label: 'checkout',
+        tagline: 'true'
     },
 
     // Enable Pay Now checkout flow (optional)
@@ -36,12 +38,14 @@ paypal.Button.render({
             // Show a confirmation message to the buyer
             window.alert('Thank you for your purchase!');
             const donation = {
-                payment_id: details.id,
-                create_at: details.create_time,
+                transaction_id: details.id,
+                created_at: details.create_time,
                 email: details.payer.email_address,
                 name: details.purchase_units[0].shipping.name.full_name,
+                phone: details.payer.phone.phone_number.national_number,
                 address: details.purchase_units[0].shipping.address.address_line_1 + ', ' + details.purchase_units[0].shipping.address.country_code,
-                purchase: details.purchase_units[0].amount.value,
+                amount: details.purchase_units[0].amount.value,
+                currency_code: details.purchase_units[0].amount.currency_code,
             }
 
             console.log(donation);

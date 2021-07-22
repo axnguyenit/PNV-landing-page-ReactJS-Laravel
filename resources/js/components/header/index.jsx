@@ -7,6 +7,9 @@ const Header = (props) => {
     // }
     return (
         <header>
+            <div id="preloader-wrap">
+                <div className="preloader"></div>
+            </div>
             <nav className={className}>
                 <div className="container">
                     <a className="navbar-brand" href="#">

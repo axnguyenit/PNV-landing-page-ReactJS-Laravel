@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Models\LandingPage;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\ContactController;
 
 
 /*
@@ -41,6 +42,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // });
 
 Route::apiResource('/landing-page', LandingPageController::class);
+Route::apiResource('/contact', ContactController::class);
+
 // Route::put('/landing-page', [LandingPageController::class, ])
 // Route::put('/landing-page', function (Request $request) {
 //     try {

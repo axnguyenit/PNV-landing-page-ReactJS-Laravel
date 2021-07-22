@@ -14,7 +14,4 @@ class LandingPage extends Model
     // protected $fillable = [
     //     'name', 'url', 'description', 'meta', 'title', 'components'
     // ];
-    // protected $casts = [
-    //     'components' => 'array'
-    // ];
 }
