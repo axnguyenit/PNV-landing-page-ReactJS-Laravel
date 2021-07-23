@@ -16,8 +16,8 @@ const Volunteers = (props) => {
           <div className="row">
             <div className="swiper-container volunteers-swiper p-60px-b swiper-container-horizontal swiper-container-free-mode">
               <div className="swiper-wrapper" style={{transform: 'translate3d(0px, 0px, 0px)'}}>
-                {props.tasks ? props.tasks.map(volunteer => (
-                  <div className="swiper-slide swiper-slide-active" style={{width: '360px'}}>
+                {props.tasks ? props.tasks.map((volunteer, index) => (
+                  <div key={index} className="swiper-slide swiper-slide-active" style={{width: '360px'}}>
                     <div className="col">
                       <div className="each-box">
                         <div className="inner gray-bg text-center">

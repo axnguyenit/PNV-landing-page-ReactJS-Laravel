@@ -69,26 +69,24 @@ var Banner = function Banner(props) {
                           children: item.title
                         })
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
                       className: "hero-btn-wrapper",
+                      action: "https://www.sandbox.paypal.com/donate",
+                      method: "post",
+                      target: "_top",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
                         href: "#contact",
                         className: "btn btn-default btn-default-outline",
                         children: "Contact us"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                        type: "hidden",
+                        name: "hosted_button_id",
+                        value: "BPUVMLWMPNBUL"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+                        type: "submit",
                         className: "btn btn-default",
-                        href: "#",
                         children: "Donate now"
                       })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                      className: "hero-btn-wrapper",
-                      children: item.buttonItems && item.buttonItems.map(function (button) {
-                        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                          href: button.buttonLink,
-                          className: button.buttonClass,
-                          children: button.buttonText
-                        });
-                      })
                     })]
                   })
                 })

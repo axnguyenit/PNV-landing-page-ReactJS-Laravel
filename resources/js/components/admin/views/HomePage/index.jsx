@@ -6,7 +6,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Form from "@rjsf/material-ui";
-// 
 import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
@@ -14,7 +13,6 @@ import EditIcon from '@material-ui/icons/Edit';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import DeleteIcon from '@material-ui/icons/Delete';
-// 
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 // core components
 import GridItem from "../../components/Grid/GridItem.js";
@@ -24,15 +22,10 @@ import Card from "../../components/Card/Card.js";
 import CardHeader from "../../components/Card/CardHeader.js";
 import swal from 'sweetalert';
 import axios from "axios";
-
+// homepage components
 import CardBody from "../../components/Card/CardBody.js";
 import CustomTabs from "../../components/CustomTabs/CustomTabs.js";
-// import HomePage from "../../components/HomePage/HomePage";
-import Tasks from "../../components/Tasks/Tasks.js";
-// import CardAvatar from "../../components/Card/CardAvatar.js";
 import CardFooter from "../../components/Card/CardFooter.js";
-import systemComponent from "./SystemComponent";
-import uiSchema from "./UiSchema";
 import Header from "../../../header";
 import Banner from "../../../banner";
 import About from '../../../about';
@@ -44,9 +37,10 @@ import JoinAsVolunteer from '../../../joinVolunteers';
 import Testimonials from '../../../testimonials';
 import Milestones from '../../../milestones';
 import Gallery from '../../../gallery';
-// import Input from "@material-ui/core/Input";
-
-const API_URL_CONTAINER = `http://127.0.0.1:8000/api/container`;
+import Contact from '../../../contact';
+// dynamic form
+import systemComponent from "./SystemComponent";
+import uiSchema from "./UiSchema";
 
 const styles = {
   cardCategoryWhite: {
@@ -105,12 +99,14 @@ const renderComponent = (name, props) => {
       return <Testimonials {...props}/>
     case 'Video':
       return <VideoSection {...props}/>
-    case 'Header': 
-      return <Header {...props} preview={true}/>
+    // case 'Header': 
+    //   return <Header {...props} preview={true}/>
     case 'Banner': 
       return <Banner {...props}/>
     case 'Gallery':
       return <Gallery {...props}/>
+    case 'Contact':
+      return <Contact {...props}/>
     return ''
   }
 }
@@ -122,7 +118,7 @@ const actions = [
   { icon: <DeleteIcon />, name: 'Delete' },
 ];
 
-export default function HomePage() {
+const HomePage = () => {
   const [isSelectComponent, setIsSelectComponent] = useState(false);
   const classes = useStyles();
   const [componentName, setComponentName] = useState(null);
@@ -135,6 +131,7 @@ export default function HomePage() {
 
   // handle edit, hide, show, remove component
   const handleComponent = (option, value, existingData = {}, currentIndex = null) => {
+    console.log(existingData);
     switch(option) {
       case 'Edit':
         setComponentName(value);
@@ -161,14 +158,6 @@ export default function HomePage() {
     } 
   }
 
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
   // handle call api get data from database
   const fetchData = () => {
     axios.get('/api/landing-page').then(res => {
@@ -189,8 +178,6 @@ export default function HomePage() {
     } else {
         setIsSelectComponent(false);
     }
-
-    console.log(value);
   };
 
   // handle DnD to sort component
@@ -269,16 +256,14 @@ export default function HomePage() {
     }
 
     updateListSelectedComponent([...listSelectedComponent]);
-    console.log(listSelectedComponent);
   }
 
   // handle save list selected component to database
   const onSaveLandingPage = async () => {
     try {
-      console.log(listSelectedComponent);
         const res = await axios({
             method: 'put',
-            url: `http://127.0.0.1:8000/api/landing-page/${listSelectedComponent.id}`,
+            url: `/api/landing-page/${listSelectedComponent.id}`,
             data: {
               name: 'home-page',
               url: 'home-page',
@@ -333,7 +318,7 @@ export default function HomePage() {
                         <em>None</em>
                       </MenuItem>
                       {Object.keys(systemComponent).map(item => 
-                       <MenuItem value={item}>{systemComponent[item].title}</MenuItem>
+                       <MenuItem key={item} value={item}>{systemComponent[item].title}</MenuItem>
                       )}
                     </Select>
                   </FormControl>
@@ -385,8 +370,6 @@ export default function HomePage() {
                       ]}
                     />
                   }
-                  {/* <div> Preview Component</div> */}
-                  {/* { isSelectComponent && renderComponent(componentName , currentFormData) } */}
                   {!isSelectComponent ? "" : (
                     <GridContainer>
                       <GridItem xs={12} sm={12} md={12}>
@@ -409,7 +392,6 @@ export default function HomePage() {
           </Card>
         </GridItem>
         {/* Select Component End */}
-
       </GridContainer>
       {/* Add Component End */}
 
@@ -436,8 +418,8 @@ export default function HomePage() {
                                         ariaLabel="SpeedDial example"
                                         className={classes.speedDial}
                                         icon={<SpeedDialIcon />}
-                                        onClose={handleClose}
-                                        onOpen={handleOpen}
+                                        onClose={() => {setOpen(false)}}
+                                        onOpen={() => {setOpen(true)}}
                                         open={open}
                                         direction='down'
                                       >
@@ -489,3 +471,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+export default HomePage;

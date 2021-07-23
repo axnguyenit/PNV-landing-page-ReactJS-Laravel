@@ -17,13 +17,16 @@ const Causes = (props) => {
           <div className="row">
             <div className="swiper-container causes-swiper p-60px-b swiper-container-horizontal swiper-container-free-mode">
               <div className="swiper-wrapper" style={{transform: 'translate3d(0px, 0px, 0px)'}}>
-                {props.tasks ? props.tasks.map(cause => (
-                  <div className="swiper-slide swiper-slide-active" style={{width: '360px'}}>
+                {props.tasks ? props.tasks.map((cause, index) => (
+                  <div key={index} className="swiper-slide swiper-slide-active" style={{width: '360px'}}>
                     <div className="col">
                       <article className="content-box diffuse-shadow bg-light p-10px">
                         <div className="btn-relative-img text-center">
                           <img src={cause.file} alt="PNV" />
-                          <a href='#' className="btn btn-default btn-small">Donate</a>
+                          <form className="hero-btn-wrapper" action="https://www.sandbox.paypal.com/donate" method="post" target="_top">
+                            <input type="hidden" name="hosted_button_id" value="BPUVMLWMPNBUL" />
+                            <button type="submit" className="btn btn-default btn-small">Donate</button>
+                          </form>
                         </div>
                         <div className="content-area mt-2 p-10px">
                           <h3><a href="#">{cause.title}</a></h3>

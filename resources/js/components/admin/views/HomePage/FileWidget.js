@@ -16,10 +16,7 @@ const selectFile = async (file, currentFileName = '') => {
         console.log(result.data);
         return `${window.location.origin}/${result.data}`;
     } catch( $e ) {
-
     }
-    
-
     return Date.now().toString()+'.png';
 }
 

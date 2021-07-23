@@ -51,7 +51,7 @@ var Testimonials = function Testimonials(props) {
               transform: 'translate3d(-1440px, 0px, 0px)',
               transitionDuration: '0ms'
             },
-            children: props.tasks ? props.tasks.map(function (testimonial) {
+            children: props.tasks ? props.tasks.map(function (testimonial, index) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                 className: "swiper-slide",
                 style: {
@@ -78,7 +78,7 @@ var Testimonials = function Testimonials(props) {
                     })
                   })]
                 })
-              });
+              }, index);
             }) : null
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             className: "swiper-pagination swiper-pagination-clickable swiper-pagination-bullets",

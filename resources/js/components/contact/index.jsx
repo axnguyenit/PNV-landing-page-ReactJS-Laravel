@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Contact = () => {
+const Contact = (props) => {
     const [errTxt, setErrTxt] = useState('');
     const [stt, setStt] = useState('');
     const [contact, setContact] = useState({
@@ -49,14 +49,14 @@ const Contact = () => {
     };
 
     return (
-      <div id="contact" className="p-80px-tb bg-white" data-aos="zoom-in-up">
+      <div id="contact" className="p-80px-tb bg-white" data-aos={props.aos}>
         <div className="container">
           <div className="row">
             <div className="col-sm-8 offset-sm-2">
               <div className="section-title text-center m-60px-b">
-                <h2>Contact Form</h2>
+                <h2>{props.title}</h2>
                 <div className="divider-circle mx-auto" />
-                <p>Folly was these three and songs arose whose. Of in vicinity contempt together in possible branched. Assured company hastily looking garrets in oh.</p>
+                <p dangerouslySetInnerHTML={{ __html: props.slogan }}></p>
               </div>
             </div>
           </div>
@@ -89,18 +89,16 @@ const Contact = () => {
             <div className="col-lg-4 col-md-6 col-sm-12 m-25px-b">
               <div className="address-wrap bg-light p-30px">
                 <ul>
-                  {/* SELECT FROM DATABASE */}
-                  <li><span>Address:</span>99 To Hien Thanh <br /> Da Nang, Vietnam</li>
-                  <li><span>Phone:</span><a href="#">+84 236 3888 503</a></li>
-                  <li><span>Email:</span><a href="#"> info.vietnam@passerellesnumeriques.org</a></li>
+                  <li><span>Address:</span>{props.address}</li>
+                  <li><span>Phone:</span><a href="#">{props.phone}</a></li>
+                  <li><span>Email:</span><a href="#">{props.email}</a></li>
                 </ul>
                 <h4>Connect our socials</h4>
                 <ul className="nav light-icon social-icons">
-                  <li><a href="#"><i className="icofont-facebook" /></a></li>
-                  <li><a href="#"><i className="icofont-youtube" /></a></li>
-                  <li><a href="#"><i className="icofont-skype" /></a></li>
-                  <li><a href="#"><i className="icofont-linkedin" /></a></li>
-                  <li><a href="#"><i className="icofont-instagram" /></a></li>
+                  {props.facebook ? <li><a href={props.facebook}><i className="icofont-facebook" /></a></li> : null}
+                  {props.youtube ? <li><a href={props.youtube}><i className="icofont-youtube" /></a></li> : null}
+                  {props.skype ? <li><a href={props.skype}><i className="icofont-skype" /></a></li> : null}
+                  {props.linkedin ? <li><a href={props.linkedin}><i className="icofont-linkedin" /></a></li> : null}
                 </ul>
               </div>
             </div>

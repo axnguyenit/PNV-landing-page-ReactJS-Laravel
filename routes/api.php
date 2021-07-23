@@ -1,11 +1,11 @@
 <?php
 
+use App\Models\LandingPage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
-use App\Models\LandingPage;
-use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\DonateController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LandingPageController;
 
 
 /*
@@ -23,60 +23,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::post('/landing-page', function (Request $request) {
-//     try {
-//         $data = $request->json()->all();
-//         $landingPage = new LandingPage();
-//         $landingPage->name = $data['name'];
-//         $landingPage->description = $data['description'];
-//         $landingPage->url = $data['url'];
-//         $landingPage->title = $data['title'];
-//         $landingPage->meta = $data['meta'];
-//         $landingPage->components = json_encode ($data['components']);
-//         $landingPage->save();
-
-//     } catch(Exception $e) {
-//         return 'fail';
-//     }
-//     return 'ok';
-// });
-
 Route::apiResource('/landing-page', LandingPageController::class);
 Route::apiResource('/contact', ContactController::class);
-
-// Route::put('/landing-page', [LandingPageController::class, ])
-// Route::put('/landing-page', function (Request $request) {
-//     try {
-//         $data = $request->json()->all();
-        
-//         $landingPage = LandingPage::where('url', $data['url'])->get();
-//         if (count($landingPage) < 1) {
-//             $landingPage = new LandingPage();
-//         } else {
-//             $landingPage = $landingPage[0];
-//         }
-
-//         $landingPage->name = $data['name'];
-//         $landingPage->description = $data['description'];
-//         $landingPage->url = $data['url'];
-//         $landingPage->title = $data['title'];
-//         $landingPage->meta = $data['meta'];
-//         $landingPage->components = json_encode ($data['components']);
-//         $landingPage->save();
-
-
-//     } catch(Exception $e) {
-//         echo $e->getMessage();
-//         return 'fail';
-//     }
-//     // return 'ok';
-// });
-
-// Route::get('/landing-page/{url}', function (Request $request) {
-//     $landingPage = LandingPage::where('url', $request->url)->get();
-//     $landingPage[0]->components = json_decode($landingPage[0]->components, FALSE);
-//     return $landingPage[0];
-// });
+Route::apiResource('/donate', DonateController::class);
 
 Route::post('/savefile', function (Request $request) {
     $file = $request->file;
@@ -85,16 +34,16 @@ Route::post('/savefile', function (Request $request) {
     return 'files/'.$newImageName;
 });
 
-Route::post('/savefiles', function (Request $request) {
-    $fileInfo = $request->fileInfo;
-    list($type, $name, $data) = explode(';', $fileInfo);
+// Route::post('/savefiles', function (Request $request) {
+//     $fileInfo = $request->fileInfo;
+//     list($type, $name, $data) = explode(';', $fileInfo);
 
-    list(, $type) =  explode(':', $type);
-    list(, $name) = explode('=', $name);
-    list(, $data)      = explode(',', $data);
-    $data = base64_decode($data);
+//     list(, $type) = explode(':', $type);
+//     list(, $name) = explode('=', $name);
+//     list(, $data) = explode(',', $data);
+//     $data = base64_decode($data);
 
-    $path = public_path(). DIRECTORY_SEPARATOR.'files'.DIRECTORY_SEPARATOR;
-    $ok = file_put_contents($path.$name, $data);
-    return $ok;
-});
+//     $path = public_path(). DIRECTORY_SEPARATOR.'files'.DIRECTORY_SEPARATOR;
+//     $ok = file_put_contents($path.$name, $data);
+//     return $ok;
+// });

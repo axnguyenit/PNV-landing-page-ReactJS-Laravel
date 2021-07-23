@@ -30,25 +30,29 @@ const renderComponent = (name, show, props, index) => {
     }
   switch(name) {
     case 'About':
-      return show ? <> <About {...props}/> <Donate /> </>: '';
+      return show ? <About {...props}/> : '';
     case 'Causes':
-      return show ? <Causes {...props}/>: '';
+      return show ? <Causes {...props}/>  : '';
     case 'Partners':
-      return show ? <Partners {...props}/>: '';
+      return show ? <Partners {...props}/> : '';
     case 'Volunteers':
       return show ? <Volunteers {...props}/> : '';
     case 'JoinAsVolunteer':
       return show ? <JoinVolunteers {...props}/> : '';
     case 'Milestones':
-      return show ? <> <Milestones {...props}/> <Gallery/> </>: '';
+      return show ? <Milestones {...props}/> : '';
     case 'Testimonials':
       return show ? <Testimonials {...props}/> : '';
     case 'Video':
-      return show ? <VideoSection {...props}/>: '';
+      return show ? <VideoSection {...props}/> : '';
     // case 'Header': 
     //   return <Header {...props}/>
     case 'Banner': 
-      return show ? <> <Banner {...props} /> <Contact /> </> : '';
+      return show ? <Banner {...props} /> : '';
+    case 'Gallery':
+      return show ? <Gallery {...props}/> : '';
+    case 'Contact':      
+      return show ? <Contact {...props}/> : '';
     return '';
   }
 }
@@ -59,7 +63,7 @@ const HomePage = () => {
   const [menu, setMenu] = useState([]);
   // call api here & transmit data to each component throught props
   const fetchData = () => {
-    axios.get(`api/landing-page`).then(res => {
+    axios.get(`/api/landing-page`).then(res => {
       // console.log(res.data);
       let arrTerm = [];
       res.data.components.map(item => {

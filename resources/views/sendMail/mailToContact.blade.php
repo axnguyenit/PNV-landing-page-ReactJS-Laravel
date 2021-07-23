@@ -146,10 +146,10 @@
     }
   </style>
   <div class="body">
-    <div class="header">
+    {{-- <div class="header">
       <img src="https://www.casu.pl/media/wysiwyg/logocasu.jpg" />
-    </div>
-    <div class="nav-menu">
+    </div> --}}
+    {{-- <div class="nav-menu">
       <a
         class="item"
         href="https://www.casu.pl/women/obuwie-1.html?casu_nowosc=tak"
@@ -161,14 +161,14 @@
       <a class="item" href="https://www.casu.pl/dzieciece.html?casu_nowosc=tak"
         >Dziecięce</a
       >
-    </div>
+    </div> --}}
     <div class="content">
       <h1>
-        [imie], dziękujemy za złożenie zamówienia numer [numer_zamowienia_sklep]
+        Email automatical from Passerelles numériques Vietnam
       </h1>
-      <p>[lista_przedmiotow]</p>
+      <p>Thanks for contact</p>
       <hr />
-      <div class="przycisk row">
+      {{-- <div class="przycisk row">
         <p class="col-left">
           Aby dowiedzieć się więcej nt. zamówienia, statusu dostawy
         </p>
@@ -183,36 +183,37 @@
         <a class="col-right" href="https://www.casu.pl/customer/account/login/"
           ><button type="button" class="btn">Twoje konto w sklepie</button></a
         >
-      </div>
-      <div class="przycisk row">
+      </div> --}}
+      {{-- <div class="przycisk row">
         <p class="col-left">.</p>
         <a class="col-right" href="https://www.casu.pl/zwrot"
           ><button type="button" class="btn" style="width: 182px;">
             Formularz zwrotu
           </button></a
         >
-      </div>
-      <hr />
+      </div> --}}
+      {{-- <hr /> --}}
       <p class="info">
        <br />e-mail
-        <a href="mailto:casu@casu.pl">casu@casu.pl</a><br />
-        <a href="tel:+48506455483">506 455 483</a>
+        <a href="mailto:casu@casu.pl">info.vietnam@passerellesnumeriques.org</a><br />
+        <a href="tel:+48506455483">+84 236 3888 503</a>
       </p>
-      <h2>Życzymy miłego dnia,</h2>
-      <h4>Casu.pl</h4>
-      <p class="">
+      <h2>99 To Hien Thanh
+        Da Nang, Vietnam</h2>
+      {{-- <h4>Casu.pl</h4> --}}
+      {{-- <p class="">
        
-      </p>
+      </p> --}}
     </div>
     <div class="space"></div>
     <div class="newsletter">
       <a
-        href="http://www.casu.pl/#newsletter-validate-detail"
-        title="Link do zapisu na newsletter"
+        href="https://www.passerellesnumeriques.org/misc/logo-vi.png"
+        title="Passerelles numériques Vietnam"
       >
         <img
           alt="Baner do zapisu na newsletter"
-          src="https://www.casu.pl/media/wysiwyg/template-newsletter.jpg"
+          src="https://www.passerellesnumeriques.org/misc/logo-vi.png"
         />
       </a>
     </div>
@@ -235,11 +236,11 @@
         ><img src="https://www.casu.pl/media/wysiwyg/blog.png"
       /></a>
     </div>
-    <div class="footer clr">
+    {{-- <div class="footer clr">
       08:00 - 16:00 <br />
       Komórka : 506 455 483 <br />
       e-mail: casu@casu.pl
-    </div>
+    </div> --}}
   </div>
   
 

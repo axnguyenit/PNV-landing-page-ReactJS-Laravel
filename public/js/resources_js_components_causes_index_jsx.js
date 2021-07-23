@@ -50,7 +50,7 @@ var Causes = function Causes(props) {
             style: {
               transform: 'translate3d(0px, 0px, 0px)'
             },
-            children: props.tasks ? props.tasks.map(function (cause) {
+            children: props.tasks ? props.tasks.map(function (cause, index) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                 className: "swiper-slide swiper-slide-active",
                 style: {
@@ -65,10 +65,20 @@ var Causes = function Causes(props) {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
                         src: cause.file,
                         alt: "PNV"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                        href: "#",
-                        className: "btn btn-default btn-small",
-                        children: "Donate"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
+                        className: "hero-btn-wrapper",
+                        action: "https://www.sandbox.paypal.com/donate",
+                        method: "post",
+                        target: "_top",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                          type: "hidden",
+                          name: "hosted_button_id",
+                          value: "BPUVMLWMPNBUL"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+                          type: "submit",
+                          className: "btn btn-default btn-small",
+                          children: "Donate"
+                        })]
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                       className: "content-area mt-2 p-10px",
@@ -108,7 +118,7 @@ var Causes = function Causes(props) {
                     })]
                   })
                 })
-              });
+              }, index);
             }) : null
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             className: "swiper-pagination swiper-pagination-clickable swiper-pagination-bullets",

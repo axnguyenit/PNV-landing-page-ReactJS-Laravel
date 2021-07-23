@@ -33,17 +33,17 @@ const systemComponent = {
                         subTitle: { type: "string", title: "Sub title"},
                         title: { type: "string", title: "title"},
                         background: { type: "string",  title: "Single file" },
-                        buttonItems: {
-                            type: "array", 
-                            title: "buttons",
-                            items: {
-                                properties: {
-                                    buttonText: { type: "string", title: "text"},
-                                    buttonLink: { type: "string", title: "link"},
-                                    buttonClass: { type: "string", title: "classCss"},
-                                }
-                            }
-                        }
+                        // buttonItems: {
+                        //     type: "array", 
+                        //     title: "buttons",
+                        //     items: {
+                        //         properties: {
+                        //             buttonText: { type: "string", title: "text"},
+                        //             buttonLink: { type: "string", title: "link"},
+                        //             buttonClass: { type: "string", title: "classCss"},
+                        //         }
+                        //     }
+                        // }
                     },
                 },
             }
@@ -52,6 +52,10 @@ const systemComponent = {
     "About": {
         title: "About",
         type: "object",
+        required: [
+            "title",
+            "desc",
+        ],
         properties: {
             title: { type: "string", title: "Title", },
             desc: { type: "string", title: "Description" },
@@ -61,19 +65,29 @@ const systemComponent = {
     "Gallery": {
         title: 'Gallery',
         type: 'object',
+        required: [
+            "title",
+            "slogan",
+        ],
         properties: {
+            title: { type: "string", title: "Title" },
+            slogan: { type: "string", title: "Slogan" },
             tasks: { 
                 type: "array", 
-                title: "Images",
+                title: "Gallery Filter",
                 items: {
+                    type: "object",
+                    required: [
+                        'filter',
+                    ],
                     properties: {
-                        filter: { type: "string", title: "Gallery Filter"},
+                        filter: { type: "string", title: "Filter"},
                         images: {
                             type: "array", 
-                            title: "Image",
+                            title: "Images",
                             items: {
                                 properties: {
-                                    file: { type: "string", title: "Single file"},
+                                    file: { type: "string",  title: "Single file" },
                                 }
                             }
                         }
@@ -112,7 +126,6 @@ const systemComponent = {
                     properties: {
                         title: { type: "string", title: "Causes title", },
                         desc: { type: "string", title: "Description", },
-                        file: { type: "string",  title: "Single file" },
                         title1: { type: "string", title: "Title 1", },
                         content1: { type: "string", title: "Content 1", },
                         title2: { type: "string", title: "Title 2", },
@@ -121,6 +134,7 @@ const systemComponent = {
                         content3: { type: "string", title: "Content 3", },
                         title4: { type: "string", title: "Title 4", },
                         content4: { type: "string", title: "Content 4", },
+                        file: { type: "string",  title: "Single file" },
                     }
                 }
             },
@@ -167,9 +181,13 @@ const systemComponent = {
                 title: "Volunteers List",
                 items: {
                     type: "object",
+                    required: [
+                        "name",
+                        "year",
+                    ],
                     properties: {
                         name: { type: "string", title: "Name", },
-                        year: { type: "string", title: "Year", },
+                        year: { type: "string", title: "Slogan", },
                         file: { type: "string",  title: "Single file" },
                     }
                 }
@@ -187,36 +205,6 @@ const systemComponent = {
             title: { type: "string", title: "Title" },
             desc: { type: "string", title: "Description" },
             file: { type: "string",  title: "Single file" },
-        }
-    },
-    "Milestones": {
-        title: "Milestones",
-        type: "object",
-        required: [
-            "title",
-            "desc"
-        ],
-        properties: {
-            title: { type: "string", title: "Title" },
-            desc: { type: "string", title: "Description" },
-            tasks: {
-                type: "array",
-                title: "Milestones List",
-                items: {
-                    type: "object",
-                    required: [
-                        "title",
-                        "desc",
-                        "date"
-                    ],
-                    properties: {
-                        title: { type: "string",  title: "Title" },
-                        desc: { type: "string", title: "Description" },
-                        file: { type: "string", title: "Image",  description: "Image" },
-                        date: { type: "string", title: "Date", format: "date" }
-                    }
-                }
-            }
         }
     },
     "Testimonials": {
@@ -256,9 +244,62 @@ const systemComponent = {
         ],
         properties: {
             title: { type: "string", title: "Title" },
-            desc: { type: "string", title: "Description" },
+            slogan: { type: "string", title: "Slogan" },
             videoUrl: { type: "string", title: "Video URL" },
             file: { type: "string",  title: "Background" },
+        }
+    },
+    "Milestones": {
+        title: "Milestones",
+        type: "object",
+        required: [
+            "title",
+            "desc",
+        ],
+        properties: {
+            title: { type: "string", title: "Title" },
+            desc: { type: "string", title: "Description" },
+            tasks: {
+                type: "array",
+                title: "Milestones List",
+                items: {
+                    required: [
+                        "title",
+                        "desc",
+                        "date",
+                    ],
+                    properties: {
+                        title: { type: "string",  title: "Title" },
+                        desc: { type: "string", title: "Description" },
+                        date: { type: "string", title: "Date", format: "date" },
+                        file: { type: "string",  title: "Single file" },
+                    }
+                }
+            }
+        }
+    },
+    "Contact": {
+        title: "Contact Form",
+        type: "object",
+        required: [
+            "title",
+            "slogan",
+            "address",
+            "phone",
+            "email",
+            "facebook",
+            "youtube",
+        ],
+        properties: {
+            title: { type: "string", title: "Title" },
+            slogan: { type: "string", title: "Slogan" },
+            address: { type: "string", title: "Address" },
+            phone: { type: "string", title: "Phone" },
+            email: { type: "string", title: "Email" },
+            facebook: { type: "string", title: "Facebook" },
+            youtube: { type: "string", title: "YouTube" },
+            skype: { type: "string", title: "Skype" },
+            linkedin: { type: "string", title: "LinkedIn" },
         }
     },
 }

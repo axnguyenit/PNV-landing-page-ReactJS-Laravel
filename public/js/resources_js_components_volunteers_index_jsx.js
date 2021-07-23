@@ -50,7 +50,7 @@ var Volunteers = function Volunteers(props) {
             style: {
               transform: 'translate3d(0px, 0px, 0px)'
             },
-            children: props.tasks ? props.tasks.map(function (volunteer) {
+            children: props.tasks ? props.tasks.map(function (volunteer, index) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                 className: "swiper-slide swiper-slide-active",
                 style: {
@@ -85,7 +85,7 @@ var Volunteers = function Volunteers(props) {
                     })
                   })
                 })
-              });
+              }, index);
             }) : null
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             className: "swiper-pagination swiper-pagination-clickable swiper-pagination-bullets",

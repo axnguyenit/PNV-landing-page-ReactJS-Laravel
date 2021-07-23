@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DonateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/test', function() {
-    return view('sendMail.mailToContact');
-});
+
+// Route::get('/testMail', function() {
+//     return view('sendMail.mailToContact');
+// });
 
 Route::get('/{path?}', function () {
     return view('index');

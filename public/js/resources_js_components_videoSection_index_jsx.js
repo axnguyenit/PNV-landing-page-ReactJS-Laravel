@@ -23,6 +23,7 @@ var VideoSection = function VideoSection(props) {
     style: {
       backgroundImage: "url(".concat(props.file, ")")
     },
+    "data-aos": props.aos,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "container",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -34,7 +35,9 @@ var VideoSection = function VideoSection(props) {
             children: props.title
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
             className: "m-30px-b sm-m-25px-b",
-            children: props.desc
+            dangerouslySetInnerHTML: {
+              __html: props.slogan
+            }
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             className: "video-btn",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {

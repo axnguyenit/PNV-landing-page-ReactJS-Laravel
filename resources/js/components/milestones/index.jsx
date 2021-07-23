@@ -17,8 +17,8 @@ const Milestones = (props) => {
             <div className="swiper-container causes-swiper p-60px-b swiper-container-horizontal swiper-container-free-mode">
               <div className="swiper-wrapper" style={{transform: 'translate3d(0px, 0px, 0px)'}}>
                 {/* Start Single blog */}
-                {props.tasks ? props.tasks.map(milestone => (
-                  <div className="swiper-slide col-lg-4 col-md-6 col-sm-12 m-25px-b">
+                {props.tasks ? props.tasks.map((milestone, index) => (
+                  <div key={index} className="swiper-slide col-lg-4 col-md-6 col-sm-12 m-25px-b">
                     <div className="single-blog-wrap">
                       <div className="single-blog">
                         <img src={milestone.file} alt="" />
@@ -27,9 +27,9 @@ const Milestones = (props) => {
                         </div>
                       </div>
                       <div className="post-header">
-                        <a className="date" href>
-                          <span className="day">{milestone.date.split('-')[0]}</span>
-                          <span className="month">{milestone.date.split('-')[1]}</span>
+                        <a className="date">
+                          {milestone.date ? <> <span className="day">{milestone.date.split('-')[0]}</span>
+                          <span className="month">{milestone.date.split('-')[1]}</span> </> : null}
                         </a>
                         <h3>{milestone.title}</h3>
                       </div>

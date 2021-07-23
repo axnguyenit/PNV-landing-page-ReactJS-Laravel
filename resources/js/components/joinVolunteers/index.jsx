@@ -10,21 +10,16 @@ const JoinVolunteers = (props) => {
               <div className="divider-dashed m-25px-b" />
               <p className="m-25px-b" dangerouslySetInnerHTML={{ __html: props.desc}}>
               </p>
-              {/* <div className="row">
+              <div className="row">
                 <div className="col-sm-6">
                   <div className="asset-box">
                     <i className="icofont-holding-hands" />
-                    <p><span className="counter">147</span> Volenteers</p>
+                    <br />
+                    <br />
                   </div>
                 </div>
-                <div className="col-sm-6">
-                  <div className="asset-box">
-                    <i className="icofont-check-circled" />
-                    <p><span className="counter">2000</span> Causes done</p>
-                  </div>
-                </div>
-              </div> */}
-              <a className="btn btn-default" href="#">Join now</a>
+              </div>
+              <a className="btn btn-default" href="#contact">Join now</a>
             </div>
             <div className="col-md-6 col-sm-12">
               <img src={props.file} alt="" />

@@ -9,8 +9,8 @@
     <title>Passerelles numériques | A Gateway for Life </title>
 </head>
 
-<body>
-    <div id="app">  </div>
+<body data-spy="scroll" data-target="#navbarCodeply" data-offset="70" data-new-gr-c-s-check-loaded="14.1014.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1014.0">
+    <div id="app"></div>
     <script src= {{ asset('js/app.js') }} ></script>
 
     <script src= {{ asset('./assets/js/jquery-3.2.1.min.js') }}></script>
@@ -31,8 +31,6 @@
     <script src= {{ asset('./assets/js/jquery.ajaxchimp.min.js') }}></script>
     <!-- Swiper JS -->
     <script src= {{ asset('./assets/js/swiper.min.js') }}></script>
-    {{-- PayPal --}}
-    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <!-- Custom -->
     <script src= {{ asset('./assets/js/custom.js') }}></script>
     <!-- ReactJS -->

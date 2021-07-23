@@ -5,6 +5,9 @@ const uiSchema = {
     desc: {
         "ui:widget": DraftjsWidget 
     },
+    slogan: {
+        "ui:widget": DraftjsWidget 
+    },
     file: {
         "ui:widget": FileWidget
     },
@@ -18,23 +21,6 @@ const uiSchema = {
             }
         }
     },
-    details: {
-        items: {
-            desc: {
-                "ui:widget": "textarea"
-            },
-            file: {
-                "ui:widget": FileWidget
-            },
-        }
-    },
-    tasks: {
-        items: {
-            file: {
-                "ui:widget": FileWidget
-            },
-        },
-    },
     tasks: {
         items: {
             desc: {
@@ -46,19 +32,15 @@ const uiSchema = {
             file: {
                 "ui:widget": FileWidget
             },
+            images: {
+                items: {
+                    file: {
+                        "ui:widget": FileWidget
+                    }
+                }
+            }
         }
     },
-    // tasks: {
-    //     items: {
-    //         images: {
-    //             items: {
-    //                 file: {
-    //                     "ui:widget": FileWidget
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
 }
 
 export default uiSchema;

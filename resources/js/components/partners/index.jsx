@@ -12,8 +12,8 @@ const Partners = (props) => {
             <div className="row">
               <div className="swiper-container causes-swiper p-60px-b swiper-container-horizontal swiper-container-free-mode">
                 <div className="swiper-wrapper" style={{transform: 'translate3d(0px, 0px, 0px)'}}>
-                  {props.tasks ? props.tasks.map(partner => (
-                    <div className="swiper-slide col-lg-4 col-sm-6">
+                  {props.tasks ? props.tasks.map((partner, index) => (
+                    <div key={index} className="swiper-slide col-lg-4 col-sm-6">
                       <div className="donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t">
                         <img src={partner.file} alt="" />
                         <a href={partner.url}>Visit site <i className="icofont-long-arrow-right" /></a>

@@ -44,7 +44,7 @@ var Partners = function Partners(props) {
             style: {
               transform: 'translate3d(0px, 0px, 0px)'
             },
-            children: props.tasks ? props.tasks.map(function (partner) {
+            children: props.tasks ? props.tasks.map(function (partner, index) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                 className: "swiper-slide col-lg-4 col-sm-6",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
@@ -59,7 +59,7 @@ var Partners = function Partners(props) {
                     })]
                   })]
                 })
-              });
+              }, index);
             }) : null
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             className: "swiper-pagination swiper-pagination-clickable swiper-pagination-bullets",

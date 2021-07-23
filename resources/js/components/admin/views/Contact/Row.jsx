@@ -5,12 +5,12 @@ import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 // ==========================================================
+import Quote from "../../components/Typography/Quote.js";
 
 import Box from '@material-ui/core/Box';
 import Collapse from '@material-ui/core/Collapse';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-
 
 const useRowStyles = makeStyles({
     root: {
@@ -18,10 +18,10 @@ const useRowStyles = makeStyles({
         borderBottom: 'unset',
       },
     },
-    message: {
-      paddingLeft: '30px',
-      fontStyle: 'italic',
-    }
+    typo: {
+      marginBottom: "40px",
+      position: "relative",
+    },
 });
   
   
@@ -51,9 +51,12 @@ const Row = (props) => {
                 <Typography variant="h6" gutterBottom component="div">
                   Message
                 </Typography>
-                  <Typography variant="body1" gutterBottom className={classes.message}>
-                    {row.message}
-                  </Typography>
+                <div className={classes.typo}>
+                  <Quote
+                    text={row.message}
+                    author={row.name}
+                  />
+                </div>
               </Box>
             </Collapse>
           </TableCell>

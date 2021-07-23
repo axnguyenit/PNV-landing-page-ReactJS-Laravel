@@ -23,15 +23,16 @@ const Banner = (props) => {
                           <li className="current">{item.title}</li>
                         </ul>
                       </h2>
-                      <div className="hero-btn-wrapper">
-                        <a href="#contact" className="btn btn-default btn-default-outline">Contact us</a>
-                        <a className="btn btn-default" href="#">Donate now</a>
-                      </div>
-                      <div className="hero-btn-wrapper">
-                        {item.buttonItems && item.buttonItems.map(button=>(
-                          <a href={button.buttonLink} className={button.buttonClass}>{button.buttonText}</a>
+                        <form className="hero-btn-wrapper" action="https://www.sandbox.paypal.com/donate" method="post" target="_top">
+                          <a href="#contact" className="btn btn-default btn-default-outline">Contact us</a>
+                          <input type="hidden" name="hosted_button_id" value="BPUVMLWMPNBUL" />
+                          <button type="submit" className="btn btn-default">Donate now</button>
+                        </form>
+                      {/* <div className="hero-btn-wrapper">
+                        {item.buttonItems && item.buttonItems.map((button, idx)=>(
+                          <a key={idx} href={button.buttonLink} className={button.buttonClass}>{button.buttonText}</a>
                         ))}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

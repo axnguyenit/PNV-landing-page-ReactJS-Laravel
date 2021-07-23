@@ -4,16 +4,8 @@ import TableRow from '@material-ui/core/TableRow';
 import TableHead from '@material-ui/core/TableHead';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 
-const headCells = [
-  { id: 'name', numeric: false, disablePadding: true, label: 'Name' },
-  { id: 'email', numeric: true, disablePadding: false, label: 'Email' },
-  { id: 'jubject', numeric: true, disablePadding: false, label: 'Subject' },
-  { id: 'date', numeric: true, disablePadding: false, label: 'Date' },
-];
-
-
 const Head = props => {
-    const { classes, order, orderBy, onRequestSort } = props;
+    const { classes, order, orderBy, onRequestSort, headCells } = props;
     const createSortHandler = (property) => (event) => {
       onRequestSort(event, property);
     };

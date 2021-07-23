@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -11,8 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import axios from 'axios';
-// ==========================================================
-import TableToolbar from './TableToolBar';
+import TableToolbar from '../Table/TableToolBar';
 import Head from './Head';
 import Row from './Row';
 
@@ -99,7 +97,7 @@ const ContactTable = () => {
 
   const fetchData = async() => {
       try {
-          const res = await axios.get(`http://127.0.0.1:8000/api/contact`);
+          const res = await axios.get(`/api/contact`);
           if(res.status === 200) {
             setData(res.data);
           }
@@ -108,6 +106,13 @@ const ContactTable = () => {
       }
   };
 
+  const headCells = [
+    { id: 'name', numeric: false, disablePadding: true, label: 'Name' },
+    { id: 'email', numeric: true, disablePadding: false, label: 'Email' },
+    { id: 'jubject', numeric: true, disablePadding: false, label: 'Subject' },
+    { id: 'date', numeric: true, disablePadding: false, label: 'Date' },
+  ];
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -115,7 +120,7 @@ const ContactTable = () => {
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
-        <TableToolbar/>
+        <TableToolbar slg="Contact"/>
         <TableContainer>
           <Table
             className={classes.table}
@@ -128,6 +133,7 @@ const ContactTable = () => {
               order={order}
               orderBy={orderBy}
               onRequestSort={handleRequestSort}
+              headCells={headCells}
             />
             <TableBody>
               {stableSort(data, getComparator(order, orderBy))

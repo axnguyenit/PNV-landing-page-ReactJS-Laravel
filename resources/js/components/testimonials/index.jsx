@@ -16,8 +16,8 @@ const Testimonials = (props) => {
           <div className="row">
             <div className="swiper-container testimonialSwiper p-50px-b swiper-container-horizontal">
               <div className="swiper-wrapper" style={{transform: 'translate3d(-1440px, 0px, 0px)', transitionDuration: '0ms'}}>
-                {props.tasks ? props.tasks.map(testimonial => (
-                  <div className="swiper-slide" style={{width: '720px'}}>
+                {props.tasks ? props.tasks.map((testimonial, index) => (
+                  <div key={index} className="swiper-slide" style={{width: '720px'}}>
                     <div className="row single-testimonial">
                       <div className="col-sm-12 col-md-5 col-lg-3 align-self-center">
                         <img className="img-thumbnail" src={testimonial.file} alt="" />

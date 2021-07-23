@@ -11,7 +11,6 @@ function DraftjsWidget(props) {
     );
 
     const onChange = (editorState) => {
-        // console.log(editorState);
         const contentState = editorState.getCurrentContent();
         setEditorState(editorState);
 
@@ -30,10 +29,10 @@ function DraftjsWidget(props) {
                 history: { inDropdown: true }
             }
         }
-        />);
-    }
+        />
+    );
+}
 
-
-    export {
-        DraftjsWidget
-    };
+export {
+    DraftjsWidget
+};

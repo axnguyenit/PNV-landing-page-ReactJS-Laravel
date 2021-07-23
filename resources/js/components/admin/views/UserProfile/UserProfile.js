@@ -13,7 +13,7 @@ import CardAvatar from "../../components/Card/CardAvatar.js";
 import CardBody from "../../components/Card/CardBody.js";
 import CardFooter from "../../components/Card/CardFooter.js";
 
-import avatar from "../../assets/img/faces/marc.jpg";
+import avatar from "../../assets/img/pn-logo.png";
 
 const styles = {
   cardCategoryWhite: {
@@ -160,11 +160,10 @@ export default function UserProfile() {
             </CardAvatar>
             <CardBody profile>
               <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
-              <h4 className={classes.cardTitle}>Alec Thompson</h4>
+              <h4 className={classes.cardTitle}>Passerelles numériques Vietnam</h4>
               <p className={classes.description}>
                 Don{"'"}t be scared of the truth because we need to restart the
-                human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
+                human foundation in truth.
               </p>
               <Button color="primary" round>
                 Follow
