@@ -762,6 +762,10 @@ ol {
 
 /*  6. VIDEO SECTION */
 
+.video {
+    z-index: 9999;
+}
+
 .promo-video,
 .promo-video h1,
 .promo-video h2,
