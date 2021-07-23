@@ -23,7 +23,14 @@ var Header = function Header(props) {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       id: "preloader-wrap",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "preloader"
+        className: "preloader",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "preloader-icon",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: "assets/images/pn-logo.png",
+            alt: "PN"
+          })
+        })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("header", {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("nav", {
@@ -51,7 +58,7 @@ var Header = function Header(props) {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
               className: "nav navbar-nav ml-auto",
               children: props.menu && props.menu.map(function (item, index) {
-                if (item.name === 'Banner' || item.name === "Video") {
+                if (item.name === 'Footer' || item.name === 'Banner' || item.name === "Video") {
                   return '';
                 } else if (item.name === 'Contact') {
                   return item.show ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {

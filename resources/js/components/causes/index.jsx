@@ -34,16 +34,16 @@ const Causes = (props) => {
                         </div>
                         <footer className="content-footer p-10px-l p-10px-r">
                           <p className="content-raised">
-                          {cause.title1}:<br /><b>${cause.content1}</b>
+                          Raised<br /><b>{cause.raised}</b>
                           </p>
                           <p className="content-goal">
-                          {cause.title2}:<br /><b>${cause.content2}</b>
+                          Goal<br /><b>{cause.goal}</b>
                           </p>
                           <p className="content-raised">
-                          {cause.title3}:<br /><b>{cause.content3}</b>
+                          Donors<br /><b>{cause.donors}</b>
                           </p>
                           <p className="content-goal">
-                          {cause.title4}:<br /><b>{cause.content4}</b>
+                          Time Left<br /><b>{cause.timeLeft}</b>
                           </p>
                         </footer>
                       </article>

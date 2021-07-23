@@ -4,7 +4,11 @@ const Header = (props) => {
     return (
         <>
             <div id="preloader-wrap">
-                <div className="preloader"></div>
+                <div className="preloader">
+                    <div className="preloader-icon">
+                        <img src='assets/images/pn-logo.png' alt="PN"/>
+                    </div>
+                </div>
             </div>
             <header>
                 <nav className="navbar navbar-inverse navbar-expand-lg header-nav fixed-top light-header fixed-header">
@@ -19,7 +23,7 @@ const Header = (props) => {
                             <ul className="nav navbar-nav ml-auto">
                                 {
                                     props.menu && props.menu.map((item, index) => {
-                                        if(item.name === 'Banner' || item.name === "Video") {
+                                        if(item.name === 'Footer' || item.name === 'Banner' || item.name === "Video") {
                                             return '';
                                         }
                                         else if(item.name === 'Contact') {

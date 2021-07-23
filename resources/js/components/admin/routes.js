@@ -3,6 +3,7 @@ import UserProfile from "./views/UserProfile/UserProfile.js";
 import HomePage from "./views/HomePage";
 import ContactTable from "./views/Contact";
 import Donate from "./views/Donate";
+import Login from "./views/Account/Login.jsx";
 
 const dashboardRoutes = [{
         path: "/dashboard",

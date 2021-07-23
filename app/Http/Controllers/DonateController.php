@@ -70,22 +70,26 @@ class DonateController extends Controller
                 }
             }
 
-            $donate = new Donate();
-            $donate->name = $data['first_name'].' '.$data['last_name'];
-            $donate->email = $data['payer_email'];
-            $donate->amount = $data['amount'];
-            $donate->donation_for = $data['product_name'];
-            if(strcmp($data['payment_cycle'], 'Monthly') == 0) {             
-                $donate->donation_type = $data['payment_cycle'];
+            $isValidDonate = Donate::where("email", $data['payer_email'])->first();
+
+            if(is_null($isValidDonate)) {
+                $donate = new Donate();
+                $donate->name = $data['first_name'].' '.$data['last_name'];
+                $donate->email = $data['payer_email'];
+                $donate->amount = $data['amount'];
+                $donate->donation_for = $data['product_name'];
+                if(strcmp($data['payment_cycle'], 'Monthly') == 0) {             
+                    $donate->donation_type = $data['payment_cycle'];
+                }
+                else {
+                    $donate->donation_type = 'Once time';
+                }
+                $donate->currency_code = $data['currency_code'];
+                $donate->date = $data['next_payment_date'];
+                $donate->created_at = Carbon::now('Asia/Ho_Chi_Minh');
+                $donate->updated_at = Carbon::now('Asia/Ho_Chi_Minh');
+                $donate->save();
             }
-            else {
-                $donate->donation_type = 'Once time';
-            }
-            $donate->currency_code = $data['currency_code'];
-            $donate->date = $data['next_payment_date'];
-            $donate->created_at = Carbon::now('Asia/Ho_Chi_Minh');
-            $donate->updated_at = Carbon::now('Asia/Ho_Chi_Minh');
-            $donate->save();
 
             // $contactTerm = Contact::where("email", $data['email'])->first();
 

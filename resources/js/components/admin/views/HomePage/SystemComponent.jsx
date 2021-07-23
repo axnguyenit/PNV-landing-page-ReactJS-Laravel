@@ -27,7 +27,8 @@ const systemComponent = {
             title: { type: "string", title: "Title", },
             bannerItems: { 
                 type: "array", 
-                title: "Banner Item",
+                title: "Banner Item (Max 5)",
+                maxItems: 5,
                 items: {
                     properties: {
                         subTitle: { type: "string", title: "Sub title"},
@@ -74,7 +75,8 @@ const systemComponent = {
             slogan: { type: "string", title: "Slogan" },
             tasks: { 
                 type: "array", 
-                title: "Gallery Filter",
+                title: "Gallery Filter (Max 5)",
+                maxItems: 5,
                 items: {
                     type: "object",
                     required: [
@@ -84,7 +86,8 @@ const systemComponent = {
                         filter: { type: "string", title: "Filter"},
                         images: {
                             type: "array", 
-                            title: "Images",
+                            title: "Images (Max 12)",
+                            maxItems: 12,
                             items: {
                                 properties: {
                                     file: { type: "string",  title: "Single file" },
@@ -108,32 +111,25 @@ const systemComponent = {
             desc: { type: "string", title: "Description" },
             tasks: {
                 type: "array",
-                title: "Causes List",
+                title: "Causes List (Max 10)",
+                maxItems: 10,
                 items: {
                     type: "object",
                     required: [
                         "title",
                         "desc",
-                        "title1",
-                        "title2",
-                        "title3",
-                        "title4",
-                        "content1",
-                        "content2",
-                        "content3",
-                        "content4",
+                        "raised",
+                        "goal",
+                        "donors",
+                        "timeLeft",
                     ],
                     properties: {
                         title: { type: "string", title: "Causes title", },
                         desc: { type: "string", title: "Description", },
-                        title1: { type: "string", title: "Title 1", },
-                        content1: { type: "string", title: "Content 1", },
-                        title2: { type: "string", title: "Title 2", },
-                        content2: { type: "string", title: "Content 2", },
-                        title3: { type: "string", title: "Title 3", },
-                        content3: { type: "string", title: "Content 3", },
-                        title4: { type: "string", title: "Title 4", },
-                        content4: { type: "string", title: "Content 4", },
+                        raised: { type: "string", title: "Raised", },
+                        goal: { type: "string", title: "Goal", },
+                        donors: { type: "string", title: "Donors", },
+                        timeLeft: { type: "string", title: "Time Left", },
                         file: { type: "string",  title: "Single file" },
                     }
                 }
@@ -298,8 +294,61 @@ const systemComponent = {
             email: { type: "string", title: "Email" },
             facebook: { type: "string", title: "Facebook" },
             youtube: { type: "string", title: "YouTube" },
+            twitter: { type: "string", title: "Twitter" },
             skype: { type: "string", title: "Skype" },
             linkedin: { type: "string", title: "LinkedIn" },
+        }
+    },
+    "Footer": {
+        title: "Footer",
+        type: "object",
+        required: [
+            "copyright",
+            "slogan",
+        ],
+        properties: {
+            title: { type: "string", title: "Title" },
+            copyright: { type: "string", title: "Copyright Text" },
+            logo: { type: "string",  title: "Logo" },
+            slogan: { type: "string", title: "Slogan" },
+            links: {
+                type: "array",
+                title: "Quick Links (Max 10)",
+                maxItems: 10,
+                items: {
+                    required: [
+                        "name",
+                        "link",
+                    ],
+                    properties: {
+                        name: { type: "string",  title: "Name" },
+                        link: { type: "string", title: "Link" },
+                    }
+                }
+            },
+            milestones: {
+                type: "array",
+                title: "Milestones (Max 5)",
+                maxItems: 5,
+                items: {
+                    required: [
+                        "milestone",
+                    ],
+                    properties: {
+                        milestone: { type: "string",  title: "Milestone" },
+                    }
+                }
+            },
+            gallery: {
+                type: "array",
+                title: "Photo Gallery (Max 9)",
+                maxItems: 9,
+                items: {
+                    properties: {
+                        img: { type: "string",  title: "Image" },
+                    }
+                }
+            },
         }
     },
 }

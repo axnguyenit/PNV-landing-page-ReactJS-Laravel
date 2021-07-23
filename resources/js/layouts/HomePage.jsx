@@ -53,6 +53,8 @@ const renderComponent = (name, show, props, index) => {
       return show ? <Gallery {...props}/> : '';
     case 'Contact':      
       return show ? <Contact {...props}/> : '';
+    case 'Footer':      
+      return show ? <Footer {...props}/> : '';
     return '';
   }
 }
@@ -76,15 +78,13 @@ const HomePage = () => {
 
   useEffect(() => {
     fetchData();
-    Aos.init({duration: 2000});
+    Aos.init({duration: 1000});
   }, [])
 
   return (
     <>
       {menu ? <Header menu={menu}/> : null}
-      
       {data.components ? data.components.map((item, index) => renderComponent(item.name, item.show, item.componentParams, index)) : ''}
-      <Footer />
     </>
   )
 }

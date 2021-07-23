@@ -141,7 +141,6 @@ var PATH = {};
             spaceBetween: 0,
             freeMode: true,
             speed: 1500,
-            loop: true,
             centeredSlides: true,
             autoplay: {
                 delay: 3000,
@@ -211,10 +210,7 @@ var PATH = {};
     /******************** 14. TESTIMONIAL SLIDER ********************/
     PATH.sliderTestimonial = function() {
             var tswiper = new Swiper('.testimonialSwiper', {
-
                 speed: 1500,
-                loop: true,
-
                 freeMode: true,
                 centeredSlides: true,
                 autoplay: {

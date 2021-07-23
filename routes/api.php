@@ -3,6 +3,7 @@
 use App\Models\LandingPage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DonateController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LandingPageController;
@@ -26,6 +27,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('/landing-page', LandingPageController::class);
 Route::apiResource('/contact', ContactController::class);
 Route::apiResource('/donate', DonateController::class);
+Route::post('/login', [UsersController::class, 'onLogin'])->name('login');
 
 Route::post('/savefile', function (Request $request) {
     $file = $request->file;

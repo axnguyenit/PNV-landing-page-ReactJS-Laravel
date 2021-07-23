@@ -98,6 +98,7 @@ const Contact = (props) => {
                   {props.facebook ? <li><a href={props.facebook}><i className="icofont-facebook" /></a></li> : null}
                   {props.youtube ? <li><a href={props.youtube}><i className="icofont-youtube" /></a></li> : null}
                   {props.skype ? <li><a href={props.skype}><i className="icofont-skype" /></a></li> : null}
+                  {props.twitter ? <li><a href={props.twitter}><i className="icofont-twitter" /></a></li> : null}
                   {props.linkedin ? <li><a href={props.linkedin}><i className="icofont-linkedin" /></a></li> : null}
                 </ul>
               </div>

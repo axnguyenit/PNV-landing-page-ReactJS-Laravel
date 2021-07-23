@@ -41,6 +41,13 @@ const uiSchema = {
             }
         }
     },
+    gallery: {
+        items: {
+            img: {
+                "ui:widget": FileWidget
+            }
+        },
+    }
 }
 
 export default uiSchema;

@@ -30,19 +30,19 @@ const Gallery = (props) => {
               <div className="row">
                 <div className="col-sm-12">
                   <div className="gallery-boxes" style={{position: 'relative'}}>
-                    {/* Single gallery box box start */}
+                    {/* Single gallery box start */}
                     {props.tasks ? props.tasks.reverse().map((items) => {
                       return items.images ? items.images.reverse().map((item, index) => (
                         <div key={index} className={`each-box col-lg-3 col-md-4 col-sm-12 gallery-box ${items.filter}`} style={{position: 'absolute', left: '0px', top: '0px'}}>
                           <div className="inner gray-bg text-center">
                               <a href={item.file}>
-                                <img src={item.file} alt="PNV" className="img-responsive" />
+                                <img src={item.file} alt={items.filter} className="img-responsive" />
                               </a>
                           </div>
                         </div>
                       )) : null
                     }) : null}
-                    {/* Single gallery box box end */}
+                    {/* Single gallery box end */}
                   </div>
                 </div>
               </div>

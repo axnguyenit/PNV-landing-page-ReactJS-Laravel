@@ -17,7 +17,8 @@ import Search from "@material-ui/icons/Search";
 // core components
 import CustomInput from "../CustomInput/CustomInput.js";
 import Button from "../CustomButtons/Button.js";
-
+import { useCookies } from 'react-cookie';
+import { useHistory } from 'react-router';
 import styles from "../../assets/jss/material-dashboard-react/components/headerLinksStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -26,6 +27,8 @@ const AdminNavbarLinks = () => {
   const classes = useStyles();
   const [openNotification, setOpenNotification] = React.useState(null);
   const [openProfile, setOpenProfile] = React.useState(null);
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  const history = useHistory();
   const handleClickNotification = (event) => {
     if (openNotification && openNotification.contains(event.target)) {
       setOpenNotification(null);
@@ -46,6 +49,11 @@ const AdminNavbarLinks = () => {
   const handleCloseProfile = () => {
     setOpenProfile(null);
   };
+
+  const onLogout = () => {
+    removeCookie('username');
+    history.replace('/admin');
+  }
   return (
     <div>
       <div className={classes.searchWrapper}>
@@ -194,7 +202,7 @@ const AdminNavbarLinks = () => {
                     </MenuItem>
                     <Divider light />
                     <MenuItem
-                      onClick={handleCloseProfile}
+                      onClick={onLogout}
                       className={classes.dropdownItem}
                     >
                       Logout

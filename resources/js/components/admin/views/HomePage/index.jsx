@@ -38,6 +38,7 @@ import Testimonials from '../../../testimonials';
 import Milestones from '../../../milestones';
 import Gallery from '../../../gallery';
 import Contact from '../../../contact';
+import Footer from '../../../footer';
 // dynamic form
 import systemComponent from "./SystemComponent";
 import uiSchema from "./UiSchema";
@@ -107,6 +108,8 @@ const renderComponent = (name, props) => {
       return <Gallery {...props}/>
     case 'Contact':
       return <Contact {...props}/>
+    case 'Footer':
+      return <Footer {...props}/>
     return ''
   }
 }
