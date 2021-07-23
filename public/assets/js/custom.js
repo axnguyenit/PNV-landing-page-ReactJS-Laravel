@@ -5,6 +5,7 @@ var PATH = {};
     /******************** 1. PRELOADER ********************/
     PATH.preLoader = function() {
         $(".preloader").fadeOut();
+        $(".preloader-icon").fadeOut();
         $("#preloader-wrap").fadeOut("slow");
     }
 

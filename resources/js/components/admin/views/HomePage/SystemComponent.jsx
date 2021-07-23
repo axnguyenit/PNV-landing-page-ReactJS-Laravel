@@ -236,7 +236,7 @@ const systemComponent = {
         type: "object",
         required: [
             "title",
-            "desc"
+            "slogan"
         ],
         properties: {
             title: { type: "string", title: "Title" },

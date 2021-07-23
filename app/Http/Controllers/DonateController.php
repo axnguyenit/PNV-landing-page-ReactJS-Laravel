@@ -70,9 +70,9 @@ class DonateController extends Controller
                 }
             }
 
-            $isValidDonate = Donate::where("email", $data['payer_email'])->first();
+            // $isValidDonate = Donate::where("email", $data['payer_email'])->first();
 
-            if(is_null($isValidDonate)) {
+            // if(is_null($isValidDonate)) {
                 $donate = new Donate();
                 $donate->name = $data['first_name'].' '.$data['last_name'];
                 $donate->email = $data['payer_email'];
@@ -89,7 +89,7 @@ class DonateController extends Controller
                 $donate->created_at = Carbon::now('Asia/Ho_Chi_Minh');
                 $donate->updated_at = Carbon::now('Asia/Ho_Chi_Minh');
                 $donate->save();
-            }
+            // }
 
             // $contactTerm = Contact::where("email", $data['email'])->first();
 
