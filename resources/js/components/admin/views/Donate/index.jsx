@@ -96,7 +96,7 @@ const DonateTable = () => {
 
   const fetchData = async() => {
       try {
-          const res = await axios.get(`/api/donate`);
+          const res = await axios.get(`https://passerellesnumeriques.herokuapp.com/api/donate`);
           if(res.status === 200) {
             setData(res.data);
           }

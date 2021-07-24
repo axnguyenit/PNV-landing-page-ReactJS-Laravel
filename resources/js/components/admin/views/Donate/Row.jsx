@@ -40,7 +40,7 @@ const Row = (props) => {
           <TableCell align="right">{row.amount + ' ' + row.currency_code}</TableCell>
           <TableCell align="right">{row.donation_for}</TableCell>
           <TableCell align="right">{row.donation_type}</TableCell>
-          <TableCell align="right">{row.date}</TableCell>
+          <TableCell align="right">{row.created_at}</TableCell>
         </TableRow>
       </React.Fragment>
     );
