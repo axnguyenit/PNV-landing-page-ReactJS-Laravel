@@ -95,11 +95,11 @@ const Contact = (props) => {
                 </ul>
                 <h4>Connect our socials</h4>
                 <ul className="nav light-icon social-icons">
-                  {props.facebook ? <li><a href={props.facebook}><i className="icofont-facebook" /></a></li> : null}
-                  {props.youtube ? <li><a href={props.youtube}><i className="icofont-youtube" /></a></li> : null}
-                  {props.skype ? <li><a href={props.skype}><i className="icofont-skype" /></a></li> : null}
-                  {props.twitter ? <li><a href={props.twitter}><i className="icofont-twitter" /></a></li> : null}
-                  {props.linkedin ? <li><a href={props.linkedin}><i className="icofont-linkedin" /></a></li> : null}
+                  {props.facebook ? <li><a href={props.facebook}><i className="icofont-facebook" target="_blank"/></a></li> : null}
+                  {props.youtube ? <li><a href={props.youtube}><i className="icofont-youtube" target="_blank"/></a></li> : null}
+                  {props.skype ? <li><a href={props.skype}><i className="icofont-skype" target="_blank"/></a></li> : null}
+                  {props.twitter ? <li><a href={props.twitter}><i className="icofont-twitter" target="_blank"/></a></li> : null}
+                  {props.linkedin ? <li><a href={props.linkedin}><i className="icofont-linkedin" target="_blank"/></a></li> : null}
                 </ul>
               </div>
             </div>

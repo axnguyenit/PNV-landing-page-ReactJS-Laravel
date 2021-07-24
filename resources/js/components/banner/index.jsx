@@ -26,7 +26,7 @@ const Banner = (props) => {
                         <form className="hero-btn-wrapper" action="https://www.sandbox.paypal.com/donate" method="post" target="_top">
                           <a href="#contact" className="btn btn-default btn-default-outline">Contact us</a>
                           <input type="hidden" name="hosted_button_id" value="BPUVMLWMPNBUL" />
-                          <button type="submit" className="btn btn-default">Donate now</button>
+                          <button type="submit" className="btn btn-default" >Donate now</button>
                         </form>
                       {/* <div className="hero-btn-wrapper">
                         {item.buttonItems && item.buttonItems.map((button, idx)=>(

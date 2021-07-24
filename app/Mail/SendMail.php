@@ -30,6 +30,6 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Passerelles numériques Vietnam')->markdown('sendMail.mailToContact');
+        return $this->subject('Thanks for your contact')->markdown('sendMail.mailToContact');
     }
 }

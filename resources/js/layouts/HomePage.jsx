@@ -29,31 +29,31 @@ const renderComponent = (name, show, props, index) => {
       props.aos = 'zoom-out-up';
     }
   switch(name) {
-    case 'About':
+    case `About`:
       return show ? <About {...props}/> : '';
-    case 'Causes':
+    case `Causes`:
       return show ? <Causes {...props}/>  : '';
-    case 'Partners':
+    case `Partners`:
       return show ? <Partners {...props}/> : '';
-    case 'Volunteers':
+    case `Volunteers`:
       return show ? <Volunteers {...props}/> : '';
-    case 'JoinAsVolunteer':
+    case `JoinAsVolunteer`:
       return show ? <JoinVolunteers {...props}/> : '';
-    case 'Milestones':
+    case `Milestones`:
       return show ? <Milestones {...props}/> : '';
-    case 'Testimonials':
+    case `Testimonials`:
       return show ? <Testimonials {...props}/> : '';
-    case 'Video':
+    case `Video`:
       return show ? <VideoSection {...props}/> : '';
-    // case 'Header': 
+    // case `Header`: 
     //   return <Header {...props}/>
-    case 'Banner': 
+    case `Banner`: 
       return show ? <Banner {...props} /> : '';
-    case 'Gallery':
+    case `Gallery`:
       return show ? <Gallery {...props}/> : '';
-    case 'Contact':      
+    case `Contact`:
       return show ? <Contact {...props}/> : '';
-    case 'Footer':      
+    case `Footer`:
       return show ? <Footer {...props}/> : '';
     return '';
   }
@@ -78,7 +78,7 @@ const HomePage = () => {
 
   useEffect(() => {
     fetchData();
-    Aos.init({duration: 1000});
+    Aos.init({duration: 2000});
   }, [])
 
   return (

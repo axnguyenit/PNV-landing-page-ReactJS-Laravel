@@ -5,7 +5,6 @@ var PATH = {};
     /******************** 1. PRELOADER ********************/
     PATH.preLoader = function() {
         $(".preloader").fadeOut();
-        $(".preloader-icon").fadeOut();
         $("#preloader-wrap").fadeOut("slow");
     }
 
@@ -268,12 +267,6 @@ var PATH = {};
             });
         }
     }
-
-    /* Document ready function */
-    $(function() {
-
-
-    });
 
     /* Window on scroll function */
     $(window).on("scroll", function() {

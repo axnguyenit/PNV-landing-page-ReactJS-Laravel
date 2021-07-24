@@ -5,9 +5,6 @@ const Header = (props) => {
         <>
             <div id="preloader-wrap">
                 <div className="preloader">
-                    <div className="preloader-icon">
-                        <img src='assets/images/pn-logo.png' alt="PN"/>
-                    </div>
                 </div>
             </div>
             <header>

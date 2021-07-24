@@ -11,8 +11,9 @@
 
 <body data-spy="scroll" data-target="#navbarCodeply" data-offset="70" data-new-gr-c-s-check-loaded="14.1014.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1014.0">
     <div id="app"></div>
-    <script src= {{ asset('js/app.js') }} ></script>
-
+    <!-- ReactJS -->
+    <script src= {{ asset('./js/app.js') }} ></script>
+    
     <script src= {{ asset('./assets/js/jquery-3.2.1.min.js') }}></script>
     <script src= {{ asset('./assets/js/jquery-migrate-3.0.0.min.js') }}></script>
     <!-- Bootstrap JS -->
@@ -20,7 +21,7 @@
     <!-- Animated text -->
     <script src= {{ asset('./assets/js/jquery.textillate.js') }}></script>
     <script src= {{ asset('./assets/js/jquery.lettering.js') }}></script>
-    <script src= {{ asset('./assets/js/jquery.fittext.js') }}></script
+    <script src= {{ asset('./assets/js/jquery.fittext.js') }}></script>
     <!-- Waypoints JS -->
     <script src= {{ asset('./assets/js/waypoints.min.js') }}></script>
     <!-- CounterUp JS -->
@@ -33,6 +34,6 @@
     <script src= {{ asset('./assets/js/swiper.min.js') }}></script>
     <!-- Custom -->
     <script src= {{ asset('./assets/js/custom.js') }}></script>
-    <!-- ReactJS -->
+    
 </body>
 </html>

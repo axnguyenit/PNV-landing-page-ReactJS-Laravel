@@ -16,7 +16,7 @@ const Partners = (props) => {
                     <div key={index} className="swiper-slide col-lg-4 col-sm-6">
                       <div className="donor-box corporate-donor m-20px-t m-20px-b sm-m-0px-t">
                         <img src={partner.file} alt="" />
-                        <a href={partner.url}>Visit site <i className="icofont-long-arrow-right" /></a>
+                        <a href={partner.url} target="_blank">Visit site <i className="icofont-long-arrow-right" /></a>
                       </div>
                     </div>
                   )) : null}

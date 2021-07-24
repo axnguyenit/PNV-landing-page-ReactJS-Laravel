@@ -40,14 +40,12 @@ class ContactController extends Controller
 
             $contactTerm = Contact::where("email", $data['email'])->first();
 
-            if(!is_null($contactTerm)) {
-                $code = rand(999999, 111111);
+            // if(!is_null($contactTerm)) {
                 $content = [
-                    'title' => 'Code Verification',
-                    'body' => $code,
+                    
                 ];
                 \Mail::to($data['email'])->send(new SendMail($content));
-            }
+            // }
             return response()->json();
             
         } catch(Exception $e) {

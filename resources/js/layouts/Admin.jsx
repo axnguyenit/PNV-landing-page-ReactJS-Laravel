@@ -1,3 +1,3 @@
 import React from 'react';
-const Admin = React.lazy(() => import('../components/admin/App'));
+import Admin from '../components/admin/App';
 export {Admin};

@@ -8,7 +8,7 @@ import Login from "./views/Account/Login.jsx";
 const dashboardRoutes = [{
         path: "/dashboard",
         name: "Dashboard",
-        component: HomePage,
+        component: DashboardPage,
         layout: "/admin",
     },
     {

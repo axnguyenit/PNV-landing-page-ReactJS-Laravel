@@ -21,7 +21,7 @@
 .light-icon.share-icons li a:hover,
 .card-info,
 a.btn.btn-readmore:hover {
-    background-color: #007bff;
+    background-color: #22bbee;
 }
 
 
@@ -41,7 +41,7 @@ a.btn.btn-readmore:hover {
 .page-item.active .page-link,
 .single-blog-post blockquote,
 .card-info {
-    border-color: #007bff;
+    border-color: #22bbee;
 }
 
 .video-btn button:hover,
@@ -63,5 +63,5 @@ a.btn.btn-readmore:hover {
 .post-meta ul li a:hover,
 .single-blog-post a:hover h2,
 .single-blog-post a {
-    color: #007bff;
+    color: #22bbee;
 }

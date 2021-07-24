@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import swal from 'sweetalert';
+import axios from "axios";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -13,15 +16,16 @@ import EditIcon from '@material-ui/icons/Edit';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+// dynamic form
+import systemComponent from "./SystemComponent";
+import uiSchema from "./UiSchema";
 // core components
 import GridItem from "../../components/Grid/GridItem.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
 import CardHeader from "../../components/Card/CardHeader.js";
-import swal from 'sweetalert';
-import axios from "axios";
+
 // homepage components
 import CardBody from "../../components/Card/CardBody.js";
 import CustomTabs from "../../components/CustomTabs/CustomTabs.js";
@@ -39,9 +43,6 @@ import Milestones from '../../../milestones';
 import Gallery from '../../../gallery';
 import Contact from '../../../contact';
 import Footer from '../../../footer';
-// dynamic form
-import systemComponent from "./SystemComponent";
-import uiSchema from "./UiSchema";
 
 const styles = {
   cardCategoryWhite: {
@@ -84,33 +85,33 @@ const useStyles = makeStyles(styles);
 
 const renderComponent = (name, props) => {
   switch(name) {
-    case 'About':
+    case `About`:
       return <About {...props}/>
-    case 'Causes':
+    case `Causes`:
       return <Causes {...props}/>
-    case 'Partners':
+    case `Partners`:
       return <Partners {...props}/>
-    case 'Volunteers':
+    case `Volunteers`:
       return <Volunteers {...props}/>
-    case 'JoinAsVolunteer':
+    case `JoinAsVolunteer`:
       return <JoinAsVolunteer {...props}/>
-    case 'Milestones':
+    case `Milestones`:
       return <Milestones {...props}/>
-    case 'Testimonials':
+    case `Testimonials`:
       return <Testimonials {...props}/>
-    case 'Video':
+    case `Video`:
       return <VideoSection {...props}/>
-    // case 'Header': 
+    // case `Header`: 
     //   return <Header {...props} preview={true}/>
-    case 'Banner': 
+    case `Banner`: 
       return <Banner {...props}/>
-    case 'Gallery':
+    case `Gallery`:
       return <Gallery {...props}/>
-    case 'Contact':
+    case `Contact`:
       return <Contact {...props}/>
-    case 'Footer':
+    case `Footer`:
       return <Footer {...props}/>
-    return ''
+    return ``;
   }
 }
 

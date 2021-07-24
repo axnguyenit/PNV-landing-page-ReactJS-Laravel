@@ -14,9 +14,12 @@ use App\Http\Controllers\DonateController;
 |
 */
 
-// Route::get('/testMail', function() {
-//     return view('sendMail.mailToContact');
-// });
+Route::get('/testMail', function() {
+    return view('sendMail.mailToContact');
+});
+Route::get('/test', function() {
+    return view('sendMail.mailToDonor');
+});
 
 Route::get('/{path?}', function () {
     return view('index');
