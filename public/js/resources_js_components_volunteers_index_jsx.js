@@ -75,9 +75,9 @@ var Volunteers = function Volunteers(props) {
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
                               className: "title",
                               children: volunteer.name
-                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                               className: "pera-text",
-                              children: ["Helping over ", volunteer.year, " years"]
+                              children: volunteer.year
                             })]
                           })
                         })]

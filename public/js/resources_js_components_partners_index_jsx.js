@@ -54,6 +54,7 @@ var Partners = function Partners(props) {
                     alt: ""
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                     href: partner.url,
+                    target: "_blank",
                     children: ["Visit site ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
                       className: "icofont-long-arrow-right"
                     })]
