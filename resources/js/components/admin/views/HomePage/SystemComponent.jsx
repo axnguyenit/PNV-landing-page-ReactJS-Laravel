@@ -89,6 +89,7 @@ const systemComponent = {
                             title: "Images (Max 12)",
                             maxItems: 12,
                             items: {
+                                type: "object",
                                 properties: {
                                     file: { type: "string",  title: "Single file" },
                                 }

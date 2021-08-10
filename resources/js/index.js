@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Cookies from 'js-cookie';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import HomePage from './layouts/HomePage';
+import Login from './components/admin/views/Account/Login.jsx';
 import Admin from './components/admin/App';
+import HomePage from './layouts/HomePage';
 import './css/app.css';
-const Login = React.lazy(() => import('./components/admin/views/Account/Login.jsx'));
 
 const loading = (
   <div id="preloader-wrap">

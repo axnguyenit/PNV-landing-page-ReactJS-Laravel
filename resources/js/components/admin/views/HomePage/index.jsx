@@ -69,15 +69,16 @@ const styles = {
     width: "100%",
     listStyle: "none",
     paddingLeft: "0",
+    // zIndex: '9999999',
   },
   exampleWrapper: {
     position: 'relative',
-    zIndex: '999',
   },
   speedDial: {
     position: 'absolute',
     top: '20px',
     right: '20px',
+    zIndex: '9999999',
   },
 };
 

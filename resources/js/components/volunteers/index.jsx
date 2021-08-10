@@ -26,7 +26,7 @@ const Volunteers = (props) => {
                             <div className="mask">
                               <div className="mask-inner">
                                 <h3 className="title">{volunteer.name}</h3>
-                                <p className="pera-text">Helping over {volunteer.year} years</p>
+                                <p className="pera-text">{volunteer.year}</p>
                               </div>
                             </div>
                           </div>

@@ -22,9 +22,9 @@ class UserSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            "name" => "Nguyen Dinh Kha",
+            "name" => "Admin",
             "username" => "admin",
-            "email" => "nguyendinhkha1812@gmail.com",
+            "email" => "admin@gmail.com",
             "password" => md5(12345),
         ]);
     }
