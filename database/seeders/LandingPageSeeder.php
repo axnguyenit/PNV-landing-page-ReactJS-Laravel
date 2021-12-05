@@ -29,17 +29,17 @@ class LandingPageSeeder extends Seeder {
                   [
                     "subTitle" => "PNV for hopeless peoples",
                     "title" => "We give a helping hand for happy life",
-                    "background" => "http://localhost:8000/files/1626486551-176778080_3868749673204487_7325439355205340404_n.jpg"
+                    "background" => "https://passerellesnumeriques.herokuapp.com/files/1626486551-176778080_3868749673204487_7325439355205340404_n.jpg"
                   ],
                   [
                     "title" => "We give a helping hand for happy life",
                     "subTitle" => "PNV for hopeless peoples",
-                    "background" => "http://localhost:8000/files/1626486741-165949070_3796052373807551_6614457510907095919_n.jpg"
+                    "background" => "https://passerellesnumeriques.herokuapp.com/files/1626486741-165949070_3796052373807551_6614457510907095919_n.jpg"
                   ],
                   [
                     "subTitle" => "PNV for hopeless peoples",
                     "title" => "We give a helping hand for happy life",
-                    "background" => "http://localhost:8000/files/1626487151-130226703_3505949189484539_6042040827060488726_n.jpg"
+                    "background" => "https://passerellesnumeriques.herokuapp.com/files/1626487151-130226703_3505949189484539_6042040827060488726_n.jpg"
                   ]
                 ],
                 "title" => "Banner"
@@ -51,14 +51,14 @@ class LandingPageSeeder extends Seeder {
               "componentParams" => [
                 "title" => "ITnuoiIT",
                 "desc" => "<p>Bạn có biết, 50% quỹ hoạt động của PNV đến từ trợ cấp của &nbsp;các tập đoàn lớn. Với sự xuất hiện của COVID-19, 39.4% hộ nghèo tăng thêm so với trước khi đại dịch xảy ra, 85.7 % các doanh gnhieejp ở Việt Nam bị nahr hưởng và phải cắt giảm chi phí bao gồm các khoản tài trợ từ thiện. 61% quỹ hoạt động hàng năm của PNV THIẾU tính đến thắng 7 năm 2021.</p>\n<p>Chương trình IT nuôi IT là chương trình gây quỹ cộng đồng nhằm chung sức với PNV để xây dựng dự án \"xây cầu công nghệ\" cho các kỹ sư CNTT tương lai được tiếp tục trong giai đoạn đặc biệt khó khăn này.</p>\n<p>Hỗ trợ tài chính cho sinh viên PNV theo tháng với mức chỉ từ 50.000đ/tháng. PNV mong rằng các bạn tham gia nuôi các em IT theo tháng, đóng góp định kỳ để đồng hành lâu dài cùng các em.</p>",
-                "file" => "http://localhost:8000/files/1628272231-126899959_3466409546771837_2977095222181321492_n.jpg"
+                "file" => "https://passerellesnumeriques.herokuapp.com/files/1628272231-126899959_3466409546771837_2977095222181321492_n.jpg"
               ]
             ],
             [
               "name" => "About",
               "show" => true,
               "componentParams" => [
-                "file" => "http://localhost:8000/files/1628271058-126899959_3466409546771837_2977095222181321492_n.jpg",
+                "file" => "https://passerellesnumeriques.herokuapp.com/files/1628271058-126899959_3466409546771837_2977095222181321492_n.jpg",
                 "title" => "About",
                 "desc" => "<p>Passerelles numériques is a non-profit organization under French law, created in 2005, operating in three Asian countries: <a href=\"https://www.passerellesnumeriques.org/our-actions/cambodia/\" title=\"Cambodia\">Cambodia</a>, the <a href=\"https://www.passerellesnumeriques.org/our-actions/philippines/\" title=\"Philippines\">Philippines</a>, and <a href=\"https://www.passerellesnumeriques.org/our-actions/vietnam/\" title=\"Vietnam\">Vietnam</a>.&nbsp;</p>\n<p>Our mission is to provide education, technical and professional training in the digital sector to young underprivileged people by leveraging their potential and willpower. We endeavour to truly develop their employability which will allow them and their families to escape poverty in a sustainable way, and contribute to the social and economic development of their countries.&nbsp;</p>\n<p>Our beneficiaries are typically underprivileged or disadvantaged, in extremely precarious situations, according to the criteria PN has defined/specified for each of the countries in which it operates.&nbsp;</p>\n<p>PN’s objective is that at least 90% of the students enrolled in our programs can escape poverty, be professionally more successful relatively to the national average, and take advantage of a ‘Gateway for Life’.&nbsp;</p>\n<p>PN’s additional objective is to reduce inequality between genders. Therefore, PN strives to enrol a ratio of at least 50% girls (or a maximum of two thirds) at each of our centers.&nbsp;</p>"
               ]
@@ -79,7 +79,7 @@ class LandingPageSeeder extends Seeder {
                     "content2" => "value 1",
                     "content3" => "value 1",
                     "content4" => "value 1",
-                    "file" => "http://127.0.0.1:8000/files/1628580634-IMG_6884.jpg",
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1628580634-IMG_6884.jpg",
                     "raised" => "$100",
                     "goal" => "$1000",
                     "donors" => "12",
@@ -96,7 +96,7 @@ class LandingPageSeeder extends Seeder {
                     "content4" => "value4",
                     "title" => "Donate for helpless",
                     "desc" => "Much evil soon high in hope do view. Out may few northward.",
-                    "file" => "http://127.0.0.1:8000/files/1628580562-Featured-image-1-400x250.jpg",
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1628580562-Featured-image-1-400x250.jpg",
                     "raised" => "$100",
                     "goal" => "$1000",
                     "donors" => "12",
@@ -113,7 +113,7 @@ class LandingPageSeeder extends Seeder {
                     "content4" => "value4",
                     "title" => "Donate for helpless",
                     "desc" => "Much evil soon high in hope do view. Out may few northward.",
-                    "file" => "http://localhost:8000/files/1626488759-160936086_3754446967968092_4613389374008195814_n.jpg",
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1626488759-160936086_3754446967968092_4613389374008195814_n.jpg",
                     "timeLeft" => "5 days",
                     "donors" => "15",
                     "goal" => "$1000",
@@ -130,7 +130,7 @@ class LandingPageSeeder extends Seeder {
                     "content2" => "value 1",
                     "content3" => "value 1",
                     "content4" => "value 1",
-                    "file" => "http://localhost:8000/files/1626488766-160558011_3754439897968799_7547598645428764941_n.jpg",
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1626488766-160558011_3754439897968799_7547598645428764941_n.jpg",
                     "timeLeft" => "5 days",
                     "donors" => "13",
                     "goal" => "$1200",
@@ -147,27 +147,27 @@ class LandingPageSeeder extends Seeder {
               "componentParams" => [
                 "tasks" => [
                   [
-                    "file" => "http://127.0.0.1:8000/files/1628577339-140622658_3616917921720998_1033743568133356212_n.jpg",
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1628577339-140622658_3616917921720998_1033743568133356212_n.jpg",
                     "year" => "Senior Brand Partner Manager Nu Skin Vietnam",
                     "name" => "Lê Thị Minh Nguyệt"
                   ],
                   [
                     "name" => "Trần Mạnh Huy",
                     "year" => "CEO & Founder V.B.P.O Đà Nẵng JSC",
-                    "file" => "http://127.0.0.1:8000/files/1628577345-140732344_3616917888387668_445998331362894955_n.jpg"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1628577345-140732344_3616917888387668_445998331362894955_n.jpg"
                   ],
                   [
                     "name" => "Tôn Thị Cẩm Bình",
                     "year" => "Director Viet's Smile Training & Counseling Psychology JSC",
-                    "file" => "http://127.0.0.1:8000/files/1628577351-141291905_3616917905054333_5771674493651215297_n.jpg"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1628577351-141291905_3616917905054333_5771674493651215297_n.jpg"
                   ],
                   [
                     "name" => "Lê Thị Minh Nguyệt",
                     "year" => "Senior Brand Partner Manager Nu Skin Vietnam",
-                    "file" => "http://127.0.0.1:8000/files/1628580817-140622658_3616917921720998_1033743568133356212_n.jpg"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1628580817-140622658_3616917921720998_1033743568133356212_n.jpg"
                   ],
                   [
-                    "file" => "http://127.0.0.1:8000/files/1628580826-140732344_3616917888387668_445998331362894955_n.jpg",
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1628580826-140732344_3616917888387668_445998331362894955_n.jpg",
                     "year" => "CEO & Founder V.B.P.O Đà Nẵng JSC",
                     "name" => "Trần Mạnh Huy"
                   ]
@@ -183,27 +183,27 @@ class LandingPageSeeder extends Seeder {
                 "tasks" => [
                   [
                     "url" => "https://www.axonactive.com/",
-                    "file" => "http://localhost:8000/files/1626425777-Axon-logoPNwebsite.png"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1626425777-Axon-logoPNwebsite.png"
                   ],
                   [
                     "url" => "http://danavtc.edu.vn/",
-                    "file" => "http://localhost:8000/files/1626425775-DVT-400x284.png"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1626425775-DVT-400x284.png"
                   ],
                   [
                     "url" => "https://www.logigear.com/",
-                    "file" => "http://localhost:8000/files/1626425770-Logigear-logo.png"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1626425770-Logigear-logo.png"
                   ],
                   [
                     "url" => "https://kms-technology.com/",
-                    "file" => "http://localhost:8000/files/1626425761-KMS-Technology-400x284.png"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1626425761-KMS-Technology-400x284.png"
                   ],
                   [
                     "url" => "https://seadev.us/",
-                    "file" => "http://localhost:8000/files/1626425784-seadev.png"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1626425784-seadev.png"
                   ],
                   [
                     "url" => "https://neo-lab.vn/",
-                    "file" => "http://localhost:8000/files/1626425792-Neolab.png"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1626425792-Neolab.png"
                   ]
                 ],
                 "title" => "Partners",
@@ -218,22 +218,22 @@ class LandingPageSeeder extends Seeder {
                   [
                     "testimonial" => "H. was born and raised in a mountainous area in Hung Hoa district, Quang Tri province. She is from the Van Kieu ethnic group. H.’s family includes her parents, 2 brothers, 3 younger sisters. They are farmers and have to depend on the field of cassava for livelihood.",
                     "name" => "Hồ Thị Hươu",
-                    "file" => "http://127.0.0.1:8000/files/1628579472-IMG_6884-400x250.jpg"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1628579472-IMG_6884-400x250.jpg"
                   ],
                   [
                     "name" => "Hoài NGÔ THỊ MỸ",
                     "testimonial" => "As a girl, many people once questioned my choice to pursue an IT major. They said I should choose other career paths, like becoming a teacher or a tour guide, that I would never be as good as boys in IT. At that time, I did not know how to answer. I just knew that I wanted to follow this dream no matter what. I believed that if I tried, I could do it. I chose PN as the place to nurture that dream.",
-                    "file" => "http://127.0.0.1:8000/files/1628579779-Hoai-NGO-THI-MY-Student.jpg"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1628579779-Hoai-NGO-THI-MY-Student.jpg"
                   ],
                   [
                     "name" => "Lucas SINROD",
                     "testimonial" => "The IT world is full of machines and AI, and so can be characteristically cold. Through PN I have rediscovered the human side of technology. With every smiling face or curious question, PN students remind me why I learned to code. Computers are fascinating! Tech progress is exciting!",
-                    "file" => "http://127.0.0.1:8000/files/1628579813-Lucas-SINROD-Staff.jpg"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1628579813-Lucas-SINROD-Staff.jpg"
                   ],
                   [
                     "testimonial" => "We were the first batch in the expansion to a full three-year training program. We had more time to learn the cutting-edge technologies that companies need. We developed the soft skills that helped us in our career paths. Moreover, the Specialization module and the final internship boosted my employability.",
                     "name" => "Cuong NGUYEN HUU",
-                    "file" => "http://127.0.0.1:8000/files/1628579991-Cuong-NGUYEN-HUU-Alumni.jpg"
+                    "file" => "https://passerellesnumeriques.herokuapp.com/files/1628579991-Cuong-NGUYEN-HUU-Alumni.jpg"
                   ]
                 ],
                 "desc" => "<p>Testimonials&nbsp;</p>",
@@ -247,7 +247,7 @@ class LandingPageSeeder extends Seeder {
                 "title" => "About PNV",
                 "slogan" => "<p>PNV on VTV 4</p>",
                 "videoUrl" => "https://www.youtube.com/embed/v6BAKdfRq6s",
-                "file" => "http://127.0.0.1:8000/files/1627052903-176778080_3868749673204487_7325439355205340404_n.jpg"
+                "file" => "https://passerellesnumeriques.herokuapp.com/files/1627052903-176778080_3868749673204487_7325439355205340404_n.jpg"
               ]
             ],
             [
@@ -258,13 +258,13 @@ class LandingPageSeeder extends Seeder {
                   [
                     "images" => [
                       [
-                        "file" => "http://127.0.0.1:8000/files/1627050052-160998233_3760276224051833_8908666237433458936_n.jpg"
+                        "file" => "https://passerellesnumeriques.herokuapp.com/files/1627050052-160998233_3760276224051833_8908666237433458936_n.jpg"
                       ],
                       [
-                        "file" => "http://127.0.0.1:8000/files/1627049766-160558011_3754439897968799_7547598645428764941_n.jpg"
+                        "file" => "https://passerellesnumeriques.herokuapp.com/files/1627049766-160558011_3754439897968799_7547598645428764941_n.jpg"
                       ],
                       [
-                        "file" => "http://127.0.0.1:8000/files/1627050036-160936086_3754446967968092_4613389374008195814_n.jpg"
+                        "file" => "https://passerellesnumeriques.herokuapp.com/files/1627050036-160936086_3754446967968092_4613389374008195814_n.jpg"
                       ]
                     ],
                     "filter" => "Activity"
@@ -272,10 +272,10 @@ class LandingPageSeeder extends Seeder {
                   [
                     "images" => [
                       [
-                        "file" => "http://127.0.0.1:8000/files/1627049749-Blossom-in-the-storm-1-400x250.jpg"
+                        "file" => "https://passerellesnumeriques.herokuapp.com/files/1627049749-Blossom-in-the-storm-1-400x250.jpg"
                       ],
                       [
-                        "file" => "http://127.0.0.1:8000/files/1627050029-160101603_3754440081302114_3810132440188073441_n.jpg"
+                        "file" => "https://passerellesnumeriques.herokuapp.com/files/1627050029-160101603_3754440081302114_3810132440188073441_n.jpg"
                       ]
                     ],
                     "filter" => "Children"
@@ -283,13 +283,13 @@ class LandingPageSeeder extends Seeder {
                   [
                     "images" => [
                       [
-                        "file" => "http://127.0.0.1:8000/files/1627049762-160936086_3754446967968092_4613389374008195814_n.jpg"
+                        "file" => "https://passerellesnumeriques.herokuapp.com/files/1627049762-160936086_3754446967968092_4613389374008195814_n.jpg"
                       ],
                       [
-                        "file" => "http://127.0.0.1:8000/files/1627049766-160558011_3754439897968799_7547598645428764941_n.jpg"
+                        "file" => "https://passerellesnumeriques.herokuapp.com/files/1627049766-160558011_3754439897968799_7547598645428764941_n.jpg"
                       ],
                       [
-                        "file" => "http://127.0.0.1:8000/files/1627050036-160936086_3754446967968092_4613389374008195814_n.jpg"
+                        "file" => "https://passerellesnumeriques.herokuapp.com/files/1627050036-160936086_3754446967968092_4613389374008195814_n.jpg"
                       ]
                     ],
                     "filter" => "Activity"
@@ -360,37 +360,37 @@ class LandingPageSeeder extends Seeder {
                 ],
                 "gallery" => [
                   [
-                    "img" => "http://127.0.0.1:8000/files/1627058801-164833846_3796050877141034_3848534070815939540_n.jpg"
+                    "img" => "https://passerellesnumeriques.herokuapp.com/files/1627058801-164833846_3796050877141034_3848534070815939540_n.jpg"
                   ],
                   [
-                    "img" => "http://127.0.0.1:8000/files/1627059067-164833846_3796050877141034_3848534070815939540_n.jpg"
+                    "img" => "https://passerellesnumeriques.herokuapp.com/files/1627059067-164833846_3796050877141034_3848534070815939540_n.jpg"
                   ],
                   [
-                    "img" => "http://127.0.0.1:8000/files/1627059042-164833846_3796050877141034_3848534070815939540_n.jpg"
+                    "img" => "https://passerellesnumeriques.herokuapp.com/files/1627059042-164833846_3796050877141034_3848534070815939540_n.jpg"
                   ],
                   [
-                    "img" => "http://127.0.0.1:8000/files/1627059046-164833846_3796050877141034_3848534070815939540_n.jpg"
+                    "img" => "https://passerellesnumeriques.herokuapp.com/files/1627059046-164833846_3796050877141034_3848534070815939540_n.jpg"
                   ],
                   [
-                    "img" => "http://127.0.0.1:8000/files/1627059050-164833846_3796050877141034_3848534070815939540_n.jpg"
+                    "img" => "https://passerellesnumeriques.herokuapp.com/files/1627059050-164833846_3796050877141034_3848534070815939540_n.jpg"
                   ],
                   [
-                    "img" => "http://127.0.0.1:8000/files/1627059054-164833846_3796050877141034_3848534070815939540_n.jpg"
+                    "img" => "https://passerellesnumeriques.herokuapp.com/files/1627059054-164833846_3796050877141034_3848534070815939540_n.jpg"
                   ],
                   [
-                    "img" => "http://127.0.0.1:8000/files/1627059058-164833846_3796050877141034_3848534070815939540_n.jpg"
+                    "img" => "https://passerellesnumeriques.herokuapp.com/files/1627059058-164833846_3796050877141034_3848534070815939540_n.jpg"
                   ],
                   [
-                    "img" => "http://127.0.0.1:8000/files/1627059061-164833846_3796050877141034_3848534070815939540_n.jpg"
+                    "img" => "https://passerellesnumeriques.herokuapp.com/files/1627059061-164833846_3796050877141034_3848534070815939540_n.jpg"
                   ],
                   [
-                    "img" => "http://127.0.0.1:8000/files/1627059032-164833846_3796050877141034_3848534070815939540_n.jpg"
+                    "img" => "https://passerellesnumeriques.herokuapp.com/files/1627059032-164833846_3796050877141034_3848534070815939540_n.jpg"
                   ]
                 ],
                 "copyright" => "2021 PNV - Passerelles numériques Vietnam | Made with love by: Team Spirit",
                 "slogan" => "<p>We enable young underprivileged people to build their employability through education in the digital industry</p>",
                 "title" => "Kha",
-                "logo" => "http://127.0.0.1:8000/files/1627058809-logo-pn.png"
+                "logo" => "https://passerellesnumeriques.herokuapp.com/files/1627058809-logo-pn.png"
               ]
             ]
           ]),
