@@ -3,51 +3,51 @@ import { DraftjsWidget } from './DraftjsWidget';
 
 const uiSchema = {
     desc: {
-        "ui:widget": DraftjsWidget 
+        'ui:widget': DraftjsWidget,
     },
     slogan: {
-        "ui:widget": DraftjsWidget 
+        'ui:widget': DraftjsWidget,
     },
     file: {
-        "ui:widget": FileWidget
+        'ui:widget': FileWidget,
     },
     logo: {
-        "ui:widget": FileWidget
+        'ui:widget': FileWidget,
     },
-    bannerItems :{
+    bannerItems: {
         items: {
             background: {
-                "ui:widget": FileWidget
-            }
-        }
+                'ui:widget': FileWidget,
+            },
+        },
     },
     tasks: {
         items: {
             desc: {
-                "ui:widget": "textarea"
+                'ui:widget': 'textarea',
             },
             testimonial: {
-                "ui:widget": "textarea"
+                'ui:widget': 'textarea',
             },
             file: {
-                "ui:widget": FileWidget
+                'ui:widget': FileWidget,
             },
             images: {
                 items: {
                     file: {
-                        "ui:widget": FileWidget
-                    }
-                }
-            }
-        }
+                        'ui:widget': FileWidget,
+                    },
+                },
+            },
+        },
     },
     gallery: {
         items: {
             img: {
-                "ui:widget": FileWidget
-            }
+                'ui:widget': FileWidget,
+            },
         },
-    }
-}
+    },
+};
 
 export default uiSchema;

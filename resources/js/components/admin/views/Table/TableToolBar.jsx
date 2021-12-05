@@ -8,33 +8,35 @@ import FilterListIcon from '@material-ui/icons/FilterList';
 
 const useToolbarStyles = makeStyles({
     root: {
-      paddingLeft: '20px',
-      paddingRight: '10px',
+        paddingLeft: '20px',
+        paddingRight: '10px',
     },
     title: {
-      flex: '1 1 100%',
+        flex: '1 1 100%',
     },
 });
 
 const TableToolbar = (props) => {
     const { slg } = props;
     const classes = useToolbarStyles();
-  
+
     return (
-      <Toolbar
-        className={classes.root}
-      >
-          <Typography className={classes.title} variant="h6" id="tableTitle" component="div">
-            {slg}
-          </Typography>
-          <Tooltip title="Filter list">
-            <IconButton aria-label="filter list">
-              <FilterListIcon />
-            </IconButton>
-          </Tooltip>
-      </Toolbar>
+        <Toolbar className={classes.root}>
+            <Typography
+                className={classes.title}
+                variant="h6"
+                id="tableTitle"
+                component="div"
+            >
+                {slg}
+            </Typography>
+            <Tooltip title="Filter list">
+                <IconButton aria-label="filter list">
+                    <FilterListIcon />
+                </IconButton>
+            </Tooltip>
+        </Toolbar>
     );
 };
-
 
 export default TableToolbar;

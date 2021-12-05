@@ -292,7 +292,7 @@ class LandingPageSeeder extends Seeder {
                         "file" => "https://passerellesnumeriques.herokuapp.com/files/1627050036-160936086_3754446967968092_4613389374008195814_n.jpg"
                       ]
                     ],
-                    "filter" => "Activity"
+                    "filter" => "Another"
                   ]
                 ],
                 "slogan" => "<p>Slogan Gallery</p>",

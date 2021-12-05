@@ -101,40 +101,7 @@ var PATH = {};
         }
     }
 
-    /******************** 9. CAUSES LIGHTBOX ********************/
-    PATH.causesLightBox = function() {
-            var $causesLightBox = $('.causes-lightbox');
-            if ($causesLightBox.length) {
-                $causesLightBox.magnificPopup({
-                    type: 'image',
-                    mainClass: 'mfp-fade',
-                    removalDelay: 160,
-                    fixedContentPos: true,
-                });
-            }
-        }
-        /******************** 10. CAUSES PROGRESS BARS ********************/
-    PATH.causesProgress = function() {
-        var $skills = $('.content-box'),
-            $skillProgressBars = $skills.find('.progress-bars');
-
-        if ($skillProgressBars.length) {
-            $skillProgressBars.find('.progress-bar').each(function() {
-                var $t = $(this);
-
-                $t.css('width', 0);
-
-                $t.waypoint(function() {
-                    $t.css('width', $t.data('value') + '%');
-                }, {
-                    triggerOnce: true,
-                    offset: 'bottom-in-view'
-                });
-            });
-        }
-    }
-
-    /******************** 11. CAUSES SLIDER ********************/
+    /******************** CAUSES SLIDER ********************/
     PATH.causesSlider = function() {
         var pswiper = new Swiper('.causes-swiper', {
             slidesPerView: 3,
@@ -169,7 +136,7 @@ var PATH = {};
         });
     }
 
-    /******************** 12. GALLERY FILTER ********************/
+    /******************** GALLERY FILTER ********************/
     PATH.GalleryFilter = function() {
         var $portfolio_selectors = $('.gallery-filter >li>a');
         if ($portfolio_selectors.length) {
@@ -190,7 +157,7 @@ var PATH = {};
         }
     }
 
-    /******************** 13. GALLERY LIGHTBOX ********************/
+    /******************** GALLERY LIGHTBOX ********************/
     PATH.GalleryLightBox = function() {
         var $galleryLightBox = $('.gallery-icon');
         if ($galleryLightBox.length) {
@@ -207,7 +174,7 @@ var PATH = {};
         }
     }
 
-    /******************** 14. TESTIMONIAL SLIDER ********************/
+    /******************** TESTIMONIAL SLIDER ********************/
     PATH.sliderTestimonial = function() {
             var tswiper = new Swiper('.testimonialSwiper', {
                 speed: 1500,
@@ -224,49 +191,53 @@ var PATH = {};
                 },
             });
         }
-        /******************** 15. VOLUNTEERS SLIDER ********************/
+        /******************** VOLUNTEERS SLIDER ********************/
     PATH.sliderVolunteers = function() {
-            var vswiper = new Swiper('.volunteers-swiper', {
-                slidesPerView: 4,
-                spaceBetween: 0,
-                freeMode: true,
-                autoplay: {
-                    delay: 2000,
+        var vswiper = new Swiper('.volunteers-swiper', {
+            slidesPerView: 4,
+            spaceBetween: 0,
+            freeMode: true,
+            autoplay: {
+                delay: 2000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: 3,
                 },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                    dynamicBullets: true,
+                1024: {
+                    slidesPerView: 2,
                 },
-                breakpoints: {
-                    1199: {
-                        slidesPerView: 3,
-                    },
-                    1024: {
-                        slidesPerView: 2,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                    },
-                    640: {
-                        slidesPerView: 1,
-                    },
-                    320: {
-                        slidesPerView: 1,
-                    }
+                768: {
+                    slidesPerView: 2,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                320: {
+                    slidesPerView: 1,
                 }
-            });
-        }
-        /******************** 16. COUNTER UP JS ********************/
-    PATH.counterUp = function() {
-        var $counter = $('.counter');
-        if ($counter.length) {
-            $counter.counterUp({
-                delay: 10,
-                time: 3000
-            });
-        }
+            }
+        });
     }
+
+    /* Document ready function */
+    $(function() {
+        PATH.textAnimation();
+        PATH.sliderTestimonial();
+        PATH.sliderVolunteers();
+        PATH.heroSlider();
+        PATH.causesSlider();
+        PATH.GalleryFilter();
+        PATH.MenuClose();
+        PATH.HeaderScroll();
+        PATH.HeaderSticky();
+        PATH.GalleryLightBox();
+    });
 
     /* Window on scroll function */
     $(window).on("scroll", function() {
@@ -281,13 +252,10 @@ var PATH = {};
         PATH.heroSlider();
         PATH.causesSlider();
         PATH.GalleryFilter();
-        PATH.counterUp();
         PATH.preLoader();
         PATH.MenuClose();
         PATH.HeaderScroll();
         PATH.HeaderSticky();
-        PATH.causesLightBox();
-        PATH.causesProgress();
         PATH.GalleryLightBox();
     });
 })(jQuery);

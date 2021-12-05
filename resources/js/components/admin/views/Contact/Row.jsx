@@ -5,7 +5,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 // ==========================================================
-import Quote from "../../components/Typography/Quote.js";
+import Quote from '../../components/Typography/Quote.js';
 
 import Box from '@material-ui/core/Box';
 import Collapse from '@material-ui/core/Collapse';
@@ -14,55 +14,65 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 const useRowStyles = makeStyles({
     root: {
-      '& > *': {
-        borderBottom: 'unset',
-      },
+        '& > *': {
+            borderBottom: 'unset',
+        },
     },
     typo: {
-      marginBottom: "40px",
-      position: "relative",
+        marginBottom: '40px',
+        position: 'relative',
     },
 });
-  
-  
-  
+
 const Row = (props) => {
     const { row } = props;
     const [open, setOpen] = React.useState(false);
     const classes = useRowStyles();
-  
+
     return (
-      <React.Fragment>
-        <TableRow hover onClick={() => setOpen(!open)} className={classes.root}>
-          <TableCell>
-            <IconButton size="small" >
-              {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-            </IconButton>
-          </TableCell>
-          <TableCell align="left">{row.name}</TableCell>
-          <TableCell align="right">{row.email}</TableCell>
-          <TableCell align="right">{row.subject}</TableCell>
-          <TableCell align="right">{row.created_at}</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-            <Collapse in={open} timeout="auto" unmountOnExit>
-              <Box margin={1}>
-                <Typography variant="h6" gutterBottom component="div">
-                  Message
-                </Typography>
-                <div className={classes.typo}>
-                  <Quote
-                    text={row.message}
-                    author={row.name}
-                  />
-                </div>
-              </Box>
-            </Collapse>
-          </TableCell>
-        </TableRow>
-      </React.Fragment>
+        <React.Fragment>
+            <TableRow
+                hover
+                onClick={() => setOpen(!open)}
+                className={classes.root}
+            >
+                <TableCell>
+                    <IconButton size="small">
+                        {open ? (
+                            <KeyboardArrowUpIcon />
+                        ) : (
+                            <KeyboardArrowDownIcon />
+                        )}
+                    </IconButton>
+                </TableCell>
+                <TableCell align="left">{row.name}</TableCell>
+                <TableCell align="right">{row.email}</TableCell>
+                <TableCell align="right">{row.subject}</TableCell>
+                <TableCell align="right">{row.created_at}</TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell
+                    style={{ paddingBottom: 0, paddingTop: 0 }}
+                    colSpan={6}
+                >
+                    <Collapse in={open} timeout="auto" unmountOnExit>
+                        <Box margin={1}>
+                            <Typography
+                                variant="h6"
+                                gutterBottom
+                                component="div"
+                            >
+                                Message
+                            </Typography>
+                            <div className={classes.typo}>
+                                <Quote text={row.message} author={row.name} />
+                            </div>
+                        </Box>
+                    </Collapse>
+                </TableCell>
+            </TableRow>
+        </React.Fragment>
     );
-}
+};
 
 export default Row;
