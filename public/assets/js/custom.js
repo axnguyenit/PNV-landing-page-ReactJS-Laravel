@@ -6,6 +6,7 @@ var PATH = {};
     PATH.preLoader = function() {
         $(".preloader").fadeOut();
         $("#preloader-wrap").fadeOut("slow");
+        $("#preloader-wrap").css("display", "none");
     }
 
     /******************** 2. ADD CLASS HEADER ********************/
