@@ -52,7 +52,7 @@ const Contact = (props) => {
     };
 
     return (
-        <div id="contact" className="p-80px-tb bg-white" data-aos={props.aos}>
+        <div id="contact" className="p-80px-tb bg-white">
             <div className="container">
                 <div className="row">
                     <div className="col-sm-8 offset-sm-2">

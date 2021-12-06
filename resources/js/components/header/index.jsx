@@ -1,4 +1,5 @@
 import React from 'react';
+import toSlug from '../toSlug';
 
 const Header = (props) => {
     return (
@@ -49,7 +50,7 @@ const Header = (props) => {
                                             <li key={index}>
                                                 <a
                                                     className="nav-link"
-                                                    href={`#${item.componentParams.title}`}
+                                                    href={`#${toSlug(item.componentParams.title)}`}
                                                 >
                                                     {item.componentParams.title}
                                                 </a>

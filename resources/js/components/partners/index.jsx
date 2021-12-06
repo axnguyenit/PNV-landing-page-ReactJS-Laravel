@@ -1,11 +1,12 @@
 import React from 'react';
+import toSlug from '../toSlug';
 
 const Partners = (props) => {
     return (
         <section
-            id={props.title}
+            id={toSlug(props.title)}
             className={`p-80px-tb ${props.bg}`}
-            data-aos={props.aos}
+            // data-aos={props.aos}
         >
             <div className="container">
                 <div className="section-title text-center m-60px-b">

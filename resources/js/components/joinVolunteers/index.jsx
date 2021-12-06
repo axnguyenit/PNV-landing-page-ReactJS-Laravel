@@ -1,11 +1,12 @@
 import React from 'react';
+import toSlug from '../toSlug';
 
 const JoinVolunteers = (props) => {
     return (
         <section
-            id="JoinVolunteers"
+            id={toSlug(props.title)}
             className={`p-80px-tb ${props.bg}`}
-            data-aos={props.aos}
+            // data-aos={props.aos}
         >
             <div className="container">
                 <div className="row">

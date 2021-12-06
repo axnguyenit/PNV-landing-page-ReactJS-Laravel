@@ -228,16 +228,15 @@ var PATH = {};
 
     /* Document ready function */
     $(function() {
-        PATH.textAnimation();
+        PATH.textAnimation(),
+            PATH.MenuClose(),
+            PATH.HeaderScroll(),
+            PATH.HeaderSticky();
+        PATH.GalleryLightBox();
         PATH.sliderTestimonial();
         PATH.sliderVolunteers();
         PATH.heroSlider();
         PATH.causesSlider();
-        PATH.GalleryFilter();
-        PATH.MenuClose();
-        PATH.HeaderScroll();
-        PATH.HeaderSticky();
-        PATH.GalleryLightBox();
     });
 
     /* Window on scroll function */
@@ -247,16 +246,11 @@ var PATH = {};
 
     /* Window on load function */
     $(window).on('load', function() {
-        PATH.textAnimation();
         PATH.sliderTestimonial();
         PATH.sliderVolunteers();
         PATH.heroSlider();
         PATH.causesSlider();
         PATH.GalleryFilter();
         PATH.preLoader();
-        PATH.MenuClose();
-        PATH.HeaderScroll();
-        PATH.HeaderSticky();
-        PATH.GalleryLightBox();
     });
 })(jQuery);

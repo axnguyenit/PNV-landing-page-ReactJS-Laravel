@@ -5,7 +5,7 @@ const VideoSection = (props) => {
         <section
             className="video p-100px-tb overlay overlay-6 parallax"
             style={{ backgroundImage: `url(${props.file})` }}
-            data-aos={props.aos}
+            // data-aos={props.aos}
         >
             <div className="container">
                 <div className="row">

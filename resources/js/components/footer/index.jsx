@@ -7,7 +7,7 @@ const Footer = (props) => {
             <section
                 id="footer-top"
                 className="p-80px-tb bg-light"
-                data-aos={props.aos}
+                // data-aos={props.aos}
             >
                 <SimpleReactLightbox>
                     <SRLWrapper>

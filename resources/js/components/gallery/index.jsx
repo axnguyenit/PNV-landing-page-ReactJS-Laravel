@@ -1,14 +1,15 @@
 import React from 'react';
 import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
+import toSlug from '../toSlug';
 
 const Gallery = (props) => {
     return (
         <SimpleReactLightbox>
             <SRLWrapper>
                 <section
-                    id={props.title}
+                    id={toSlug(props.title)}
                     className={`p-80px-tb ${props.bg}`}
-                    data-aos={props.aos}
+                    // data-aos={props.aos}
                 >
                     <div className="container">
                         <div className="row">
